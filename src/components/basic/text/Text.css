@@ -1,0 +1,44 @@
+@layer base {
+  @variants responsive {
+    .typography-h1 {
+      @apply font-poppins font-light not-italic text-h1;
+    }
+
+    .typography-h2 {
+      @apply font-poppins font-medium not-italic text-h2;
+    }
+
+    .typography-h3 {
+      @apply font-titillium font-normal not-italic text-h3;
+    }
+
+    .typography-h4 {
+      @apply font-titillium font-bold not-italic text-h4;
+    }
+
+    .typography-body {
+      @apply font-work-sans font-normal not-italic text-body;
+    }
+
+    .typography-footer {
+      @apply font-work-sans font-normal not-italic text-footer;
+    }
+
+    .typography-poppins {
+      @apply font-poppins font-light not-italic;
+    }
+
+    .typography-titillium {
+      @apply font-titillium font-normal not-italic;
+    }
+
+    .typography-work-sans {
+      @apply font-work-sans font-normal not-italic;
+    }
+
+    /* custom fonts */
+    .typography-stats {
+      @apply font-poppins font-light not-italic text-stats;
+    }
+  }
+}

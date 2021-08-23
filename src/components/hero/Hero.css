@@ -1,0 +1,16 @@
+@layer base {
+  @variants responsive {
+    .area-hero-content {
+      grid-area: HeroContent;
+    }
+
+    .hero-grid-mobile {
+      grid-template-areas: "HeroContent";
+    }
+
+    .hero-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-areas: ". HeroContent";
+    }
+  }
+}

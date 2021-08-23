@@ -1,0 +1,42 @@
+
+@layer base {
+  @variants responsive {
+    .area-au-main {
+      grid-area: AUMain;
+    }
+
+    .area-au-secondary {
+      grid-area: AUSecondary;
+    }
+
+    .area-au-tile-one {
+      grid-area: AUTileOne;
+    }
+
+    .area-au-tile-two {
+      grid-area: AUTileTwo;
+    }
+
+    .au-grid-mobile {
+      grid-template-areas:
+        "AUMain"
+        "AUSecondary"
+        "AUTileOne"
+        "AUTileTwo";
+    }
+
+    /* .au-grid-web {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-areas:
+        "MPTitle MPTitle"
+        "MPPartnerImage MPMainText"
+        "MPPartnerImage MPSecondaryText"
+        "MPPartnerImage ."
+        ". .";
+    } */
+
+    .au-tile-grid-tablet {
+      grid-template-columns: 136px 324px;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@layer utilities {
+  @variants responsive, focus-visible {
+    .header-focus-outline {
+      outline: 2px solid #000000;
+    }
+
+    .header-mobile-grid {
+      grid-template-columns: 3.6rem 5.2rem auto 3rem 3.6rem;
+      grid-template-areas: ". HeaderLogo . HeaderBurger .";
+    }
+
+    .header-tablet-grid {
+      grid-template-columns: 6.9rem 16.8rem auto 3rem 8.1rem;
+      grid-template-areas: ". HeaderLogo . HeaderBurger .";
+    }
+
+    .header-desktop-grid {
+      grid-template-columns: 4.7rem 16.8rem auto 3.6rem 10.3rem;
+      grid-template-areas: ". HeaderLogo HeaderLinks . HeaderSendButton";
+    }
+
+    .header-hd-grid {
+      grid-template-columns: 9.4rem 16.8rem auto 9.2rem 10.4rem;
+      grid-template-areas: ". HeaderLogo HeaderLinks . HeaderSendButton";
+    }
+
+    .header-logo-area {
+      grid-area: HeaderLogo;
+    }
+
+    .header-burger-area {
+      grid-area: HeaderBurger;
+    }
+
+    .header-links-area {
+      grid-area: HeaderLinks;
+    }
+
+    .header-send-button-area {
+      grid-area: HeaderSendButton;
+    }
+  }
+}

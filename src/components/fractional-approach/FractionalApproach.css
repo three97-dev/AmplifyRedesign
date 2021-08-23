@@ -1,0 +1,75 @@
+@layer base {
+  @variants responsive {
+    .fa-grid-mobile {
+      grid-template-areas:
+        "Heading"
+        "Description"
+        "Image"
+        "Stats"
+        "Tile1"
+        "Tile2"
+        "Tile3"
+        "Tile4"
+        "Button";
+    }
+
+    .fa-grid-tablet {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-areas:
+        "Heading Heading"
+        "Description Description"
+        "Image Stats"
+        "Tile1 Tile2"
+        "Tile3 Tile4"
+        "Button Button";
+    }
+
+    .fa-grid-web-small {
+      grid-template-columns: 26.8rem 26.8rem 27.6rem 27.6rem;
+      grid-template-areas:
+        "Heading Heading Heading Heading"
+        "Description Description Tile1 Tile2"
+        "Description Description Tile3 Tile4"
+        "Image Stats Tile3 Tile4"
+        "Button Button Button Button";
+    }
+
+    .fa-grid-web {
+      grid-template-columns: 40.6rem 40.6rem 41.4rem 41.4rem;
+      grid-template-areas:
+        "Heading Heading Heading Heading"
+        "Description Description Tile1 Tile2"
+        "Description Description Tile3 Tile4"
+        "Image Stats Tile3 Tile4"
+        "Button Button Button Button";
+    }
+  }
+}
+
+.area-fa-heading {
+  grid-area: Heading;
+}
+.area-fa-description {
+  grid-area: Description;
+}
+.area-fa-image {
+  grid-area: Image;
+}
+.area-fa-stats {
+  grid-area: Stats;
+}
+.area-fa-tile1 {
+  grid-area: Tile1;
+}
+.area-fa-tile2 {
+  grid-area: Tile2;
+}
+.area-fa-tile3 {
+  grid-area: Tile3;
+}
+.area-fa-tile4 {
+  grid-area: Tile4;
+}
+.area-fa-button {
+  grid-area: Button;
+}
