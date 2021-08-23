@@ -1,0 +1,68 @@
+@layer utilities {
+  @variants responsive {
+    .testimonials-tablet-grid {
+      grid-template-columns: 1fr 32.3rem 0.3rem 1rem 3.3rem 4rem 1.6rem 32.8rem 8.1rem 1fr;
+      grid-template-rows: 19.8rem auto;
+      grid-template-areas:
+        ". TestimonialsImage . TestimonialsSliderDots . . . TestimonialsHeader . ."
+        ". TestimonialsImage . TestimonialsSliderDots . TestimonialsQuote . TestimonialsSlide . .";
+    }
+    .testimonials-desktop-grid {
+      grid-template-columns: 1fr 35.2rem 9.5rem 1rem 3.9rem 4rem 1.6rem 53.6rem 1fr;
+      grid-template-rows: 20.2rem auto;
+      grid-template-areas:
+        ". TestimonialsImage . TestimonialsSliderDots . . . TestimonialsHeader ."
+        ". TestimonialsImage . TestimonialsSliderDots . TestimonialsQuote . TestimonialsSlide .";
+    }
+
+    .testimonials-hd-grid {
+      grid-template-columns: 1fr 53.6rem 11.8rem 1.6rem 8.2rem 6.1rem 1.6rem 67.4rem 1fr;
+      grid-template-rows: 36.2rem auto;
+      grid-template-areas:
+        ". TestimonialsImage  . TestimonialsSliderDots . . . TestimonialsHeader ."
+        ". TestimonialsImage . TestimonialsSliderDots . TestimonialsQuote . TestimonialsSlide .";
+    }
+
+    .testimonials-slider-slick {
+      display: grid;
+    }
+
+    .testimonials-image-area {
+      grid-area: TestimonialsImage;
+    }
+
+    .testimonials-quote-area {
+      grid-area: TestimonialsQuote;
+    }
+
+    .testimonials-slide-area {
+      grid-area: TestimonialsSlide;
+    }
+
+    .testimonials-header-area {
+      grid-area: TestimonialsHeader;
+    }
+
+    .testimonials-slider-dots-area {
+      grid-area: TestimonialsSliderDots;
+    }
+
+    .testimonials-slider-dots {
+      z-index: 10;
+    }
+
+    .testimonials-slider-dots button {
+      box-sizing: border-box;
+      border-radius: 100%;
+      border: 1px solid #1a1a40;
+      text-align: center;
+      background-color: #ffffff;
+    }
+
+    .testimonials-slider-dots button.slick-active {
+      background-color: #1a1a40;
+      border: 2px solid #ffffff;
+      box-shadow: 0 0 0px 1px #1a1a40;
+    }
+  }
+}
