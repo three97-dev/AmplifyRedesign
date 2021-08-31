@@ -5,6 +5,8 @@ import Text from "../basic/text/Text";
 import TileShadow from "../basic/tile-shadow/TileShadow";
 
 import ImageAboutUsBackgroundTablet from "../../assets/pages/about/about-us-bg-tablet.svg";
+import ImageAboutUsBackgroundWeb from "../../assets/pages/about/about-us-bg-web.svg";
+import ImageAboutUsBackgroundWebHd from "../../assets/pages/about/about-us-bg-webhd.svg";
 
 import "./AboutUs.css";
 
@@ -20,25 +22,25 @@ const AboutUs = ({
 }) => {
   return (
     <div
-      className={`grid justify-items-center w-full overflow-x-hidden pb-64px md:pb-140px ${className}`}
+      className={`grid justify-items-center w-full overflow-x-hidden ${className}`}
       {...otherProps}
     >
-      <div className="grid relative au-grid-mobile md:au-grid-tablet lg:au-grid-web xl:au-grid-webhd h-max">
+      <div className="grid relative au-grid-mobile md:au-grid-tablet lg:au-grid-web xl:au-grid-webhd h-max pb-64px md:pb-148px lg:pb-450px xl:pb-495px">
         <img
           src={ImageAboutUsBackgroundTablet}
           alt="background"
-          className="hidden md:block lg:hidden absolute -z-10 -bottom-138px right-0px"
-        />
-        {/* <img
-          src={ImageMicrosoftPartnerBgWeb}
-          alt="background"
-          className="hidden md+:block lg+:hidden absolute -z-10 top-33px -right-252px"
+          className="hidden md:block lg:hidden absolute -z-10 bottom-0px right-0px max-w-none"
         />
         <img
-          src={ImageMicrosoftPartnerBgWebHd}
+          src={ImageAboutUsBackgroundWeb}
           alt="background"
-          className="hidden lg+:block absolute -z-10 top-155px -right-405px"
-        /> */}
+          className="hidden lg:block xl:hidden absolute -z-10 bottom-40px -left-303px max-w-none"
+        />
+        <img
+          src={ImageAboutUsBackgroundWebHd}
+          alt="background"
+          className="hidden xl:block absolute -z-10 top-178px -left-333px max-w-none"
+        />
 
         <div className="area-au-texts mx-36px md:mx-0px">
           <Text typography="h3" className="mt-88px md:mt-123px lg:mt-180px">
