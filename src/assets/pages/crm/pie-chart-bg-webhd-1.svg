@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1963.734" height="385.5" viewBox="100 100 1963.734 385.5">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#090743"/>
+      <stop offset="1" stop-color="#434398"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.247" y1="0.925" x2="0.695" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1a1a40"/>
+      <stop offset="1" stop-color="#fb5357"/>
+    </linearGradient>
+  </defs>
+  <g id="pie-chart-bg-webhd-1" transform="translate(164.234 -3850.217)">
+    <path id="Path_1124" data-name="Path 1124" d="M16,0A16,16,0,1,1,0,16,16,16,0,0,1,16,0Z" transform="translate(368 3955.717)" fill="url(#linear-gradient)"/>
+    <g transform="matrix(1, 0, 0, 1, -164.23, 3850.22)">
+      <circle id="Ellipse_218-2" data-name="Ellipse 218" cx="48.5" cy="48.5" r="48.5" transform="translate(1908.23 138.5)" fill="url(#linear-gradient-2)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -164.23, 3850.22)">
+      <circle id="Ellipse_247-2" data-name="Ellipse 247" cx="83.715" cy="83.715" r="83.715" transform="translate(138.5 159.57)" fill="url(#linear-gradient-2)"/>
+    </g>
+  </g>
+</svg>
