@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="899.55" height="271" viewBox="0 0 899.55 271">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#090743"/>
+      <stop offset="1" stop-color="#434398"/>
+    </linearGradient>
+  </defs>
+  <g id="pie-chart-bg-tablet-2" transform="translate(11.8 -5500.5)">
+    <circle id="Ellipse_250" data-name="Ellipse 250" cx="89.75" cy="89.75" r="89.75" transform="translate(708.25 5592)" fill="#f15d5e"/>
+    <circle id="Ellipse_252" data-name="Ellipse 252" cx="16" cy="16" r="16" transform="translate(667 5560.5)" fill="url(#linear-gradient)"/>
+    <g id="Group_2458" data-name="Group 2458" transform="translate(-31.134 86.978)">
+      <circle id="Ellipse_245" data-name="Ellipse 245" cx="46.4" cy="46.4" r="46.4" transform="translate(19.333 5413.522)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

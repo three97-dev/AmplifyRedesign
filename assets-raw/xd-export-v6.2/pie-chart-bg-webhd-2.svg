@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1944.574" height="532.813" viewBox="0 0 1944.574 532.813">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#090743"/>
+      <stop offset="1" stop-color="#434398"/>
+    </linearGradient>
+  </defs>
+  <g id="pie-chart-bg-webhd-2" transform="translate(-51.236 -5053.75)">
+    <circle id="Ellipse_248" data-name="Ellipse 248" cx="124.047" cy="124.047" r="124.047" transform="translate(1747.717 5338.47)" fill="#f15d5e"/>
+    <path id="Path_1227" data-name="Path 1227" d="M16,0A16,16,0,1,1,0,16,16,16,0,0,1,16,0Z" transform="translate(1658.304 5319.97)" fill="url(#linear-gradient)"/>
+    <circle id="Ellipse_216" data-name="Ellipse 216" cx="34.242" cy="34.242" r="34.242" transform="translate(51.236 5053.75)" fill="#f15d5e"/>
+    <circle id="Ellipse_217" data-name="Ellipse 217" cx="82.181" cy="82.181" r="82.181" transform="translate(98.334 5155.607)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

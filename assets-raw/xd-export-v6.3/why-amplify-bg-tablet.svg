@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1139.5" height="615.5" viewBox="0 0 1139.5 615.5">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.247" y1="0.925" x2="0.695" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1a1a40"/>
+      <stop offset="1" stop-color="#fb5357"/>
+    </linearGradient>
+    <filter id="Ellipse_179" x="0" y="0" width="465" height="465" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="49.5" result="blur"/>
+      <feFlood flood-color="#fff" flood-opacity="0.749"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#090743"/>
+      <stop offset="1" stop-color="#434398"/>
+    </linearGradient>
+  </defs>
+  <g id="why-amplify-bg-tablet" transform="translate(226.5 -1884.5)">
+    <g transform="matrix(1, 0, 0, 1, -226.5, 1884.5)" filter="url(#Ellipse_179)">
+      <circle id="Ellipse_179-2" data-name="Ellipse 179" cx="84" cy="84" r="84" transform="translate(138.5 138.5)" fill="url(#linear-gradient)"/>
+    </g>
+    <circle id="Ellipse_180" data-name="Ellipse 180" cx="16" cy="16" r="16" transform="translate(98 2043)" fill="url(#linear-gradient-2)"/>
+    <circle id="Ellipse_181" data-name="Ellipse 181" cx="30.5" cy="30.5" r="30.5" transform="translate(80 2191)" fill="#f15d5e"/>
+    <circle id="Ellipse_182" data-name="Ellipse 182" cx="36" cy="36" r="36" transform="translate(683 2428)" fill="url(#linear-gradient)"/>
+    <circle id="Ellipse" cx="78" cy="78" r="78" transform="translate(757 2290)" opacity="0.995" fill="url(#linear-gradient-2)"/>
+  </g>
+</svg>
