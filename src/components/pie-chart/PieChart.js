@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { graphql } from "gatsby";
 
 import Text from "../basic/text/Text";
 
@@ -13,7 +14,19 @@ import PieChartBackgroundWeb2 from "../../assets/pages/crm/pie-chart-bg-web-2.sv
 import PieChartBackgroundWebHD1 from "../../assets/pages/crm/pie-chart-bg-webhd-1.svg";
 import PieChartBackgroundWebHD2 from "../../assets/pages/crm/pie-chart-bg-webhd-2.svg";
 
-const PieChart = ({ title, subtitle, content, leftBlock, rightBlock, centerBlock, className, ...otherProps }) => {
+const PieChart = ({
+  title,
+  subtitle,
+  content,
+  leftBlockTitle,
+  leftBlockContent,
+  rightBlockTitle,
+  rightBlockContent,
+  centerBlockTitle,
+  centerBlockContent,
+  className,
+  ...otherProps
+}) => {
   return (
     <div className={`grid justify-items-center overflow-hidden ${className}`} {...otherProps}>
       <div className="grid relative w-318px md:w-672px lg:w-720px xl:w-1088px">
@@ -65,26 +78,26 @@ const PieChart = ({ title, subtitle, content, leftBlock, rightBlock, centerBlock
         </Text>
         <div className="grid relative h-790px md:h-1096px xl:h-1338px">
           <div className="grid items-end w-154px md:w-156px lg:w-172px xl:w-260px text-center absolute justify-self-start md:left-86px lg:left-90px xl:left-138px bottom-505px md:bottom-765px xl:bottom-1012px">
-            <Text typography="h4">{leftBlock.title}</Text>
+            <Text typography="h4">{leftBlockTitle}</Text>
             <Text typography="body" className="mt-20px">
-              {leftBlock.content}
+              {leftBlockContent}
             </Text>
             <div className="w-2px h-50px md:h-75px lg:h-70px xl:h-100px mt-20px bg-line-color justify-self-center" />
           </div>
           <div className="grid items-end w-154px md:w-156px lg:w-172px xl:w-260px text-center absolute justify-self-end md:right-86px lg:right-90px xl:right-138px bottom-486px md:bottom-721px lg:bottom-745px xl:bottom-972px">
-            <Text typography="h4">{rightBlock.title}</Text>
+            <Text typography="h4">{rightBlockTitle}</Text>
             <Text typography="body" className="mt-20px">
-              {rightBlock.content}
+              {rightBlockContent}
             </Text>
             <div className="w-2px h-30px md:h-75px lg:h-70px xl:h-100px mt-20px bg-line-color justify-self-center" />
           </div>
           <div className="grid items-end w-154px md:w-156px lg:w-168px xl:w-260px text-center absolute justify-self-center top-467px md:top-695px lg:top-716px xl:top-896px">
             <div className="w-2px h-50px md:h-75px lg:h-70px xl:h-100px bg-line-color justify-self-center" />
             <Text typography="h4" className="mt-20px">
-              {centerBlock.title}
+              {centerBlockTitle}
             </Text>
             <Text typography="body" className="mt-20px">
-              {centerBlock.content}
+              {centerBlockContent}
             </Text>
           </div>
           <img src={PieChartImage} alt="diagram" className="w-full mt-285px md:mt-336px lg:mt-332px xl:mt-326px" />
@@ -98,6 +111,12 @@ PieChart.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
   content: PropTypes.string,
+  leftBlockTitle: PropTypes.string,
+  leftBlockContent: PropTypes.string,
+  rightBlockTitle: PropTypes.string,
+  rightBlockContent: PropTypes.string,
+  centerBlockTitle: PropTypes.string,
+  centerBlockContent: PropTypes.string,
 };
 
 PieChart.defaultProps = {
@@ -105,18 +124,28 @@ PieChart.defaultProps = {
   subtitle: "Some subtitle text",
   content:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit, turpis id vestibulum semper, eros orci placerat ante, vestibulum varius elit odio ac sapien.",
-  leftBlock: {
-    title: "title1",
-    content: "someContent",
-  },
-  rightBlock: {
-    title: "title2",
-    content: "someContent",
-  },
-  centerBlock: {
-    title: "title3",
-    content: "someContent",
-  },
+  leftBlockTitle: "ALIGNMENT",
+  leftBlockContent: "We structure our partnership so we can dive in with our clients and proactively work together.",
+  rightBlockTitle: "VALUE",
+  rightBlockContent:
+    "We only work on a flat consulting fee so there is less time on quotes, proposals, and approvals… And more time on development.",
+  centerBlockTitle: "TRACK RECORD",
+  centerBlockContent:
+    "In an industry known to have a steep price and poor success rates, our approach has lead to a flawless success rate at a discount.",
 };
 
 export default PieChart;
+
+export const query = graphql`
+  fragment PieChart on ContentfulPieChart {
+    title
+    subtitle
+    content
+    leftBlockTitle
+    leftBlockContent
+    rightBlockTitle
+    rightBlockContent
+    centerBlockTitle
+    centerBlockContent
+  }
+`;

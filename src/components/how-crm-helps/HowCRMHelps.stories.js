@@ -16,7 +16,9 @@ Default.args = {
   title: "How CRM Technology Helps",
   subtitle:
     "A CRM platform helps companies target different audiences, set scores and alerts based on an individual lead or customer’s activity, proactively work with contacts, and maintain relationships. Best of all, a CRM system can be used across departments to ensure that all customer-facing teams are empowered with the right data to create incredible customer experiences.",
-  image: ImageHowCRMHelps,
+  image: {
+    mock: ImageHowCRMHelps,
+  },
   mainText:
     "Microsoft is the only vendor that provides hardware, software, and internet-of-things (IoT) platforms to enable end-to-end customer service.",
   secondaryText: (

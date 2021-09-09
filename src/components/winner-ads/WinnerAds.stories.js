@@ -13,7 +13,9 @@ const Template = args => <WinnerAds {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  image: WinnerLogo,
+  tileImage: {
+    mock: WinnerLogo,
+  },
   title: "Amplify the Good",
   subtitle: "Could a $50,000 technology investment help your cause?",
   blockContent: (

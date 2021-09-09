@@ -1,30 +1,89 @@
 import React from "react";
+import { graphql } from "gatsby";
 
-import Header from "../components/header/Header";
-import Hero from "../components/hero/Hero";
+import Seo from "../seo/Seo";
+import { ContactsMap, HeroContactForm, SiteFooter, SiteHeader } from "../components";
 
-export default function ContactPage() {
-  const header = {
-    sendButtonLink: "/",
-    isInverted: false,
-    links: [
-      { link: "/about", label: "About" },
-      { link: "/crm", label: "CRM" },
-      { link: "/analytics", label: "Analytics" },
-      { link: "/blog", label: "Blog" },
-      { link: "/contact", label: "Contact" },
-    ],
-  };
-  const hero = {
-    type: "type4",
-    title: "",
-    subtitle: "",
-  };
-
+export default function ContactPage({ data }) {
+  const { contentfulContactsPage } = data;
+  const {
+    contactsMap,
+    heroTitle,
+    heroSubtitle,
+    firstNameInputPlaceholder,
+    lastNameInputPlaceholder,
+    businessInputPlaceholder,
+    phoneNumberInputPlaceholder,
+    emailAddressInputPlaceholder,
+    requiredMessage,
+    buttonLabel,
+  } = contentfulContactsPage;
   return (
-    <>
-      <Header {...header} />
-      <Hero {...hero} />
-    </>
+    <Seo seo={contentfulContactsPage}>
+      <SiteHeader />
+      <HeroContactForm
+        heroTitle={heroTitle}
+        heroSubtitle={heroSubtitle}
+        firstNameInputPlaceholder={firstNameInputPlaceholder}
+        lastNameInputPlaceholder={lastNameInputPlaceholder}
+        businessInputPlaceholder={businessInputPlaceholder}
+        phoneNumberInputPlaceholder={phoneNumberInputPlaceholder}
+        emailAddressInputPlaceholder={emailAddressInputPlaceholder}
+        requiredMessage={requiredMessage}
+        buttonLabel={buttonLabel}
+      />
+      <ContactsMap
+        title={contactsMap.title}
+        address={contactsMap.addressTitle}
+        addressContent={contactsMap.addressValue}
+        phone={contactsMap.phoneTitle}
+        phoneContent={contactsMap.phoneValue}
+        email={contactsMap.emailTitle}
+        emailContent={contactsMap.emailValue}
+        location={contactsMap.location}
+        googleMapsCredentials={contactsMap.googleMapsCredentials}
+      />
+      <SiteFooter />
+    </Seo>
   );
 }
+
+export const pageQuery = graphql`
+  query ContactsPageQuery {
+    contentfulContactsPage(id: { eq: "4b411d63-9f97-530f-a39b-2ce94d63012a" }) {
+      heroTitle
+      heroSubtitle
+      firstNameInputPlaceholder
+      lastNameInputPlaceholder
+      businessInputPlaceholder
+      phoneNumberInputPlaceholder
+      emailAddressInputPlaceholder
+      requiredMessage
+      buttonLabel
+      contactsMap {
+        ...ContactsMap
+      }
+      seoTitle
+      seoDescription {
+        seoDescription
+      }
+      seoImage {
+        ...SEOImage
+      }
+      seoOgTitle
+      seoOgDescription {
+        seoOgDescription
+      }
+      seoOgImage {
+        ...SEOImage
+      }
+      seoTwitterTitle
+      seoTwitterDescription {
+        seoTwitterDescription
+      }
+      seoTwitterImage {
+        ...SEOImage
+      }
+    }
+  }
+`;

@@ -15,7 +15,6 @@
     .typography-h4 {
       @apply font-titillium font-bold not-italic text-h4;
     }
-
     .typography-body {
       @apply font-work-sans font-normal not-italic text-body;
     }
@@ -39,6 +38,112 @@
     /* custom fonts */
     .typography-stats {
       @apply font-poppins font-light not-italic text-stats;
+    }
+    .typography-paginator {
+      @apply font-titillium font-normal not-italic text-h4;
+    }
+    .typography-ourApproachSmall {
+      @apply font-poppins font-normal not-italic text-ourApproachSmall;
+    }
+    .typography-ourApproachWeb {
+      @apply font-poppins font-normal not-italic text-ourApproachWeb;
+    }
+    .typography-ourApproachWebhd {
+      @apply font-poppins font-normal not-italic text-ourApproachWebhd;
+    }
+
+    /* markdown or rich text styles */
+    .markdown-or-rich-text p {
+      @apply markdown-or-rich-text-paragraph typography-body text-fontcolor-body;
+    }
+
+    .markdown-or-rich-text-paragraph {
+      margin-block-end: 1em;
+    }
+
+    .markdown-or-rich-text h1 {
+      @apply mt-20px mb-22px typography-h1 text-fontcolor-h1;
+    }
+
+    .markdown-or-rich-text h2 {
+      @apply mt-20px mb-22px typography-h2 text-fontcolor-h2;
+    }
+
+    .markdown-or-rich-text h3 {
+      @apply mt-20px mb-22px typography-h3 text-fontcolor-h3;
+    }
+
+    .markdown-or-rich-text h4 {
+      @apply mt-20px mb-22px typography-h4 text-fontcolor-h4;
+    }
+    @media screen and (max-width: 833px) {
+      .markdown-or-rich-text ul {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 95px;
+      }
+      .markdown-or-rich-text ol {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 97px;
+      }
+    }
+    @media screen and (min-width: 834px) {
+      .markdown-or-rich-text ul {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 100px;
+      }
+      .markdown-or-rich-text ol {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 97px;
+      }
+    }
+    @media screen and (min-width: 1366px) {
+      .markdown-or-rich-text ul {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 105px;
+      }
+      .markdown-or-rich-text ol {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 110px;
+      }
+    }
+    @media screen and (min-width: 1920px) {
+      .markdown-or-rich-text ul {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 105px;
+      }
+      .markdown-or-rich-text ol {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 110px;
+      }
+    }
+    .markdown-or-rich-text ul {
+      list-style: disc;
+    }
+    .markdown-or-rich-text ol {
+      list-style: decimal;
+    }
+    .markdown-or-rich-text li p {
+      margin-bottom: 5px;
+    }
+    .markdown-or-rich-text li::marker {
+      color: #6f8794;
+      font-size: 1.6rem;
+    }
+
+    /* custom styling for markdown or rich text editor */
+    .markdown-text-paragraph p:first-child {
+      margin-block-start: 0;
+    }
+    .markdown-text-paragraph p {
+      margin-block-start: 1em;
     }
   }
 }

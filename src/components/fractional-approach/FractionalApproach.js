@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { graphql } from "gatsby";
 
 import Text from "../basic/text/Text";
 import TileShadow from "../basic/tile-shadow/TileShadow";
@@ -20,7 +21,7 @@ import ImageFractionalApproach from "../../assets/pages/home/fractional-approach
 import "./FractionalApproach.css";
 
 const FractionalApproach = ({
-  heading,
+  title,
   description,
   stats,
   statsDescription,
@@ -84,10 +85,12 @@ const FractionalApproach = ({
         />
 
         <div className="area-fa-heading mb-50px md:mb-100px lg:mb-120px xl:mb-132px max-w-500px lg:max-w-720px xl:max-w-none">
-          {heading}
+          <Text typography="h2" className="text-center">
+            {title}
+          </Text>
         </div>
         <div className="area-fa-description xl:justify-self-start max-w-672px xl:max-w-none lg:mt-16px xl:mt-120px">
-          {description}
+          <Text text={description} />
         </div>
         <div className="area-fa-image grid justify-items-center md:justify-items-start md:mt-57px lg:mt-0px lg:mb-18px xl:mb-124px">
           <img src={ImageFractionalApproach} alt="Fractional Approach" className="mt-29px lg:mt-12px xl:w-388px" />
@@ -166,8 +169,8 @@ const FractionalApproach = ({
 };
 
 FractionalApproach.propTypes = {
-  heading: PropTypes.any,
-  description: PropTypes.any,
+  title: PropTypes.string,
+  description: PropTypes.object,
   stats: PropTypes.string,
   statsDescription: PropTypes.string,
   tile1Number: PropTypes.string,
@@ -190,3 +193,25 @@ FractionalApproach.defaultProps = {
 };
 
 export default FractionalApproach;
+
+export const query = graphql`
+  fragment FractionalApproach on ContentfulFractionalApproach {
+    title
+    description {
+      raw
+    }
+    statsValue
+    statsDescription
+    tile1Number
+    tile1Description
+    tile2Number
+    tile2Description
+    tile3Number
+    tile3Description
+    tile4Number
+    tile4Description
+    buttonCommentText
+    buttonLink
+    buttonLabel
+  }
+`;

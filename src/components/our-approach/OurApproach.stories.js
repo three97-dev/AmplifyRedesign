@@ -19,19 +19,27 @@ Default.args = {
   title: "Our approach is simple...",
   subtitle: "We want to turn your CRM and Reporting Solutions into a top competitive advantage for your company.",
   centerText: "The Amplifying Method",
-  tileOneImage: ImageOurApproachTileOne,
+  tileOneImage: {
+    mock: ImageOurApproachTileOne,
+  },
   tileOneMainText: "UNDERSTAND YOUR BUSINESS",
   tileOneSecondaryText:
     "We are both business and tech-savvy – we will dive into your business and existing systems, understanding them as you would expect a senior employee to.",
-  tileTwoImage: ImageOurApproachTileTwo,
+  tileTwoImage: {
+    mock: ImageOurApproachTileTwo,
+  },
   tileTwoMainText: "ALIGN GOALS",
   tileTwoSecondaryText:
     "We will discuss your business and technology goals alongside your budget and available resources, ensuring we are fully aligned on how best to structure development.",
-  tileThreeImage: ImageOurApproachTileThree,
+  tileThreeImage: {
+    mock: ImageOurApproachTileThree,
+  },
   tileThreeMainText: "DEVELOPMENT MANAGEMENT",
   tileThreeSecondaryText:
     "We have a proprietory built-in tool where you, your staff and our developers can view, suggest and review on-going development together to help identify priorities.",
-  tileFourImage: ImageOurApproachTileFour,
+  tileFourImage: {
+    mock: ImageOurApproachTileFour,
+  },
   tileFourMainText: "LAUNCH NEW INITIATIVES",
   tileFourSecondaryText:
     "Not only will we be there to help your current priorities, we will pro-actively suggest ways your business can take advantage of the latest technology developments.",

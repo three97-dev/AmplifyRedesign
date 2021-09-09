@@ -8,6 +8,14 @@
         "AnswerBlock2"
         "AnswerBlock3";
     }
+    .signup-grid-tablet {
+      grid-template-columns: 67.2rem;
+      grid-template-areas:
+        "TitleBlock"
+        "AnswerBlock1"
+        "AnswerBlock2"
+        "AnswerBlock3";
+    }
     .signup-grid-web {
       grid-template-columns: 35.2rem 36.8rem 35.2rem;
       grid-template-areas:

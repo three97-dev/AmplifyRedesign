@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { graphql } from "gatsby";
 
 import Text from "../basic/text/Text";
 import Border from "../basic/border/Border";
@@ -49,9 +50,11 @@ const WhatIsCRM = ({ title1, subtitle1, contentText1, title2, subtitle2, content
         <Border borderSide="bottom" className="area-what-is-crm-title-1 hidden lg:block" />
 
         <div className="area-what-is-crm-text-1">
-          <Text typography="body" className="mt-22px lg:mt-50px xl:mt-75px mb-50px md:mb-90px lg:mb-0px">
-            {contentText1}
-          </Text>
+          <Text
+            text={contentText1}
+            typography="body"
+            className="mt-22px lg:mt-50px xl:mt-75px mb-50px md:mb-90px lg:mb-0px"
+          />
         </div>
         <Border borderSide="bottom" className="area-what-is-crm-text-1" />
 
@@ -68,9 +71,7 @@ const WhatIsCRM = ({ title1, subtitle1, contentText1, title2, subtitle2, content
         <Border borderSide="top" className="area-what-is-crm-title-2" />
 
         <div className="area-what-is-crm-text-2">
-          <Text typography="body" className="mt-22px lg:mt-50px xl:mt-75px mb-50px xl:mb-75px">
-            {contentText2}
-          </Text>
+          <Text text={contentText2} typography="body" className="mt-22px lg:mt-50px xl:mt-75px mb-50px xl:mb-75px" />
         </div>
         <Border borderSide="top" className="area-what-is-crm-text-2 hidden lg:block" />
       </div>
@@ -81,10 +82,10 @@ const WhatIsCRM = ({ title1, subtitle1, contentText1, title2, subtitle2, content
 WhatIsCRM.propTypes = {
   title1: PropTypes.string,
   subtitle1: PropTypes.string,
-  contentText1: PropTypes.string,
+  contentText1: PropTypes.object,
   title2: PropTypes.string,
   subtitle2: PropTypes.string,
-  contentText2: PropTypes.string,
+  contentText2: PropTypes.object,
   className: PropTypes.string,
 };
 
@@ -99,3 +100,22 @@ WhatIsCRM.defaultProps = {
 };
 
 export default WhatIsCRM;
+
+export const query = graphql`
+  fragment WhatIsCrm on ContentfulWhatIsCrm {
+    title1
+    subtitle1
+    contentText1 {
+      childMarkdownRemark {
+        html
+      }
+    }
+    title2
+    subtitle2
+    contentText2 {
+      childMarkdownRemark {
+        html
+      }
+    }
+  }
+`;

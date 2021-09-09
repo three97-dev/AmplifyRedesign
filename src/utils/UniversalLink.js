@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Link from "gatsby-link";
 
 const isExternalLink = link => {
@@ -37,6 +38,17 @@ const UniversalLink = ({ link, openInNewTab, children, className, ...otherProps 
       );
     }
   }
+};
+
+UniversalLink.propTypes = {
+  link: PropTypes.string,
+  openInNewTab: PropTypes.bool,
+  children: PropTypes.any,
+};
+
+UniversalLink.defaultProps = {
+  link: "/",
+  openInNewTab: false,
 };
 
 export default UniversalLink;

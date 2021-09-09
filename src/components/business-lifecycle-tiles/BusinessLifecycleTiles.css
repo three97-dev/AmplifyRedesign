@@ -52,5 +52,9 @@
     .businnes-life-cycle-tiles-button {
       grid-area: BusinnesLifeCycleTilesButton;
     }
+
+    .modal-background {
+      background: linear-gradient(#090743, #434398);
+    }
   }
 }

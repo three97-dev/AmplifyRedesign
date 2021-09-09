@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { graphql } from "gatsby";
 
+import Image from "../basic/image/Image";
 import Text from "../basic/text/Text";
 import Border from "../basic/border/Border";
 
@@ -71,13 +73,23 @@ const OurApproach = ({
               alt="background"
               className="absolute -z-10 top-0px w-156px lg:w-352px xl:w-536px"
             />
-            <Text typography="body" color="text-white" className="text-center font-bold w-82px">
+            <Text typography="ourApproachSmall" color="text-white" className="lg:hidden text-center w-82px">
+              {centerText}
+            </Text>
+            <Text
+              typography="ourApproachWeb"
+              color="text-white"
+              className="hidden lg:block xl:hidden text-center w-197px"
+            >
+              {centerText}
+            </Text>
+            <Text typography="ourApproachWebhd" color="text-white" className="hidden xl:block text-center w-300px">
               {centerText}
             </Text>
           </div>
         </div>
         <div className="area-our-approach-tile-1 mx-22px md:mx-0px md:ml-15px lg:ml-0px md:mr-34px lg:mr-0px mt-30px md:mt-0px lg:absolute lg:top-221px xl:top-295px lg:max-w-316px lg:justify-self-center">
-          <img src={tileOneImage} alt="tile one" className="mx-auto tile-image" />
+          <Image image={tileOneImage} className="mx-auto tile-image" />
           <Text typography="h4" className="text-center mt-22px">
             {tileOneMainText}
           </Text>
@@ -92,7 +104,7 @@ const OurApproach = ({
         <Border borderSide="right" className="area-our-approach-tile-1 hidden md:block lg:hidden pt-8px pb-110px" />
 
         <div className="area-our-approach-tile-2 mx-22px md:mx-0px md:ml-34px lg:ml-0px md:mr-15px lg:mr-0px mt-30px md:mt-0px lg:absolute lg:top-565px xl:top-775px lg:right-20px xl:right-32px lg:max-w-316px xl:max-w-496px">
-          <img src={tileTwoImage} alt="tile two" className="mx-auto tile-image" />
+          <Image image={tileTwoImage} className="mx-auto tile-image" />
           <Text typography="h4" className="text-center mt-22px">
             {tileTwoMainText}
           </Text>
@@ -108,7 +120,7 @@ const OurApproach = ({
         <Border borderSide="left" className="area-our-approach-tile-2 hidden md:block lg:hidden pt-8px pb-110px" />
 
         <div className="area-our-approach-tile-3 mx-22px md:mx-0px md:ml-15px lg:ml-0px md:mr-34px lg:mr-0px mt-30px md:mt-80px lg:mt-0px lg:absolute lg:bottom-97px xl:bottom-135px lg:justify-self-center lg:max-w-316px xl:max-w-496px">
-          <img src={tileThreeImage} alt="tile three" className="mx-auto tile-image" />
+          <Image image={tileThreeImage} className="mx-auto tile-image" />
           <Text typography="h4" className="text-center mt-22px">
             {tileThreeMainText}
           </Text>
@@ -124,7 +136,7 @@ const OurApproach = ({
         <Border borderSide="right" className="area-our-approach-tile-3 hidden md:block lg:hidden pt-78px" />
 
         <div className="area-our-approach-tile-4 mx-22px md:mx-0px md:ml-34px lg:ml-0px md:mr-15px mt-30px md:mt-80px lg:mt-0px lg:absolute lg:top-565px xl:top-775px lg:left-20px xl:left-32px lg:max-w-316px xl:max-w-496px">
-          <img src={tileFourImage} alt="tile four" className="mx-auto tile-image" />
+          <Image image={tileFourImage} className="mx-auto tile-image" />
           <Text typography="h4" className="text-center mt-22px">
             {tileFourMainText}
           </Text>
@@ -146,16 +158,16 @@ OurApproach.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
   centerText: PropTypes.string,
-  tileOneImage: PropTypes.any,
+  tileOneImage: PropTypes.object,
   tileOneMainText: PropTypes.string,
   tileOneSecondaryText: PropTypes.string,
-  tileTwoImage: PropTypes.any,
+  tileTwoImage: PropTypes.object,
   tileTwoMainText: PropTypes.string,
   tileTwoSecondaryText: PropTypes.string,
-  tileThreeImage: PropTypes.any,
+  tileThreeImage: PropTypes.object,
   tileThreeMainText: PropTypes.string,
   tileThreeSecondaryText: PropTypes.string,
-  tileFourImage: PropTypes.any,
+  tileFourImage: PropTypes.object,
   tileFourMainText: PropTypes.string,
   tileFourSecondaryText: PropTypes.string,
   className: PropTypes.string,
@@ -176,3 +188,31 @@ OurApproach.defaultProps = {
 };
 
 export default OurApproach;
+
+export const query = graphql`
+  fragment OurApproach on ContentfulOurApproach {
+    title
+    subtitle
+    centerText
+    tile1Image {
+      ...Image
+    }
+    tile1MainText
+    tile1SecondaryText
+    tile2Image {
+      ...Image
+    }
+    tile2MainText
+    tile2SecondaryText
+    tile3Image {
+      ...Image
+    }
+    tile3MainText
+    tile3SecondaryText
+    tile4Image {
+      ...Image
+    }
+    tile4MainText
+    tile4SecondaryText
+  }
+`;

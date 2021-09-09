@@ -1,26 +1,26 @@
 @layer utilities {
   @variants responsive {
     .testimonials-tablet-grid {
-      grid-template-columns: 1fr 32.3rem 0.3rem 1rem 3.3rem 4rem 1.6rem 32.8rem 8.1rem 1fr;
+      grid-template-columns: 1fr 32.3rem 3.5rem 1rem 4rem 1.6rem 32.8rem 8.1rem 1fr;
       grid-template-rows: 19.8rem auto;
       grid-template-areas:
-        ". TestimonialsImage . TestimonialsSliderDots . . . TestimonialsHeader . ."
-        ". TestimonialsImage . TestimonialsSliderDots . TestimonialsQuote . TestimonialsSlide . .";
+        ". TestimonialsImage TestimonialsSliderDots . . . TestimonialsHeader . ."
+        ". TestimonialsImage TestimonialsSliderDots . TestimonialsQuote . TestimonialsSlide . .";
     }
     .testimonials-desktop-grid {
-      grid-template-columns: 1fr 35.2rem 9.5rem 1rem 3.9rem 4rem 1.6rem 53.6rem 1fr;
-      grid-template-rows: 20.2rem auto;
+      grid-template-columns: 1fr 35.2rem 5.8rem 3.5rem 5.4rem 4rem 1.6rem 53.6rem 1fr;
+      grid-template-rows: 19.8rem auto;
       grid-template-areas:
         ". TestimonialsImage . TestimonialsSliderDots . . . TestimonialsHeader ."
         ". TestimonialsImage . TestimonialsSliderDots . TestimonialsQuote . TestimonialsSlide .";
     }
 
     .testimonials-hd-grid {
-      grid-template-columns: 1fr 53.6rem 11.8rem 1.6rem 8.2rem 6.1rem 1.6rem 67.4rem 1fr;
+      grid-template-columns: 1fr 53.6rem 10rem 3.5rem 7.8rem 6.1rem 1.6rem 67.4rem 140px 1fr;
       grid-template-rows: 36.2rem auto;
       grid-template-areas:
-        ". TestimonialsImage  . TestimonialsSliderDots . . . TestimonialsHeader ."
-        ". TestimonialsImage . TestimonialsSliderDots . TestimonialsQuote . TestimonialsSlide .";
+        ". TestimonialsImage  . TestimonialsSliderDots . . . TestimonialsHeader . ."
+        ". TestimonialsImage . TestimonialsSliderDots . TestimonialsQuote . TestimonialsSlide . .";
     }
 
     .testimonials-slider-slick {

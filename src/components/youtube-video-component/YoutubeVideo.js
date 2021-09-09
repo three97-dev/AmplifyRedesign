@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { graphql } from "gatsby";
 
 import Text from "../basic/text/Text";
 
@@ -52,3 +53,11 @@ YoutubeVideo.defaultProps = {
 };
 
 export default YoutubeVideo;
+
+export const query = graphql`
+  fragment YoutubeVideo on ContentfulYoutubeVideo {
+    title
+    content
+    videoLink
+  }
+`;

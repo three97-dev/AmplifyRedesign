@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { graphql } from "gatsby";
 
 import Text from "../basic/text/Text";
 import TileShadow from "../basic/tile-shadow/TileShadow";
@@ -21,10 +22,7 @@ const AboutUs = ({
   ...otherProps
 }) => {
   return (
-    <div
-      className={`grid justify-items-center w-full overflow-x-hidden ${className}`}
-      {...otherProps}
-    >
+    <div className={`grid justify-items-center w-full overflow-x-hidden ${className}`} {...otherProps}>
       <div className="grid relative au-grid-mobile md:au-grid-tablet lg:au-grid-web xl:au-grid-webhd h-max pb-64px md:pb-148px lg:pb-450px xl:pb-495px">
         <img
           src={ImageAboutUsBackgroundTablet}
@@ -43,12 +41,8 @@ const AboutUs = ({
         />
 
         <div className="area-au-texts mx-36px md:mx-0px">
-          <Text typography="h3" className="mt-88px md:mt-123px lg:mt-180px">
-            {mainText}
-          </Text>
-          <Text typography="body" className="mt-22px lg:mt-32px">
-            {secondaryText}
-          </Text>
+          <Text text={mainText} typography="h3" className="mt-88px md:mt-123px lg:mt-180px" />
+          <Text text={secondaryText} typography="body" className="mt-22px lg:mt-32px" />
         </div>
 
         <div className="area-au-tiles justify-self-center lg:justify-self-end">
@@ -108,8 +102,8 @@ const AboutUs = ({
 };
 
 AboutUs.propTypes = {
-  mainText: PropTypes.string,
-  secondaryText: PropTypes.string,
+  mainText: PropTypes.any,
+  secondaryText: PropTypes.any,
   tile1Title: PropTypes.string,
   tile1Description: PropTypes.string,
   tile2Title: PropTypes.string,
@@ -128,3 +122,22 @@ AboutUs.defaultProps = {
 };
 
 export default AboutUs;
+
+export const query = graphql`
+  fragment AboutUs on ContentfulAboutUs {
+    mainText {
+      childMarkdownRemark {
+        html
+      }
+    }
+    secondaryText {
+      childMarkdownRemark {
+        html
+      }
+    }
+    tile1Title
+    tile1Description
+    tile2Title
+    tile2Description
+  }
+`;

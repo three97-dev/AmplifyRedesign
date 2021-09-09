@@ -1,99 +1,89 @@
 import React from "react";
+import { graphql } from "gatsby";
 
-import Header from "../components/header/Header";
-import Hero from "../components/hero/Hero";
-import GettingMost from "../components/getting-most/GettingMost";
+import Seo from "../seo/Seo";
+import { Hero, AnalyticsFeatures, GettingMost, Heading, SiteFooter, SiteHeader, YouTubeVideo } from "../components";
 
-import Heading from "../components/heading/Heading";
-import AnalyticsFeatures from "../components/analytics-features/AnalyticsFeatures";
-import YoutubeVideo from "../components/youtube-video-component/YoutubeVideo";
-
-export default function AnalyticsPage() {
-  const header = {
-    sendButtonLink: "/",
-    isInverted: false,
-    links: [
-      { link: "/about", label: "About" },
-      { link: "/crm", label: "CRM" },
-      { link: "/analytics", label: "Analytics" },
-      { link: "/blog", label: "Blog" },
-      { link: "/contact", label: "Contact" },
-    ],
-  };
-  const hero = {
-    type: "type3",
-    title: "Realize the power of proactive data insights.",
-    subtitle: "Start to make data-driven decisions for your business and see the difference for yourself.",
-  };
-
-  const gettingMost = {
-    title: "Is your business getting the most out of your data?",
-    subtitle:
-      "We specialize in leveraging existing systems and data to create in-depth reporting and analytics that help our clients make better business decisions.",
-    blockTitle1: "REAL-TIME AND PROACTIVITY",
-    blockContent1: "Ensure you are able to flag trends and forecasts in real-time so you can act before it’s too late.",
-    blockTitle2: "DATA DRIVEN",
-    blockContent2: "Lead your meetings and reviews with data to get to richer conversations and better decisions.",
-    blockTitle3: "SAVE TIME AND COSTS",
-    blockContent3:
-      "Connect directly to your data sources to avoid time spent on creating and managing one-off Excel reporting.",
-  };
-
-  const headingBlue = {
-    text: "Are you ready to connect?",
-    link: "/contact",
-  };
-
-  const analyticsFeatures = {
-    title: "Analytics provides the ability to be pro-active about your business activities.",
-    subtitle: "Power BI helps to…",
-    features: [
-      {
-        title: "CONNECT TO MULTIPLE DATABASES",
-        content: "Bring your sales, marketing, service and accounting data together to create centralized reporting.",
-      },
-      {
-        title: "SET SCHEDULE REFRESH DATE/ TIMES",
-        content:
-          "Set scheduled refresh dates and times, eliminating outdated information, manual updates and static excel reports",
-      },
-      {
-        title: "POWERFUL VISUALIZATIONS FOR BUSINESS INSIGHTS",
-        content:
-          "Easily compare month-over-month or year-over-year sales performance, operational efficiency, financial performance and other important KPI’s.",
-      },
-      {
-        title: "REDUCE “ONE-OFF” AND STATIC EXCEL REPORTS",
-        content:
-          "Connect directly to your raw data source to limit time spent on updating and reconciling your reports.",
-      },
-      {
-        title: "SET PERMISSIONS AND SECURITIES TO SCALE REPORTS",
-        content: "Create scalable reports with user/ role/department specific permissions.",
-      },
-      {
-        title: "POWERFUL DRILLDOWNS FOR BUSINESS INSIGHTS",
-        content:
-          "Drill down on reports to investigate the cause of trends or variations in both performance and underperformance.",
-      },
-    ],
-  };
-
-  const youtubeVideo = {
-    title: "Want to see Power BI in action?",
-    content:
-      "Power BI is feature-rich data mashup and report authoring tool that helps you understand data quality and formatting issues.",
-    videoLink: "https://www.youtube.com/embed/YKSNBIlM_bY",
-  };
+export default function AnalyticsPage({ data }) {
+  const { contentfulAnalyticsPage } = data;
+  const { gettingMost, analyticsFeatures, youtubeVideo } = contentfulAnalyticsPage;
 
   return (
-    <>
-      <Header {...header} />
-      <Hero {...hero} />
-      <GettingMost {...gettingMost} />
-      <AnalyticsFeatures {...analyticsFeatures} />
-      <Heading {...headingBlue} />
-      <YoutubeVideo {...youtubeVideo} />
-    </>
+    <Seo seo={contentfulAnalyticsPage}>
+      <SiteHeader />
+      <Hero type="type3" title={contentfulAnalyticsPage.heroTitle} subtitle={contentfulAnalyticsPage.heroSubtitle} />
+      <GettingMost
+        title={gettingMost.title}
+        subtitle={gettingMost.subtitle}
+        blockTitle1={gettingMost.block1Title}
+        blockContent1={gettingMost.block1Content}
+        blockTitle2={gettingMost.block2Title}
+        blockContent2={gettingMost.block2Content}
+        blockTitle3={gettingMost.block3Title}
+        blockContent3={gettingMost.block3Content}
+        className="mt-100px md:mt-25px lg:-mt-14px xl:-mt-180px"
+      />
+      <AnalyticsFeatures
+        title={analyticsFeatures.title}
+        subtitle={analyticsFeatures.subtitle}
+        feature1Title={analyticsFeatures.feature1Title}
+        feature1Content={analyticsFeatures.feature1Content}
+        feature2Title={analyticsFeatures.feature2Title}
+        feature2Content={analyticsFeatures.feature2Content}
+        feature3Title={analyticsFeatures.feature3Title}
+        feature3Content={analyticsFeatures.feature3Content}
+        feature4Title={analyticsFeatures.feature4Title}
+        feature4Content={analyticsFeatures.feature4Content}
+        feature5Title={analyticsFeatures.feature5Title}
+        feature5Content={analyticsFeatures.feature5Content}
+        feature6Title={analyticsFeatures.feature6Title}
+        feature6Content={analyticsFeatures.feature6Content}
+        className="-mt-5px md:-mt-120px lg:-mt-125px xl:-mt-160px"
+      />
+      <Heading type="type4" text={contentfulAnalyticsPage.heading1Label} link={contentfulAnalyticsPage.heading1Link} />
+      <YouTubeVideo title={youtubeVideo.title} content={youtubeVideo.content} videoLink={youtubeVideo.videoLink} />
+      <SiteFooter />
+    </Seo>
   );
 }
+
+export const pageQuery = graphql`
+  query AnalyticsPageQuery {
+    contentfulAnalyticsPage(id: { eq: "5e71c382-a438-54de-affc-161f273093ad" }) {
+      heroTitle
+      heroSubtitle
+      gettingMost {
+        ...GettingMost
+      }
+      analyticsFeatures {
+        ...AnalyticsFeatures
+      }
+      heading1Label
+      heading1Link
+      youtubeVideo {
+        ...YoutubeVideo
+      }
+      seoTitle
+      seoDescription {
+        seoDescription
+      }
+      seoImage {
+        ...SEOImage
+      }
+      seoOgTitle
+      seoOgDescription {
+        seoOgDescription
+      }
+      seoOgImage {
+        ...SEOImage
+      }
+      seoTwitterTitle
+      seoTwitterDescription {
+        seoTwitterDescription
+      }
+      seoTwitterImage {
+        ...SEOImage
+      }
+    }
+  }
+`;

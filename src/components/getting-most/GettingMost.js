@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { graphql } from "gatsby";
 
 import "./GettingMost.css";
 import Text from "../basic/text/Text";
@@ -121,3 +122,16 @@ GettingMost.defaultProps = {
 };
 
 export default GettingMost;
+
+export const query = graphql`
+  fragment GettingMost on ContentfulGettingMost {
+    title
+    subtitle
+    block1Title
+    block1Content
+    block2Title
+    block2Content
+    block3Title
+    block3Content
+  }
+`;

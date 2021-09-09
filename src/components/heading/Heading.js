@@ -5,8 +5,48 @@ import Text from "../basic/text/Text";
 import UniversalLink from "../../utils/UniversalLink";
 
 import ImageArrowRightButton from "../../assets/heading/arrow-right-button.svg";
+import HeadingImage from "../../assets/heading/heading-home-blue-webhd.svg";
 
 import "./Heading.css";
+
+const BLUE_HEADING_BACKGROUNDS = {
+  type1: (
+    <img
+      src={HeadingImage}
+      alt="heading home"
+      className="hidden md:block absolute z-10 -top-96px lg:-top-180px xl:-top-300px -left-76px lg:-left-83px xl:-left-170px w-176px lg:w-260px xl:w-auto"
+    />
+  ),
+  type2: (
+    <img
+      src={HeadingImage}
+      alt="heading about"
+      className="hidden md:block absolute z-10 -bottom-120px lg:-bottom-133px lg:-bottom-147px -left-130px lg:-left-101px xl:-left-61px w-203px"
+    />
+  ),
+  type3: (
+    <img
+      src={HeadingImage}
+      alt="heading crm"
+      className="hidden md:block absolute z-10 -top-79px lg:-top-148px xl:-top-156px -left-37px xl:-left-35px lg:-left-33px w-150px lg:w-203px xl:w-221px"
+    />
+  ),
+  type4: (
+    <img
+      src={HeadingImage}
+      alt="heading crm"
+      className="hidden lg:block absolute z-10 -bottom-147px xl:-bottom-213px -left-11px xl:-left-1px w-185px xl:w-250px"
+    />
+  ),
+};
+
+const resolveBlueHeadingBackgrounds = type => {
+  if (BLUE_HEADING_BACKGROUNDS[type]) {
+    return BLUE_HEADING_BACKGROUNDS[type];
+  } else {
+    return null;
+  }
+};
 
 const RightBackground = ({ className }) => {
   return (
@@ -66,14 +106,17 @@ const LeftBackground = ({ className }) => {
   );
 };
 
-const Heading = ({ direction, color, text, link, className, ...otherProps }) => {
+const Heading = ({ direction, color, text, link, isHuge, type, className, ...otherProps }) => {
   const colorCss = color === "blue" ? "bg-heading-blue" : "bg-heading-red";
   if (direction === "left") {
     return (
       <div className={`w-full ${className}`} {...otherProps}>
         <div
-          className={`grid heading-grid-left-mobile md:heading-grid-left-tablet lg:heading-grid-left-web xl:heading-grid-left-webhd items-center h-210px xl:h-260px mr-36px lg:mr-75px xl:mr-140px rounded-tr-80px rounded-br-80px ${colorCss}`}
+          className={`grid relative heading-grid-left-mobile md:heading-grid-left-tablet lg:heading-grid-left-web xl:heading-grid-left-webhd items-center h-210px ${
+            isHuge ? "xl:h-260px" : ""
+          }  mr-36px lg:mr-75px xl:mr-140px rounded-tr-80px rounded-br-80px ${colorCss}`}
         >
+          {resolveBlueHeadingBackgrounds(type)}
           <LeftBackground className="w-full h-full col-span-full row-span-full" />
           <div className="area-heading-text ml-36px md:ml-81px lg:ml-139px xl:ml-140px">
             <Text typography="h2" color="text-white">
@@ -92,7 +135,9 @@ const Heading = ({ direction, color, text, link, className, ...otherProps }) => 
     return (
       <div className={`w-full ${className}`} {...otherProps}>
         <div
-          className={`grid heading-grid-right-mobile md:heading-grid-right-tablet lg:heading-grid-right-web items-center h-210px xl:h-260px ml-36px lg:ml-75px xl:ml-140px rounded-tl-80px rounded-bl-80px ${colorCss}`}
+          className={`grid heading-grid-right-mobile md:heading-grid-right-tablet lg:heading-grid-right-web items-center h-210px ${
+            isHuge ? "xl:h-260px" : ""
+          } ml-36px lg:ml-75px xl:ml-140px rounded-tl-80px rounded-bl-80px ${colorCss}`}
         >
           <RightBackground className="w-full h-full col-span-full row-span-full" />
           <div className="area-heading-text ml-82px md:ml-45px lg:ml-64px xl:ml-138px">

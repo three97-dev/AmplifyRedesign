@@ -1,12 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { graphql } from "gatsby";
 
-import "./WhyAmplify.css";
 import Text from "../basic/text/Text";
 import Border from "../basic/border/Border";
 
 import ImageBackgroundWebAndWebHd from "../../assets/pages/about/why-amplify-bg-web-webhd.svg";
 import ImageBackgroundTablet from "../../assets/pages/about/why-amplify-bg-tablet.svg";
+
+import "./WhyAmplify.css";
 
 const WhyAmplify = ({
   title,
@@ -22,7 +24,7 @@ const WhyAmplify = ({
 }) => {
   return (
     <div className={`grid justify-items-center w-full overflow-x-hidden ${className}`} {...otherProps}>
-      <div className="grid relative signup-grid-mobile lg:signup-grid-web xl:signup-grid-HD md:mb-45px lg:mb-185px xl:mb-312px">
+      <div className="grid relative signup-grid-mobile md:signup-grid-tablet lg:signup-grid-web xl:signup-grid-HD md:mb-45px lg:mb-185px xl:mb-312px">
         <img
           src={ImageBackgroundWebAndWebHd}
           alt="background"
@@ -31,9 +33,9 @@ const WhyAmplify = ({
         <img
           src={ImageBackgroundTablet}
           alt="background"
-          className="hidden md:block lg:hidden absolute -z-10 md:-bottom-40px md:-right-80px max-w-none md:w-1139px"
+          className="hidden md:block lg:hidden absolute -z-10 md:-bottom-40px md:-right-160px max-w-none"
         />
-        <div className="title-block-area text-center px-36px md:px-81px lg:px-140px">
+        <div className="title-block-area text-center px-36px md:px-0px lg:px-140px">
           <Text typography="h2" className="mb-22px">
             {title}
           </Text>
@@ -42,7 +44,7 @@ const WhyAmplify = ({
           </Text>
         </div>
 
-        <div className="answer-block-area1 text-center px-56px md:px-270px lg:px-0px pb-30px lg:mr-22px lg:ml-8px xl:mr-22px">
+        <div className="answer-block-area1 text-center px-56px md:px-194px lg:px-0px pb-30px lg:mr-22px lg:ml-8px xl:mr-22px">
           <Text typography="h4" className=" mb-20px">
             {blockTitle1}
           </Text>
@@ -56,7 +58,7 @@ const WhyAmplify = ({
         />
         <Border borderSide="right" className="answer-block-area1 justify-self-end hidden lg:block lg:max-h-130px" />
 
-        <div className="answer-block-area2 text-center px-56px md:px-270px pb-32px pt-30px lg:pt-0px lg:px-28px">
+        <div className="answer-block-area2 text-center px-56px md:px-194px pb-32px pt-30px lg:pt-0px lg:px-28px">
           <Text typography="h4" className=" mb-20px xl:mb-44px">
             {blockTitle2}
           </Text>
@@ -73,7 +75,7 @@ const WhyAmplify = ({
         />
         <Border borderSide="left" className="answer-block-area2 hidden lg:block lg:max-h-130px" />
 
-        <div className="answer-block-area3 text-center px-56px md:px-270px lg:px-0px pt-30px lg:pt-0px lg:ml-24px lg:mr-10px">
+        <div className="answer-block-area3 text-center px-56px md:px-194px lg:px-0px pt-30px lg:pt-0px lg:ml-24px lg:mr-10px">
           <Text typography="h4" className="mb-20px xl:mb-44px">
             {blockTitle3}
           </Text>
@@ -114,3 +116,16 @@ WhyAmplify.defaultProps = {
 };
 
 export default WhyAmplify;
+
+export const query = graphql`
+  fragment WhyAmplify on ContentfulWhyAmplify {
+    title
+    subtitle
+    block1Title
+    block1Content
+    block2Title
+    block2Content
+    block3Title
+    block3Content
+  }
+`;
