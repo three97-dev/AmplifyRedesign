@@ -198,6 +198,7 @@ module.exports = {
       "160px": "16rem",
       "164px": "16.4rem",
       "165px": "16.5rem",
+      "166px": "16.6rem",
       "167px": "16.7rem",
       "168px": "16.8rem",
       "170px": "17rem",

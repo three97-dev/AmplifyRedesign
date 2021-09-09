@@ -16,6 +16,10 @@ const SiteFooter = () => {
           label
           link
         }
+        subtitle
+        facebookLink
+        instagramLink
+        linkedInLink
       }
     }
   `);
@@ -26,6 +30,10 @@ const SiteFooter = () => {
       copyright={data.contentfulFooterConfig.copyright}
       address={data.contentfulFooterConfig.address}
       logo={data.contentfulFooterConfig.logo}
+      subtitle={data.contentfulFooterConfig.subtitle}
+      facebookLink={data.contentfulFooterConfig.facebookLink}
+      instagramLink={data.contentfulFooterConfig.instagramLink}
+      linkedInLink={data.contentfulFooterConfig.linkedInLink}
     />
   );
 };
