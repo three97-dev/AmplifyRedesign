@@ -12,12 +12,14 @@ import "./ThankYouForSubmission.css";
 
 const ThankYouForSubmission = ({ title, color, content, className }) => {
   const { search } = useLocation();
+  const [showModal, setShowModal] = useState(false);
 
-  if (search && search.length > 0) {
-    navigate(`?thank-you`);
-  }
-
-  const [showModal, setShowModal] = useState(search && search.length > 0);
+  useEffect(() => {
+    if (search && search.length > 0) {
+      navigate(`?thank-you`);
+      setShowModal(true);
+    }
+  }, []);
 
   useEffect(() => {
     if (showModal) {
@@ -27,6 +29,7 @@ const ThankYouForSubmission = ({ title, color, content, className }) => {
     return function cleanup() {
       if (showModal) {
         document.body.style.overflowY = "scroll";
+        navigate(`/contact`);
       }
     };
   }, [showModal]);
