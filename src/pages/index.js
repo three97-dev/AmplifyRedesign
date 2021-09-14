@@ -20,7 +20,11 @@ export default function IndexPage({ data }) {
   return (
     <Seo seo={contentfulHomePage}>
       <SiteHeader isInverted={true} />
-      <HeroHome title={contentfulHomePage.heroHomeTitle} subtitle={contentfulHomePage.heroHomeSubtitle} />
+      <HeroHome
+        title={contentfulHomePage.heroHomeTitle}
+        subtitle={contentfulHomePage.heroHomeSubtitle}
+        arrowText={contentfulHomePage.heroHomeArrowText}
+      />
       <MicrosoftPartner
         title={microsoftPartner.title}
         mainText={microsoftPartner.mainText}
@@ -61,16 +65,14 @@ export default function IndexPage({ data }) {
       <FractionalApproach
         title={fractionalApproach.title}
         description={fractionalApproach.description}
+        subtitle={fractionalApproach.subtitle}
+        subtitleContent={fractionalApproach.subtitleContent}
         stats={fractionalApproach.statsValue}
         statsDescription={fractionalApproach.statsDescription}
         tile1Number={fractionalApproach.tile1Number}
         tile1Description={fractionalApproach.tile1Description}
         tile2Number={fractionalApproach.tile2Number}
         tile2Description={fractionalApproach.tile2Description}
-        tile3Number={fractionalApproach.tile3Number}
-        tile3Description={fractionalApproach.tile3Description}
-        tile4Number={fractionalApproach.tile4Number}
-        tile4Description={fractionalApproach.tile4Description}
         learnMoreText={fractionalApproach.buttonCommentText}
         learnMoreButtonLabel={fractionalApproach.buttonLabel}
         learnMoreButtonLink={fractionalApproach.buttonLink}
@@ -101,6 +103,7 @@ export const pageQuery = graphql`
         raw
       }
       heroHomeSubtitle
+      heroHomeArrowText
       microsoftPartner {
         ...MicrosoftPartner
       }

@@ -11,11 +11,11 @@ import IconClose from "../../assets/pages/home/business-lifecycle-customer-icon-
 const CustomerType = ({ image, title, subtitle, question, answer, onClick, color, className }) => {
   return (
     <TileShadow color={color} hasContentBg={false} className={className}>
-      <div className="relative max-w-318px md:max-w-672px lg:max-w-720px xl:max-w-812px">
+      <div className="relative max-w-318px md:max-w-672px lg:max-w-1246px">
         <button onClick={onClick} className="z-10px p-10px top-10px right-10px absolute">
           <img src={IconClose} alt="close" className="arrow-shadow w-16px xl:w-18px" />
         </button>
-        <div className="pt-20px pb-50px md:pb-75px mx-36px lg:mx-92px xl:mx-138px">
+        <div className="pt-30px pb-50px md:pb-75px mx-36px lg:mx-92px xl:mx-138px">
           <Image image={image} className="mx-auto w-110px md:w-130px xl:w-150px" />
           <Text typography="h2" className="text-center mt-15px md:mt-10px">
             {title}
@@ -24,7 +24,7 @@ const CustomerType = ({ image, title, subtitle, question, answer, onClick, color
           <Text typography="h3" className="mt-20px mb-25px">
             {question}
           </Text>
-          <Text text={answer} className="mt-22px" />
+          <Text text={answer} className="modal-text mt-17px" />
         </div>
       </div>
     </TileShadow>

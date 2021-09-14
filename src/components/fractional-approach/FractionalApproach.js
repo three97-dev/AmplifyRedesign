@@ -25,14 +25,12 @@ const FractionalApproach = ({
   description,
   stats,
   statsDescription,
+  subtitle,
+  subtitleContent,
   tile1Number,
   tile1Description,
   tile2Number,
   tile2Description,
-  tile3Number,
-  tile3Description,
-  tile4Number,
-  tile4Description,
   learnMoreText,
   learnMoreButtonLabel,
   learnMoreButtonLink,
@@ -60,7 +58,7 @@ const FractionalApproach = ({
         <img
           src={ImageFABackground3}
           alt="background"
-          className="hidden md:block absolute -z-10 bottom-0px lg:bottom-88px xl:bottom-120px left-72px lg:left-95px xl:left-141px w-56px lg:w-78px xl:w-110px"
+          className="hidden md:block absolute -z-10 bottom-0px lg:bottom-88px xl:bottom-135px left-72px lg:left-95px xl:left-141px w-56px lg:w-78px xl:w-110px"
         />
         <img
           src={ImageFABackground4Tablet}
@@ -75,34 +73,44 @@ const FractionalApproach = ({
         <img
           src={ImageFABackground4WebHd}
           alt="background"
-          className="hidden xl:block absolute -z-10 bottom-9px -right-140px"
+          className="hidden xl:block absolute -z-10 bottom-20px -right-140px"
         />
 
         <img
           src={ImageFABackground5}
           alt="background"
-          className="hidden md:block absolute -z-20 top-712px lg:-top-27px xl:-top-97px -right-47px lg:-right-14px xl:right-3px xl:w-526px"
+          className="hidden md:block absolute -z-20 top-691px lg:-top-27px xl:-top-97px -right-47px lg:-right-14px xl:right-3px xl:w-526px"
         />
-
-        <div className="area-fa-heading mb-50px md:mb-100px lg:mb-120px xl:mb-132px max-w-500px lg:max-w-720px xl:max-w-none">
+        <div className="area-fa-border w-full border-t-2 border-line-color2 lg:mt-28px xl:mt-50px"></div>
+        <div className="area-fa-heading mb-50px md:mb-100px lg:mb-100px xl:mb-132px max-w-500px lg:max-w-720px xl:max-w-none">
           <Text typography="h2" className="text-center">
             {title}
           </Text>
         </div>
-        <div className="area-fa-description xl:justify-self-start max-w-672px xl:max-w-none lg:mt-16px xl:mt-120px">
+        <div className="area-fa-description items-center flex max-w-672px xl:max-w-none lg:mt-16px xl:mt-20px md:mb-40px lg:mb-0px">
           <Text text={description} />
         </div>
-        <div className="area-fa-image grid justify-items-center md:justify-items-start md:mt-57px lg:mt-0px lg:mb-18px xl:mb-124px">
-          <img src={ImageFractionalApproach} alt="Fractional Approach" className="mt-29px lg:mt-12px xl:w-388px" />
+        <div className="area-fa-image grid justify-items-center md:justify-items-start md:mr-17px md:mt-45px lg:mt-38px xl:mt-55px lg:mb-18px xl:mb-124px">
+          <img
+            src={ImageFractionalApproach}
+            alt="Fractional Approach"
+            className="mt-29px lg:mt-12px md:w-328px xl:w-388px"
+          />
         </div>
-        <div className="area-fa-stats mt-29px md:mt-83px lg:mt-0px lg:mb-18px xl:mt-20px md:ml-8px text-center">
-          <Text typography="stats">{stats}</Text>
-          <Text typography="h3" className="mt-12px">
+        <div className="area-fa-stats mt-33px md:mt-80px lg:mt-53px xl:mt-83px lg:mb-18px md:ml-8px lg:ml-0px text-center">
+          <Text typography="h1">{stats}</Text>
+          <Text typography="h3" className="mt-6px md:mt-4px">
             {statsDescription}
           </Text>
         </div>
-        <div className="area-fa-tile1 justify-self-center lg:justify-self-end mt-52px md:mt-102px lg:mt-0px md:mr-10px lg:mr-0px flex flex-col items-center">
-          <TileShadow color="type5" className="md:mr-10p">
+        <div className="area-fa-subtitle pt-52px ">
+          <Text typography="h3" className="mb-22px">
+            {subtitle}
+          </Text>
+          <Text text={subtitleContent} typography="body" />
+        </div>
+        <div className="area-fa-tile1 justify-self-center lg:justify-self-start mt-25px md:mt-0px lg:mt-18px xl:mt-0px md:mr-10px lg:mr-0px flex flex-col items-center">
+          <TileShadow color="type3">
             <Text
               typography="stats"
               className="w-154px h-154px md:w-156px md:h-156px lg:w-168px lg:h-168px xl:w-260px xl:h-260px flex items-center justify-center"
@@ -110,12 +118,12 @@ const FractionalApproach = ({
               {tile1Number}
             </Text>
           </TileShadow>
-          <Text typography="h4" className="mt-42px xl:mt-52px text-center max-w-154px lg:max-w-168px xl:max-w-260px">
+          <Text typography="h4" className="mt-42px xl:mt-52px text-center lg:max-w-168px xl:max-w-260px">
             {tile1Description}
           </Text>
         </div>
-        <div className="area-fa-tile2 justify-self-center lg:justify-self-end mt-52px md:mt-102px lg:mt-0px md:ml-8px flex flex-col items-center">
-          <TileShadow color="type2" className="md:-mr-8p">
+        <div className="area-fa-tile2 justify-self-center lg:justify-self-end md:ml-4px mt-52px md:mt-0px lg:mt-18px xl:mt-0px flex flex-col items-center">
+          <TileShadow color="type5" className="md:mr-10p">
             <Text
               typography="stats"
               className="w-154px h-154px md:w-156px md:h-156px lg:w-168px lg:h-168px xl:w-260px xl:h-260px flex items-center justify-center"
@@ -123,37 +131,14 @@ const FractionalApproach = ({
               {tile2Number}
             </Text>
           </TileShadow>
-          <Text typography="h4" className="mt-42px xl:mt-52px text-center max-w-154px lg:max-w-168px xl:max-w-260px">
+          <Text
+            typography="h4"
+            className="mt-37px md:mt-42px mb-50px lg:mb-0px xl:mt-52px text-center lg:max-w-168px xl:max-w-260px"
+          >
             {tile2Description}
           </Text>
         </div>
-        <div className="area-fa-tile3 justify-self-center lg:justify-self-end mt-52px md:mt-76px lg:mt-50px xl:mt-76px md:mr-10px lg:mr-0px flex flex-col items-center">
-          <TileShadow color="type3">
-            <Text
-              typography="stats"
-              className="w-154px h-154px md:w-156px md:h-156px lg:w-168px lg:h-168px xl:w-260px xl:h-260px flex items-center justify-center"
-            >
-              {tile3Number}
-            </Text>
-          </TileShadow>
-          <Text typography="h4" className="mt-42px xl:mt-52px text-center lg:max-w-168px xl:max-w-260px">
-            {tile3Description}
-          </Text>
-        </div>
-        <div className="area-fa-tile4 justify-self-center lg:justify-self-end mt-52px md:mt-76px lg:mt-50px xl:mt-76px md:ml-8px flex flex-col items-center">
-          <TileShadow color="type6">
-            <Text
-              typography="stats"
-              className="w-154px h-154px md:w-156px md:h-156px lg:w-168px lg:h-168px xl:w-260px xl:h-260px flex items-center justify-center"
-            >
-              {tile4Number}
-            </Text>
-          </TileShadow>
-          <Text typography="h4" className="mt-42px xl:mt-52px text-center lg:max-w-168px xl:max-w-260px">
-            {tile4Description}
-          </Text>
-        </div>
-        <div className="area-fa-button mt-50px md:mt-76px xl:mt-130px grid justify-items-center">
+        <div className="area-fa-button mt-50px md:mt-76px lg:mt-83px xl:mt-30px grid justify-items-center">
           <Text typography="body" className="text-center">
             {learnMoreText}
           </Text>
@@ -173,14 +158,12 @@ FractionalApproach.propTypes = {
   description: PropTypes.object,
   stats: PropTypes.string,
   statsDescription: PropTypes.string,
+  subtitle: PropTypes.string,
+  subtitleContent: PropTypes.string,
   tile1Number: PropTypes.string,
   tile1Description: PropTypes.string,
   tile2Number: PropTypes.string,
   tile2Description: PropTypes.string,
-  tile3Number: PropTypes.string,
-  tile3Description: PropTypes.string,
-  tile4Number: PropTypes.string,
-  tile4Description: PropTypes.string,
   learnMoreText: PropTypes.string,
   learnMoreButtonLabel: PropTypes.string,
   learnMoreButtonLink: PropTypes.string,
@@ -190,6 +173,18 @@ FractionalApproach.propTypes = {
 FractionalApproach.defaultProps = {
   learnMoreButtonLink: "/",
   className: "",
+  subtitle: "some subtitle",
+  subtitleContent: "some subtitleContent",
+  title: "some title",
+  description: "some description",
+  stats: "some stats",
+  statsDescription: "some statsDescription",
+  tile1Number: "some tile1Number",
+  tile1Description: "some tile1Description",
+  tile2Number: "some tile2Number",
+  tile2Description: "some tile2Description",
+  learnMoreText: "some learnMoreText",
+  learnMoreButtonLabel: "some learnMoreButtonLabel",
 };
 
 export default FractionalApproach;
@@ -197,6 +192,12 @@ export default FractionalApproach;
 export const query = graphql`
   fragment FractionalApproach on ContentfulFractionalApproach {
     title
+    subtitle
+    subtitleContent {
+      childMarkdownRemark {
+        html
+      }
+    }
     description {
       raw
     }
@@ -206,10 +207,6 @@ export const query = graphql`
     tile1Description
     tile2Number
     tile2Description
-    tile3Number
-    tile3Description
-    tile4Number
-    tile4Description
     buttonCommentText
     buttonLink
     buttonLabel

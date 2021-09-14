@@ -4,12 +4,12 @@
       grid-template-areas:
         "Heading"
         "Description"
-        "Image"
-        "Stats"
         "Tile1"
         "Tile2"
-        "Tile3"
-        "Tile4"
+        "Border"
+        "Subtitle"
+        "Image"
+        "Stats"
         "Button";
     }
 
@@ -18,29 +18,30 @@
       grid-template-areas:
         "Heading Heading"
         "Description Description"
-        "Image Stats"
         "Tile1 Tile2"
-        "Tile3 Tile4"
+        "Border Border"
+        "Subtitle Subtitle"
+        "Image Stats"
         "Button Button";
     }
 
     .fa-grid-web-small {
-      grid-template-columns: 26.8rem 26.8rem 27.6rem 27.6rem;
+      grid-template-columns: 53.6rem 10.8rem 27.6rem 16.8rem;
       grid-template-areas:
         "Heading Heading Heading Heading"
-        "Description Description Tile1 Tile2"
-        "Description Description Tile3 Tile4"
-        "Image Stats Tile3 Tile4"
+        "Description .  Tile1 Tile2"
+        "Border Border Border Border"
+        "Subtitle . Image Stats"
         "Button Button Button Button";
     }
 
     .fa-grid-web {
-      grid-template-columns: 40.6rem 40.6rem 41.4rem 41.4rem;
+      grid-template-columns: 81.2rem 15.4rem 41.4rem 26rem;
       grid-template-areas:
         "Heading Heading Heading Heading"
-        "Description Description Tile1 Tile2"
-        "Description Description Tile3 Tile4"
-        "Image Stats Tile3 Tile4"
+        "Description .  Tile1 Tile2"
+        "Border Border Border Border"
+        "Subtitle . Image Stats"
         "Button Button Button Button";
     }
   }
@@ -58,18 +59,18 @@
 .area-fa-stats {
   grid-area: Stats;
 }
-.area-fa-tile1 {
-  grid-area: Tile1;
-}
 .area-fa-tile2 {
   grid-area: Tile2;
 }
-.area-fa-tile3 {
-  grid-area: Tile3;
-}
-.area-fa-tile4 {
-  grid-area: Tile4;
+.area-fa-tile1 {
+  grid-area: Tile1;
 }
 .area-fa-button {
   grid-area: Button;
+}
+.area-fa-subtitle {
+  grid-area: Subtitle;
+}
+.area-fa-border {
+  grid-area: Border;
 }

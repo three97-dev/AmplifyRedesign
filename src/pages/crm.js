@@ -5,7 +5,7 @@ import Seo from "../seo/Seo";
 import {
   Hero,
   AdvantagesOfCRM,
-  HowCRMHelps,
+  HowCRMHelpsVideo,
   Heading,
   PieChart,
   SiteFooter,
@@ -16,7 +16,6 @@ import {
 export default function CRMPage({ data }) {
   const { contentfulCrmPage } = data;
   const { whatIsCrm, pieChart, advantagesOfCrm, howCrmHelps } = contentfulCrmPage;
-
   return (
     <Seo seo={contentfulCrmPage}>
       <SiteHeader />
@@ -51,10 +50,10 @@ export default function CRMPage({ data }) {
         advantages6Title={advantagesOfCrm.advantages6Title}
         advantages6Content={advantagesOfCrm.advantages6Content}
       />
-      <HowCRMHelps
+      <HowCRMHelpsVideo
         title={howCrmHelps.title}
         subtitle={howCrmHelps.subtitle}
-        image={howCrmHelps.image}
+        videoLink={howCrmHelps.videoLink}
         mainText={howCrmHelps.mainText}
         secondaryText={howCrmHelps.secondaryText}
         className="md:-mt-50px xl:-mt-58px"
@@ -99,7 +98,7 @@ export const pageQuery = graphql`
         ...AdvantagesOfCrm
       }
       howCrmHelps {
-        ...HowCrmHelps
+        ...HowCrmHelpsVideo
       }
       seoTitle
       seoDescription {

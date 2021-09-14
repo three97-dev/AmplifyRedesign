@@ -27,6 +27,7 @@ import HeroBlogPost from "./hero-blog-post/HeroBlogPost";
 import HeroContactForm from "./hero-contact-form/HeroContactForm";
 import HeroHome from "./hero-home/HeroHome";
 import HowCRMHelps from "./how-crm-helps/HowCRMHelps";
+import HowCRMHelpsVideo from "./how-crm-helps-video/HowCRMHelpsVideo";
 import MapsComponent from "./maps-component/MapsComponent";
 import MicrosoftPartner from "./microsoft-partner/MicrosoftPartner";
 import OurApproach from "./our-approach/OurApproach";
@@ -71,6 +72,7 @@ export {
   FractionalApproach,
   GettingMost,
   HowCRMHelps,
+  HowCRMHelpsVideo,
   MapsComponent,
   MicrosoftPartner,
   OurApproach,

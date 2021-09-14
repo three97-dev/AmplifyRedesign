@@ -29,4 +29,5 @@ Default.args = {
     </>
   ),
   subtitle: "A CRM can amplify your insights, providing new revenue opportunities and workforce efficiencies.",
+  arrowText: "Learn More"
 };

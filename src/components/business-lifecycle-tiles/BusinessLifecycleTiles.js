@@ -39,27 +39,15 @@ const BusinessLifecycleTiles = ({
   ...otherProps
 }) => {
   const [showModalIndex, setShowModalIndex] = useState(null);
-  const [enableModalScroll, setEnableModalScroll] = useState(false);
 
   useEffect(() => {
-    const xOffset = window.pageXOffset;
-    const yOffset = window.pageYOffset;
     if (showModalIndex !== null) {
       document.body.style.overflowY = "hidden";
-      document.body.style.position = "fixed";
-      setEnableModalScroll(true);
     }
 
     return function cleanup() {
       if (showModalIndex !== null) {
         document.body.style.overflowY = "scroll";
-        document.body.style.position = null;
-        setEnableModalScroll(false);
-        window.scrollTo({
-          left: xOffset,
-          top: yOffset,
-          behavior: "auto",
-        });
       }
     };
   }, [showModalIndex]);
@@ -69,11 +57,11 @@ const BusinessLifecycleTiles = ({
   return (
     <>
       <div className={`grid justify-items-center w-full overflow-hidden ${className}`} {...otherProps}>
-        <div className="grid relative justify-items-center businnes-life-cycle-tiles-mobile md:businnes-life-cycle-tiles-grid-tablet lg:businnes-life-cycle-tiles-grid-web xl:businnes-life-cycle-tiles-grid-webHD mb-150px md:mb-215px lg:mb-237px xl:mb-285px">
+        <div className="grid relative justify-items-center businnes-life-cycle-tiles-mobile md:businnes-life-cycle-tiles-grid-tablet lg:businnes-life-cycle-tiles-grid-web lg+:businnes-life-cycle-tiles-grid-webHD mb-150px md:mb-215px lg:mb-237px lg+:mb-285px">
           <img
             src={businessStylesBg}
             alt="background"
-            className="block absolute -z-10 -bottom-150px -right-140px md:-bottom-210px md:-right-284px lg:-bottom-221px lg:-right-140px xl:-bottom-310px xl:-right-140px max-w-none w-632pxpx md:w-1242px lg:w-1366px xl:w-1920px"
+            className="block absolute -z-10 -bottom-150px -right-140px md:-bottom-210px md:-right-284px lg:-bottom-221px lg:-right-140px lg+:-bottom-310px lg+:-right-140px max-w-none w-632pxpx md:w-1242px lg:w-1366px lg+:w-1920px"
           />
           <img
             src={HeadingImage}
@@ -87,13 +75,13 @@ const BusinessLifecycleTiles = ({
             <Text typography="h3" className="hidden md:block">
               {title}
             </Text>
-            <Text typography="h3" color="text-fontcolor-body" className="xl:hidden mt-23px lg:mb-107px">
+            <Text typography="h3" color="text-fontcolor-body" className="lg+:hidden mt-23px lg:mb-107px">
               {subtitle}
             </Text>
             <Text
               typography="body"
               color="text-fontcolor-body "
-              className="hidden xl:block mt-23px lg:mb-107px xl:mb-130px"
+              className="hidden lg+:block mt-23px lg:mb-107px lg+:mb-130px"
             >
               {subtitle}
             </Text>
@@ -107,11 +95,11 @@ const BusinessLifecycleTiles = ({
               }}
             >
               <div>
-                <Image image={tileOneImage} className="mx-auto w-115px xl:w-174px" />
+                <Image image={tileOneImage} className="mx-auto w-115px lg+:w-174px" />
                 <Text typography="h4" className="mt-22px">
                   {blockTitle1}
                 </Text>
-                <Text typography="body" color="text-fontcolor-body" className="mt-21px xl:mr-2px pb-30px">
+                <Text typography="body" color="text-fontcolor-body" className="mt-21px lg+:mr-2px pb-30px">
                   {blockContent1}
                 </Text>
               </div>
@@ -119,7 +107,7 @@ const BusinessLifecycleTiles = ({
           </div>
           <Border
             borderSide="right"
-            className="businnes-life-cycle-tiles-tiles1 sm:hidden md:block lg:block justify-self-end md:max-h-310px lg:max-h-308px xl:max-h-327px md:ml-9px lg:ml-0px md:pb-5px lg:pb-0px md:mt-52px lg:mt-0px"
+            className="businnes-life-cycle-tiles-tiles1 sm:hidden md:block lg:block justify-self-end md:max-h-310px lg:max-h-308px lg+:max-h-327px md:ml-9px lg:ml-0px md:pb-5px lg:pb-0px md:mt-52px lg:mt-0px"
           />
 
           <Border
@@ -135,8 +123,8 @@ const BusinessLifecycleTiles = ({
               }}
             >
               <div>
-                <Image image={tileTwoImage} className="mx-auto w-115px xl:w-165px" />
-                <Text typography="h4" className="mt-21px xl:mt-31px">
+                <Image image={tileTwoImage} className="mx-auto w-115px lg+:w-165px" />
+                <Text typography="h4" className="mt-21px lg+:mt-31px">
                   {blockTitle2}
                 </Text>
                 <Text typography="body" color="text-fontcolor-body" className="mt-21px lg:mt-22px pb-30px">
@@ -155,11 +143,11 @@ const BusinessLifecycleTiles = ({
           />
           <Border
             borderSide="left"
-            className="businnes-life-cycle-tiles-tiles2 justify-self-end hidden md:block lg:max-h-308px md:max-h-310px lg:max-h-308px xl:max-h-327px md:pb-5px lg:pb-0px md:mt-52px lg:mt-0px"
+            className="businnes-life-cycle-tiles-tiles2 justify-self-end hidden md:block lg:max-h-308px md:max-h-310px lg:max-h-308px lg+:max-h-327px md:pb-5px lg:pb-0px md:mt-52px lg:mt-0px"
           />
           <Border
             borderSide="right"
-            className="businnes-life-cycle-tiles-tiles2 justify-self-end hidden lg:block md:max-h-310px lg:max-h-308px xl:max-h-327px"
+            className="businnes-life-cycle-tiles-tiles2 justify-self-end hidden lg:block md:max-h-310px lg:max-h-308px lg+:max-h-327px"
           />
           <div className="businnes-life-cycle-tiles-tiles3 text-center px-20px md:px-30px lg:px-30px mt-30px lg:mt-0px md:mr-9px lg:mr-0px">
             <button
@@ -169,11 +157,11 @@ const BusinessLifecycleTiles = ({
               }}
             >
               <div>
-                <Image image={tileThreeImage} className="mx-auto w-115px xl:w-165px" />
-                <Text typography="h4" className="mt-21px xl:mt-31px">
+                <Image image={tileThreeImage} className="mx-auto w-115px lg+:w-165px" />
+                <Text typography="h4" className="mt-21px lg+:mt-31px">
                   {blockTitle3}
                 </Text>
-                <Text typography="body" color="text-fontcolor-body" className="mt-21px xl:mt-45px pb-30px">
+                <Text typography="body" color="text-fontcolor-body" className="mt-21px lg+:mt-45px pb-30px">
                   {blockContent3}
                 </Text>
               </div>
@@ -185,11 +173,11 @@ const BusinessLifecycleTiles = ({
           />
           <Border
             borderSide="left"
-            className="businnes-life-cycle-tiles-tiles3 justify-self-start hidden lg:block lg:max-h-308px xl:max-h-327px"
+            className="businnes-life-cycle-tiles-tiles3 justify-self-start hidden lg:block lg:max-h-308px lg+:max-h-327px"
           />
           <Border
             borderSide="right"
-            className="businnes-life-cycle-tiles-tiles3 hidden md:block justify-self-end max-w-154px md:max-h-285px lg:max-h-308px xl:max-h-327px md:ml-9px lg:ml-0px md:pt-10px lg:pt-0px"
+            className="businnes-life-cycle-tiles-tiles3 hidden md:block justify-self-end max-w-154px md:max-h-285px lg:max-h-308px lg+:max-h-327px md:ml-9px lg:ml-0px md:pt-10px lg:pt-0px"
           />
           <Border
             borderSide="top"
@@ -204,8 +192,8 @@ const BusinessLifecycleTiles = ({
               }}
             >
               <div>
-                <Image image={tileFourImage} className="mx-auto w-115px xl:w-165px" />
-                <Text typography="h4" className="mt-21px xl:mt-31px">
+                <Image image={tileFourImage} className="mx-auto w-115px lg+:w-165px" />
+                <Text typography="h4" className="mt-21px lg+:mt-31px">
                   {blockTitle4}
                 </Text>
                 <Text typography="body" color="text-fontcolor-body" className="mt-21px md:mt-45px lg:mt-21px">
@@ -216,7 +204,7 @@ const BusinessLifecycleTiles = ({
           </div>
           <Border
             borderSide="left"
-            className="businnes-life-cycle-tiles-tiles4 hidden md:block justify-self-start md:max-h-285px lg:max-h-308px xl:max-h-327px md:mr-7px lg:mr-0px md:pt-10px lg:pt-0px"
+            className="businnes-life-cycle-tiles-tiles4 hidden md:block justify-self-start md:max-h-285px lg:max-h-308px lg+:max-h-327px md:mr-7px lg:mr-0px md:pt-10px lg:pt-0px"
           />
           <Border
             borderSide="top"
@@ -225,18 +213,16 @@ const BusinessLifecycleTiles = ({
           <Button
             label={homeSmthElse}
             link={homeSmthButtonLink}
-            className="businnes-life-cycle-tiles-button mt-50px lg:mt-70px xl:mt-99px w-full md:max-w-328px lg:max-w-352px xl:max-w-536px"
+            className="businnes-life-cycle-tiles-button mt-50px lg:mt-70px lg+:mt-99px w-full md:max-w-328px lg:max-w-352px lg+:max-w-536px"
           />
         </div>
       </div>
       {showModalIndex !== null ? (
         <div
-          className={`fixed z-100 h-full w-full grid justify-items-center top-0px left-0px modal-background  ${
-            enableModalScroll ? "overflow-y-scroll" : "overflow-y-hidden"
-          }`}
+          className="fixed z-100 h-full w-full grid justify-items-center top-0px left-0px modal-background overflow-y-auto"
           onClick={() => setShowModalIndex(null)}
         >
-          <div className="py-150px">
+          <div className="mx-36px mt-36px mb-50px md:mx-0px md:my-auto md:pt-20px md:pb-40px lg+:pt-40px lg+:pb-60px">
             <div onClick={e => e.stopPropagation()}>
               <CustomerTypeModal
                 image={tileModals[showModalIndex].image}

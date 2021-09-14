@@ -7,10 +7,13 @@ import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 
 import Text from "../basic/text/Text";
 
+import ArrowImage from "../../assets/hero-home/arrow-down.svg";
+
 const BACKGROUNDS = {
   MobileBg: ({ alt, className }) => (
     <StaticImage
       src="../../assets/hero-home/hero-home-mobile.png"
+      quality={100}
       placeholder="blurred"
       layout="fixed"
       alt={alt}
@@ -20,6 +23,7 @@ const BACKGROUNDS = {
   TabletBg: ({ alt, className }) => (
     <StaticImage
       src="../../assets/hero-home/hero-home-tablet.png"
+      quality={100}
       placeholder="blurred"
       layout="fixed"
       alt={alt}
@@ -29,6 +33,7 @@ const BACKGROUNDS = {
   WebBg: ({ alt, className }) => (
     <StaticImage
       src="../../assets/hero-home/hero-home-web.png"
+      quality={100}
       placeholder="blurred"
       layout="fixed"
       alt={alt}
@@ -38,6 +43,7 @@ const BACKGROUNDS = {
   WebHdBg: ({ alt, className }) => (
     <StaticImage
       src="../../assets/hero-home/hero-home-webhd.png"
+      quality={100}
       placeholder="blurred"
       layout="fixed"
       alt={alt}
@@ -55,7 +61,7 @@ const customRenderOptions = {
   },
 };
 
-const HeroHome = ({ title, subtitle, className, storybookBackgroundsMocks, ...otherProps }) => {
+const HeroHome = ({ title, subtitle, arrowText, className, storybookBackgroundsMocks, ...otherProps }) => {
   const { MobileBg, TabletBg, WebBg, WebHdBg } = storybookBackgroundsMocks || BACKGROUNDS;
   return (
     <div
@@ -92,6 +98,12 @@ const HeroHome = ({ title, subtitle, className, storybookBackgroundsMocks, ...ot
             {subtitle}
           </Text>
         </div>
+        <div className="justify-self-center self-end grid justify-items-center mb-50px">
+          <Text typography="body" color="text-white" className="text-center">
+            {arrowText}
+          </Text>
+          <img src={ArrowImage} alt="arrow" className="mt-5px" />
+        </div>
       </div>
     </div>
   );
@@ -100,12 +112,14 @@ const HeroHome = ({ title, subtitle, className, storybookBackgroundsMocks, ...ot
 HeroHome.propTypes = {
   title: PropTypes.object,
   subtitle: PropTypes.string,
+  arrowText: PropTypes.string,
   className: PropTypes.string,
 };
 
 HeroHome.defaultProps = {
   title: {},
   subtitle: "Some subtitle",
+  arrowText: "Some text",
   className: "",
 };
 
