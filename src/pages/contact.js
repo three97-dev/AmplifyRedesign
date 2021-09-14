@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Seo from "../seo/Seo";
-import { ContactsMap, HeroContactForm, SiteFooter, SiteHeader } from "../components";
+import { ContactsMap, HeroContactForm, SiteFooter, SiteHeader, ThankYouForSubmission } from "../components";
 
 export default function ContactPage({ data }) {
   const { contentfulContactsPage } = data;
@@ -17,6 +17,8 @@ export default function ContactPage({ data }) {
     emailAddressInputPlaceholder,
     requiredMessage,
     buttonLabel,
+    thankYouTitle,
+    thankYouContent,
   } = contentfulContactsPage;
   return (
     <Seo seo={contentfulContactsPage}>
@@ -32,6 +34,7 @@ export default function ContactPage({ data }) {
         requiredMessage={requiredMessage}
         buttonLabel={buttonLabel}
       />
+      <ThankYouForSubmission title={thankYouTitle} content={thankYouContent} />
       <ContactsMap
         title={contactsMap.title}
         address={contactsMap.addressTitle}
@@ -60,6 +63,8 @@ export const pageQuery = graphql`
       emailAddressInputPlaceholder
       requiredMessage
       buttonLabel
+      thankYouTitle
+      thankYouContent
       contactsMap {
         ...ContactsMap
       }

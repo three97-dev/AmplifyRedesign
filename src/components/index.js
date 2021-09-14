@@ -34,6 +34,7 @@ import OurApproach from "./our-approach/OurApproach";
 import PieChart from "./pie-chart/PieChart";
 import SiteFooter from "./footer/SiteFooter";
 import SiteHeader from "./header/SiteHeader";
+import ThankYouForSubmission from "./thank-you-for-submission/ThankYouForSubmission";
 import Testimonials from "./testimonials/Testimonials";
 import YouTubeVideo from "./youtube-video-component/YoutubeVideo";
 import WhatIsCRM from "./what-is-crm/WhatIsCRM";
@@ -77,6 +78,7 @@ export {
   MicrosoftPartner,
   OurApproach,
   PieChart,
+  ThankYouForSubmission,
   Testimonials,
   YouTubeVideo,
   WhatIsCRM,
