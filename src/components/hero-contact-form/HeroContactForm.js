@@ -98,19 +98,19 @@ const HeroContactForm = ({
 
   return (
     <div
-      className={`grid justify-items-center w-full relative overflow-hidden h-1375px sm+:h-1112px md+:h-858px lg+:h-1198px ${className}`}
+      className={`grid justify-items-center w-full relative overflow-hidden h-1375px sm+:h-screen md+:hero-contact-height-web lg+:hero-contact-height-webhd ${className}`}
       {...otherProps}
     >
-      <div className="absolute -z-10 w-max max-w-none sm+:hidden">
+      <div className="absolute bottom-0px -z-10 w-max max-w-none sm+:hidden">
         <MobileBg alt="hero background" />
       </div>
-      <div className="absolute -z-10 w-max max-w-none hidden sm+:grid md+:hidden">
+      <div className="absolute bottom-0px -z-10 w-max max-w-none hidden sm+:grid md+:hidden">
         <TabletBg alt="hero background" />
       </div>
-      <div className="absolute -z-10 w-max max-w-none hidden md+:grid lg+:hidden">
+      <div className="absolute bottom-0px -z-10 w-max max-w-none hidden md+:grid lg+:hidden">
         <WebBg alt="hero background" />
       </div>
-      <div className="absolute -z-10 w-max max-w-none hidden lg+:grid">
+      <div className="absolute bottom-0px -z-10 w-max max-w-none hidden lg+:grid">
         <WebHdBg alt="hero background" />
       </div>
 
@@ -124,10 +124,10 @@ const HeroContactForm = ({
 
       <form
         id="contact-form"
-        className="grid hero-contact-grid-mobile md:hero-contact-grid-tablet lg:hero-contact-web-grid xl:hero-contact-webhd-grid mx-36px mt-591px md:mt-481px lg:mt-262px xl:mt-424px"
+        className="self-end grid hero-contact-grid-mobile sm+:hero-contact-grid-tablet lg:hero-contact-web-grid xl:hero-contact-webhd-grid mx-36px mb-50px md:mb-180px lg:mb-180px xl:mb-360px mt-70px md:mt-70px lg:mt-150px xl:mt-150px"
         onSubmit={formik.handleSubmit}
       >
-        <div className="hero-contact-title-area">
+        <div className="hero-contact-title-area sm+:self-end lg:self-start">
           <Text typography="h1" className="mb-20px lg:text-white">
             {heroTitle}
           </Text>
@@ -210,7 +210,7 @@ const HeroContactForm = ({
             className="mb-16px"
           />
         </div>
-        <div className="hero-contact-required-area flex items-center justify-center md:justify-end tracking-wide text-body text-coral-red border-dashed border-2 border-input-color md:pr-3px mb-15px md:mb-0px xl:-mr-125px ">
+        <div className="hero-contact-required-area flex items-center justify-center md:justify-start tracking-wide text-body text-coral-red border-dashed border-2 border-input-color md:pl-5px mb-15px md:mb-0px xl:-mr-135px ">
           {requiredMessage}
         </div>
         <div className="hero-contact-submit-area xl:text-right">
@@ -219,7 +219,7 @@ const HeroContactForm = ({
             form="contact-form"
             disabled={isSubmitted || !formik.dirty}
             label={isSubmitted ? "Submitted" : buttonLabel}
-            className="w-full xl:w-270px"
+            className="w-full xl:w-260px"
           />
         </div>
       </form>

@@ -16,8 +16,8 @@
     }
 
     .hero-contact-grid-tablet {
-      grid-template-columns: 32.8rem 1.6rem 32.8rem;
-      grid-template-rows: 8rem 17rem 7rem 7rem 10.7rem 5.5rem;
+      grid-template-columns: minmax(25rem, 32.8rem) 1.6rem minmax(25rem, 32.8rem);
+      grid-template-rows: minmax(8rem, 12rem) 17rem 7rem 7rem 10.7rem 5.5rem;
       grid-template-areas:
         ". . HeroContactTitle"
         ". . HeroContactSubtitle"
@@ -40,7 +40,7 @@
 
     .hero-contact-webhd-grid {
       grid-template-columns: 83rem 39.8rem 1.6rem 39.8rem;
-      grid-template-rows: 11rem 7rem 7rem 10rem 5.5rem;
+      grid-template-rows: 11rem 7rem 7rem 10.5rem 5.5rem;
       grid-template-areas:
         "HeroContactTitle HeroContactSubtitle HeroContactSubtitle HeroContactSubtitle"
         ". HeroContactFirstName . HeroContactLastName"
@@ -75,6 +75,14 @@
     }
     .hero-contact-submit-area {
       grid-area: HeroContactSubmit;
+    }
+
+    .hero-contact-height-web {
+      height: calc(100vh + 90px);
+    }
+
+    .hero-contact-height-webhd {
+      height: calc(100vh + 117px);
     }
   }
 }

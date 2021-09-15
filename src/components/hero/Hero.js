@@ -48,9 +48,10 @@ const BACKGROUNDS = {
         className="-mt-50px"
       />
     ),
-    heightCss: "h-890px sm+:h-1185px md+:h-852px lg+:h-1215px",
-    titlePositionsDefaults: "mt-531px sm+:mt-507px md+:mt-333px lg+:mt-465px",
-    subtitlePositionsDefaults: "mt-24px lg+:mt-34px sm+:ml-1px lg+:ml-3px",
+    heightCss: "hero-h-type1-mobile sm+:hero-h-type1-tablet md+:hero-h-type1-web lg+:hero-h-type1-webhd",
+    titlePositionsDefaults: "md+:mt-200px lg+:mt-260px",
+    subtitlePositionsDefaults:
+      "mt-24px lg+:mt-34px sm+:ml-1px lg+:ml-3px mb-107px sm+:mb-424px md+:mb-378px lg+:mb-602px",
   },
   type2: {
     imageMobile: (
@@ -93,9 +94,9 @@ const BACKGROUNDS = {
         className="-mt-50px"
       />
     ),
-    heightCss: "h-930px sm+:h-1196px md+:h-880px lg+:h-1196px",
-    titlePositionsDefaults: "mt-432px sm+:mt-580px md+:mt-263px lg+:mt-442px",
-    subtitlePositionsDefaults: "mt-24px sm+:ml-1px lg+:ml-0px",
+    heightCss: "hero-h-type2-mobile sm+:hero-h-type2-tablet md+:hero-h-type2-web lg+:hero-h-type2-webhd",
+    titlePositionsDefaults: "md+:mt-200px lg+:mt-260px",
+    subtitlePositionsDefaults: "mt-24px sm+:ml-1px lg+:ml-0px mb-136px sm+:mb-284px md+:mb-370px lg+:mb-560px",
   },
   type3: {
     imageMobile: (
@@ -136,9 +137,9 @@ const BACKGROUNDS = {
         className="-mt-34px"
       />
     ),
-    heightCss: "h-844px sm+:h-1189px md+:h-904px lg+:h-1262px",
-    titlePositionsDefaults: "mt-462px sm+:mt-580px md+:mt-306px lg+:mt-442px",
-    subtitlePositionsDefaults: "mt-24px sm+:ml-1px lg+:ml-0px",
+    heightCss: "hero-h-type3-mobile sm+:hero-h-type3-tablet md+:hero-h-type3-web lg+:hero-h-type3-webhd",
+    titlePositionsDefaults: "mt-100px md+:mt-150px",
+    subtitlePositionsDefaults: "mt-24px sm+:ml-1px lg+:ml-0px mb-130px sm+:mb-276px md+:mb-388px lg+:mb-625px",
   },
   type4: {
     imageMobile: (
@@ -179,9 +180,9 @@ const BACKGROUNDS = {
         className="-mt-25px"
       />
     ),
-    heightCss: "h-924px sm+:h-1183px md+:h-843px lg+:h-1198px",
-    titlePositionsDefaults: "mt-462px sm+:mt-580px md+:mt-306px lg+:mt-442px",
-    subtitlePositionsDefaults: "mt-24px sm+:ml-1px lg+:ml-0px",
+    heightCss: "h-screen sm+:hero-h-type4-tablet md+:hero-h-type4-web lg+:hero-h-type4-webhd",
+    titlePositionsDefaults: "mt-100px md+:mt-150px",
+    subtitlePositionsDefaults: "mt-24px sm+:ml-1px lg+:ml-0px mb-107px sm+:mb-270px md+:mb-344px lg+:mb-561px",
   },
 };
 
@@ -217,12 +218,12 @@ const Hero = ({
       className={`grid hero-grid-mobile sm+:hero-grid justify-items-center w-full relative overflow-hidden ${heightCss} ${className}`}
       {...otherProps}
     >
-      <div className="absolute -z-10 w-max max-w-none sm+:hidden">{imageMobile}</div>
-      <div className="absolute -z-10 w-max max-w-none hidden sm+:grid md+:hidden">{imageTablet}</div>
-      <div className="absolute -z-10 w-max max-w-none hidden md+:grid lg+:hidden">{imageWeb}</div>
-      <div className="absolute -z-10 w-max max-w-none hidden lg+:grid">{imageWebHd}</div>
+      <div className="absolute bottom-0px -z-10 w-max max-w-none sm+:hidden">{imageMobile}</div>
+      <div className="absolute bottom-0px -z-10 w-max max-w-none hidden sm+:grid md+:hidden">{imageTablet}</div>
+      <div className="absolute bottom-0px -z-10 w-max max-w-none hidden md+:grid lg+:hidden">{imageWeb}</div>
+      <div className="absolute bottom-0px -z-10 w-max max-w-none hidden lg+:grid">{imageWebHd}</div>
 
-      <div className="area-hero-content w-full xl:max-w-screen-xl grid justify-items-center sm+:justify-items-start">
+      <div className="area-hero-content self-end w-full xl:max-w-screen-xl grid justify-items-center sm+:justify-items-start">
         <div className="sm+:ml-8px max-w-318px sm+:max-w-328px md+:max-w-535px lg+:max-w-672px">
           <Text typography="h1" className={titlePositions.length > 0 ? titlePositions : titlePositionsDefaults}>
             {title}

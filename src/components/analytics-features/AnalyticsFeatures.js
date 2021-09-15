@@ -73,15 +73,12 @@ const AnalyticsFeatures = ({
             <Text typography="body" className="mt-22px md:mt-20px mb-30px lg:mb-50px text-tile-bg-4 text-center">
               {feature1Content}
             </Text>
-            <Border
-              className="analytics-features-tile-1-area pl-82px md:pl-0px pr-82px md:pr-9px"
-              borderSide="bottom"
-            />
-            <Border
-              className="analytics-features-tile-1-area pt-30px lg:pt-41px xl:pt-50px pb-10px hidden md:block"
-              borderSide="right"
-            />
           </div>
+          <Border className="analytics-features-tile-1-area pl-82px md:pl-0px pr-82px md:pr-9px" borderSide="bottom" />
+          <Border
+            className="analytics-features-tile-1-area pt-30px lg:pt-41px xl:pt-50px pb-10px hidden md:block"
+            borderSide="right"
+          />
 
           <div className="analytics-features-tile-2-area grid justify-items-center pl-20px md:pl-29px lg:pl-27px pr-20px md:pr-20px lg:pr-27px">
             <Text typography="h4" className="text-center mt-30px lg:mt-41px xl:mt-50px">
@@ -90,23 +87,23 @@ const AnalyticsFeatures = ({
             <Text typography="body" className="mt-22px md:mt-20px mb-30px lg:mb-50px text-tile-bg-4 text-center">
               {feature2Content}
             </Text>
-            <Border
-              className="analytics-features-tile-2-area pl-82px md:pl-9px pr-82px md:pr-0px lg:pr-9px"
-              borderSide="bottom"
-            />
-            <Border
-              className="analytics-features-tile-2-area pl-82px md:pl-0px pr-82px md:pr-0px md:hidden"
-              borderSide="top"
-            />
-            <Border
-              className="analytics-features-tile-2-area pt-30px lg:pt-41px xl:pt-50px pb-10px hidden md:block"
-              borderSide="left"
-            />
-            <Border
-              className="analytics-features-tile-2-area pt-30px lg:pt-41px xl:pt-50px pb-10px hidden lg:block"
-              borderSide="right"
-            />
           </div>
+          <Border
+            className="analytics-features-tile-2-area pl-82px md:pl-9px pr-82px md:pr-0px lg:pr-9px"
+            borderSide="bottom"
+          />
+          <Border
+            className="analytics-features-tile-2-area pl-82px md:pl-0px pr-82px md:pr-0px md:hidden"
+            borderSide="top"
+          />
+          <Border
+            className="analytics-features-tile-2-area pt-30px lg:pt-41px xl:pt-50px pb-10px hidden md:block"
+            borderSide="left"
+          />
+          <Border
+            className="analytics-features-tile-2-area pt-30px lg:pt-41px xl:pt-50px pb-10px hidden lg:block"
+            borderSide="right"
+          />
 
           <div className="analytics-features-tile-3-area grid justify-items-center pl-20px lg:pl-29px pr-20px md:pr-29px lg:pr-20px">
             <Text typography="h4" className="text-center mt-30px lg:mt-41px xl:mt-50px">
@@ -115,23 +112,23 @@ const AnalyticsFeatures = ({
             <Text typography="body" className="mt-22px md:mt-20px mb-30px lg:mb-50px text-tile-bg-4 text-center">
               {feature3Content}
             </Text>
-            <Border
-              className="analytics-features-tile-3-area pl-82px md:pl-0px lg:pl-9px pr-82px md:pr-9px lg:pr-9px"
-              borderSide="bottom"
-            />
-            <Border
-              className="analytics-features-tile-3-area pl-82px md:pl-0px pr-82px md:pr-9px lg:hidden"
-              borderSide="top"
-            />
-            <Border
-              className="analytics-features-tile-3-area pt-10px pb-10px hidden md:block lg:hidden"
-              borderSide="right"
-            />
-            <Border
-              className="analytics-features-tile-3-area pt-30px lg:pt-41px xl:pt-50px pb-10px hidden lg:block"
-              borderSide="left"
-            />
           </div>
+          <Border
+            className="analytics-features-tile-3-area pl-82px md:pl-0px lg:pl-9px pr-82px md:pr-9px lg:pr-9px"
+            borderSide="bottom"
+          />
+          <Border
+            className="analytics-features-tile-3-area pl-82px md:pl-0px pr-82px md:pr-9px lg:hidden"
+            borderSide="top"
+          />
+          <Border
+            className="analytics-features-tile-3-area pt-10px pb-10px hidden md:block lg:hidden"
+            borderSide="right"
+          />
+          <Border
+            className="analytics-features-tile-3-area pt-30px lg:pt-41px xl:pt-50px pb-10px hidden lg:block"
+            borderSide="left"
+          />
 
           <div className="analytics-features-tile-4-area grid justify-items-center pl-20px md:pl-29px lg:pl-20px pr-20px lg:pr-29px">
             <Text typography="h4" className="text-center mt-30px lg:mt-41px xl:mt-50px">
@@ -140,23 +137,23 @@ const AnalyticsFeatures = ({
             <Text typography="body" className="mt-22px md:mt-20px mb-30px lg:mb-50px text-tile-bg-4 text-center">
               {feature4Content}
             </Text>
-            <Border
-              className="analytics-features-tile-4-area pl-82px md:pl-9px pr-82px md:pr-0px lg:hidden"
-              borderSide="bottom"
-            />
-            <Border
-              className="analytics-features-tile-4-area pl-82px md:pl-9px lg:pl-0px pr-82px md:pr-0px lg:pr-9px"
-              borderSide="top"
-            />
-            <Border
-              className="analytics-features-tile-4-area pt-10px pb-30px lg:pb-50px hidden lg:block"
-              borderSide="right"
-            />
-            <Border
-              className="analytics-features-tile-4-area pt-10px pb-10px hidden md:block lg:hidden"
-              borderSide="left"
-            />
           </div>
+          <Border
+            className="analytics-features-tile-4-area pl-82px md:pl-9px pr-82px md:pr-0px lg:hidden"
+            borderSide="bottom"
+          />
+          <Border
+            className="analytics-features-tile-4-area pl-82px md:pl-9px lg:pl-0px pr-82px md:pr-0px lg:pr-9px"
+            borderSide="top"
+          />
+          <Border
+            className="analytics-features-tile-4-area pt-10px pb-30px lg:pb-50px hidden lg:block"
+            borderSide="right"
+          />
+          <Border
+            className="analytics-features-tile-4-area pt-10px pb-10px hidden md:block lg:hidden"
+            borderSide="left"
+          />
 
           <div className="analytics-features-tile-5-area grid justify-items-center pl-20px lg:pl-27px pr-20px md:pr-29px lg:pr-27px">
             <Text typography="h4" className="text-center mt-30px lg:mt-41px xl:mt-50px">
@@ -165,23 +162,23 @@ const AnalyticsFeatures = ({
             <Text typography="body" className="mt-22px md:mt-20px mb-30px lg:mb-50px text-tile-bg-4 text-center">
               {feature5Content}
             </Text>
-            <Border
-              className="analytics-features-tile-5-area pl-82px md:pl-0px pr-82px md:pr-9px md:hidden"
-              borderSide="bottom"
-            />
-            <Border
-              className="analytics-features-tile-5-area pl-82px md:pl-0px lg:pl-9px pr-82px md:pr-9px"
-              borderSide="top"
-            />
-            <Border
-              className="analytics-features-tile-5-area pt-10px pb-30px lg:pb-50px hidden md:block"
-              borderSide="right"
-            />
-            <Border
-              className="analytics-features-tile-5-area pt-10px pb-30px lg:pb-50px hidden lg:block"
-              borderSide="left"
-            />
           </div>
+          <Border
+            className="analytics-features-tile-5-area pl-82px md:pl-0px pr-82px md:pr-9px md:hidden"
+            borderSide="bottom"
+          />
+          <Border
+            className="analytics-features-tile-5-area pl-82px md:pl-0px lg:pl-9px pr-82px md:pr-9px"
+            borderSide="top"
+          />
+          <Border
+            className="analytics-features-tile-5-area pt-10px pb-30px lg:pb-50px hidden md:block"
+            borderSide="right"
+          />
+          <Border
+            className="analytics-features-tile-5-area pt-10px pb-30px lg:pb-50px hidden lg:block"
+            borderSide="left"
+          />
 
           <div className="analytics-features-tile-6-area grid justify-items-center pl-20px md:pl-29px pr-20px md:pr-20px lg:pr-20px">
             <Text typography="h4" className="text-center mt-30px lg:mt-41px xl:mt-50px">
@@ -190,12 +187,12 @@ const AnalyticsFeatures = ({
             <Text typography="body" className="mt-22px md:mt-20px mb-30px lg:mb-50px text-tile-bg-4 text-center">
               {feature6Content}
             </Text>
-            <Border className="analytics-features-tile-6-area pl-82px md:pl-9px pr-82px md:pr-0px" borderSide="top" />
-            <Border
-              className="analytics-features-tile-6-area pt-10px pb-30px lg:pb-50px hidden md:block"
-              borderSide="left"
-            />
           </div>
+          <Border className="analytics-features-tile-6-area pl-82px md:pl-9px pr-82px md:pr-0px" borderSide="top" />
+          <Border
+            className="analytics-features-tile-6-area pt-10px pb-30px lg:pb-50px hidden md:block"
+            borderSide="left"
+          />
         </div>
       </div>
     </div>

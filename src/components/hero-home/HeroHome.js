@@ -65,19 +65,19 @@ const HeroHome = ({ title, subtitle, arrowText, className, storybookBackgroundsM
   const { MobileBg, TabletBg, WebBg, WebHdBg } = storybookBackgroundsMocks || BACKGROUNDS;
   return (
     <div
-      className={`grid justify-items-center w-full h-844px sm+:h-1111px md+:h-768px lg+:h-1080px relative overflow-hidden ${className}`}
+      className={`grid justify-items-center w-full h-screen relative overflow-hidden ${className}`}
       {...otherProps}
     >
-      <div className="absolute -z-10 w-max max-w-none sm+:hidden">
+      <div className="absolute bottom-0px -z-10 w-max max-w-none sm+:hidden">
         <MobileBg alt="hero background" />
       </div>
-      <div className="absolute -z-10 w-max max-w-none hidden sm+:grid md+:hidden">
+      <div className="absolute bottom-0px -z-10 w-max max-w-none hidden sm+:grid md+:hidden">
         <TabletBg alt="hero background" />
       </div>
-      <div className="absolute -z-10 w-max max-w-none hidden md+:grid lg+:hidden">
+      <div className="absolute bottom-0px -z-10 w-max max-w-none hidden md+:grid lg+:hidden">
         <WebBg alt="hero background" />
       </div>
-      <div className="absolute -z-10 w-max max-w-none hidden lg+:grid">
+      <div className="absolute bottom-0px -z-10 w-max max-w-none hidden lg+:grid">
         <WebHdBg alt="hero background" />
       </div>
 

@@ -12,7 +12,7 @@ import "./FourBlogPosts.css";
 const FourBlogPosts = ({ posts, linkLabel, currentPage, totalPages, className, ...otherProps }) => {
   return (
     <div className={`grid justify-items-center w-full overflow-x-hidden ${className}`} {...otherProps}>
-      <div className="grid relative blog-grid-mobile md:blog-grid-tablet lg:blog-grid-webhd">
+      <div className="grid relative blog-grid-mobile md:blog-grid-tablet lg:blog-grid-webhd mt-55px md:mt-0px">
         <img
           src={BlogImageBgMobile}
           alt="background"

@@ -69,13 +69,8 @@ const BusinessLifecycleTiles = ({
             className="hidden md:block lg:hidden absolute -z-10 -bottom-134px -left-144px"
           />
           <div className="businnes-life-cycle-tiles-title w-full">
-            <Text typography="h2" className="md:hidden">
-              {title}
-            </Text>
-            <Text typography="h3" className="hidden md:block">
-              {title}
-            </Text>
-            <Text typography="h3" color="text-fontcolor-body" className="lg+:hidden mt-23px lg:mb-107px">
+            <Text typography="h2">{title}</Text>
+            <Text typography="h3" color="text-fontcolor-body" className="lg+:hidden mt-23px md:mb-26px lg:mb-107px">
               {subtitle}
             </Text>
             <Text
@@ -87,7 +82,7 @@ const BusinessLifecycleTiles = ({
             </Text>
           </div>
 
-          <div className="businnes-life-cycle-tiles-tiles1 text-center px-20px md:px-30px lg:px-20px mt-22px md:mt-52px lg:mt-0px md:mr-3px lg:mr-8px">
+          <div className="businnes-life-cycle-tiles-tiles1 hover:bg-line-color2 text-center px-20px md:pl-30px md:pr-33px lg:pl-20px lg:pr-28px pt-22px md:pt-30px lg:pt-0px">
             <button
               onClick={e => {
                 setShowModalIndex(0);
@@ -99,7 +94,7 @@ const BusinessLifecycleTiles = ({
                 <Text typography="h4" className="mt-22px">
                   {blockTitle1}
                 </Text>
-                <Text typography="body" color="text-fontcolor-body" className="mt-21px lg+:mr-2px pb-30px">
+                <Text typography="body" color="text-fontcolor-body" className="mt-21px lg+:mr-2px pb-30px lg+:pb-5px">
                   {blockContent1}
                 </Text>
               </div>
@@ -115,7 +110,7 @@ const BusinessLifecycleTiles = ({
             className="businnes-life-cycle-tiles-tiles1 lg:hidden justify-self-center max-w-154px md:max-w-328px md:pr-5px lg:pr-0px"
           />
 
-          <div className="businnes-life-cycle-tiles-tiles2 text-center px-20px lg:px-25px mt-28px md:mt-52px lg:mt-0px md:ml-9px lg:ml-0px">
+          <div className="businnes-life-cycle-tiles-tiles2 hover:bg-line-color2 text-center px-20px md:pr-20px md:pl-29px lg:px-25px pt-28px md:pt-30px lg:pt-0px">
             <button
               onClick={e => {
                 setShowModalIndex(1);
@@ -127,7 +122,7 @@ const BusinessLifecycleTiles = ({
                 <Text typography="h4" className="mt-21px lg+:mt-31px">
                   {blockTitle2}
                 </Text>
-                <Text typography="body" color="text-fontcolor-body" className="mt-21px lg:mt-22px pb-30px">
+                <Text typography="body" color="text-fontcolor-body" className="mt-21px lg:mt-22px pb-30px lg+:pb-5px">
                   {blockContent2}
                 </Text>
               </div>
@@ -149,7 +144,7 @@ const BusinessLifecycleTiles = ({
             borderSide="right"
             className="businnes-life-cycle-tiles-tiles2 justify-self-end hidden lg:block md:max-h-310px lg:max-h-308px lg+:max-h-327px"
           />
-          <div className="businnes-life-cycle-tiles-tiles3 text-center px-20px md:px-30px lg:px-30px mt-30px lg:mt-0px md:mr-9px lg:mr-0px">
+          <div className="businnes-life-cycle-tiles-tiles3 hover:bg-line-color2 text-center px-20px md:pl-30px md:pr-39px lg:px-30px pt-30px lg:pt-0px">
             <button
               onClick={e => {
                 setShowModalIndex(2);
@@ -161,7 +156,7 @@ const BusinessLifecycleTiles = ({
                 <Text typography="h4" className="mt-21px lg+:mt-31px">
                   {blockTitle3}
                 </Text>
-                <Text typography="body" color="text-fontcolor-body" className="mt-21px lg+:mt-45px pb-30px">
+                <Text typography="body" color="text-fontcolor-body" className="mt-21px lg+:mt-45px pb-30px lg+:pb-5px">
                   {blockContent3}
                 </Text>
               </div>
@@ -184,7 +179,7 @@ const BusinessLifecycleTiles = ({
             className="businnes-life-cycle-tiles-tiles3 lg:hidden justify-self-center max-w-154px md:max-w-328px md:pr-5px"
           />
 
-          <div className="businnes-life-cycle-tiles-tiles4 text-center px-20px lg:px-21px mt-28px md:mt-30px lg:mt-0px md:ml-9px">
+          <div className="businnes-life-cycle-tiles-tiles4 hover:bg-line-color2 text-center px-20px lg:pr-20px md:pl-30px lg:pl-29px pt-30px lg:pt-0px">
             <button
               onClick={e => {
                 setShowModalIndex(3);
@@ -193,10 +188,14 @@ const BusinessLifecycleTiles = ({
             >
               <div>
                 <Image image={tileFourImage} className="mx-auto w-115px lg+:w-165px" />
-                <Text typography="h4" className="mt-21px lg+:mt-31px">
+                <Text typography="h4" className="mt-21px lg+:mt-31px md:mx-10px">
                   {blockTitle4}
                 </Text>
-                <Text typography="body" color="text-fontcolor-body" className="mt-21px md:mt-45px lg:mt-21px">
+                <Text
+                  typography="body"
+                  color="text-fontcolor-body"
+                  className="mt-21px md:mt-45px lg:mt-21px pb-30px lg+:pb-5px"
+                >
                   {blockContent4}
                 </Text>
               </div>
@@ -213,7 +212,7 @@ const BusinessLifecycleTiles = ({
           <Button
             label={homeSmthElse}
             link={homeSmthButtonLink}
-            className="businnes-life-cycle-tiles-button mt-50px lg:mt-70px lg+:mt-99px w-full md:max-w-328px lg:max-w-352px lg+:max-w-536px"
+            className="businnes-life-cycle-tiles-button mt-50px md:mt-40px lg:mt-70px lg+:mt-125px w-full md:max-w-328px lg:max-w-352px lg+:max-w-536px"
           />
         </div>
       </div>
