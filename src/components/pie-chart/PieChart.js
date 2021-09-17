@@ -14,6 +14,8 @@ import PieChartBackgroundWeb2 from "../../assets/pages/crm/pie-chart-bg-web-2.sv
 import PieChartBackgroundWebHD1 from "../../assets/pages/crm/pie-chart-bg-webhd-1.svg";
 import PieChartBackgroundWebHD2 from "../../assets/pages/crm/pie-chart-bg-webhd-2.svg";
 
+import "./PieChart.css";
+
 const PieChart = ({
   title,
   subtitle,
@@ -29,7 +31,7 @@ const PieChart = ({
 }) => {
   return (
     <div className={`grid justify-items-center overflow-hidden ${className}`} {...otherProps}>
-      <div className="grid relative w-318px md:w-672px lg:w-720px xl:w-1088px">
+      <div className="grid lg:pie-chart-web-grid xl:pie-chart-webhd-grid lg:items-center relative w-318px md:w-672px lg:w-full">
         <img
           src={PieChartBackgroundMobile}
           alt="background"
@@ -48,51 +50,53 @@ const PieChart = ({
         <img
           src={PieChartBackgroundWeb1}
           alt="background"
-          className="hidden lg:block xl:hidden absolute -z-10 top-34px -left-377px max-w-none"
+          className="hidden lg:block xl:hidden absolute -z-10 -top-94px left-46px max-w-none"
         />
         <img
           src={PieChartBackgroundWeb2}
           alt="background"
-          className="hidden lg:block xl:hidden absolute -z-10 -bottom-37px -right-392px max-w-none"
+          className="hidden lg:block xl:hidden absolute -z-10 -bottom-81px -left-42px max-w-none"
         />
 
         <img
           src={PieChartBackgroundWebHD1}
           alt="background"
-          className="hidden xl:block absolute -z-10 top-60px -left-479px max-w-none"
+          className="hidden xl:block absolute -z-10 -top-87px left-80px max-w-none"
         />
         <img
           src={PieChartBackgroundWebHD2}
           alt="background"
-          className="hidden xl:block absolute -z-10 -bottom-56px -right-533px max-w-none"
+          className="hidden xl:block absolute -z-10 -bottom-63px -left-22px max-w-none"
         />
 
-        <Text typography="h2" className="text-center mt-50px md:mt-100px lg:mt-150px">
-          {title}
-        </Text>
-        <Text typography="h3" className="mt-20px lg:mt-22px">
-          {subtitle}
-        </Text>
-        <Text typography="body" className="mt-23px lg:mt-21px text-tile-bg-4">
-          {content}
-        </Text>
-        <div className="grid relative h-790px md:h-1096px xl:h-1338px">
-          <div className="grid items-end w-154px md:w-156px lg:w-172px xl:w-260px text-center absolute justify-self-start md:left-86px lg:left-90px xl:left-138px bottom-505px md:bottom-765px xl:bottom-1012px">
+        <div className="lg:pie-chart-content-area">
+          <Text typography="h2" className="text-center lg:text-left mt-50px md:mt-100px lg:mt-0px">
+            {title}
+          </Text>
+          <Text typography="h3" className="mt-20px lg:mt-22px">
+            {subtitle}
+          </Text>
+          <Text typography="body" className="mt-23px lg:mt-21px text-tile-bg-4">
+            {content}
+          </Text>
+        </div>
+        <div className="lg:pie-chart-diagram-area grid relative h-790px md:h-1096px lg:h-765px xl:h-1076px">
+          <div className="grid items-end w-154px md:w-156px lg:w-260px text-center absolute justify-self-start md:left-86px lg:left-0px bottom-505px md:bottom-765px lg:bottom-491px xl:bottom-682px">
             <Text typography="h4">{leftBlockTitle}</Text>
             <Text typography="body" className="mt-20px">
               {leftBlockContent}
             </Text>
-            <div className="w-2px h-50px md:h-75px lg:h-70px xl:h-100px mt-20px bg-line-color justify-self-center" />
+            <div className="w-2px h-50px md:h-75px lg:h-50px xl:h-86px mt-20px bg-line-color justify-self-center" />
           </div>
-          <div className="grid items-end w-154px md:w-156px lg:w-172px xl:w-260px text-center absolute justify-self-end md:right-86px lg:right-90px xl:right-138px bottom-486px md:bottom-721px lg:bottom-745px xl:bottom-972px">
+          <div className="grid items-end w-154px md:w-156px lg:w-260px text-center absolute justify-self-end md:right-86px lg:right-0px bottom-486px md:bottom-721px lg:bottom-456px xl:bottom-642px">
             <Text typography="h4">{rightBlockTitle}</Text>
             <Text typography="body" className="mt-20px">
               {rightBlockContent}
             </Text>
-            <div className="w-2px h-30px md:h-75px lg:h-70px xl:h-100px mt-20px bg-line-color justify-self-center" />
+            <div className="w-2px h-30px md:h-75px lg:h-45px xl:h-87px mt-20px bg-line-color justify-self-center" />
           </div>
-          <div className="grid items-end w-154px md:w-156px lg:w-168px xl:w-260px text-center absolute justify-self-center top-467px md:top-695px lg:top-716px xl:top-896px">
-            <div className="w-2px h-50px md:h-75px lg:h-70px xl:h-100px bg-line-color justify-self-center" />
+          <div className="grid items-end w-154px md:w-156px lg:w-535px text-center absolute justify-self-center top-467px md:top-695px lg:top-501px xl:top-714px">
+            <div className="w-2px h-50px md:h-75px lg:h-63px xl:h-80px bg-line-color justify-self-center" />
             <Text typography="h4" className="mt-20px">
               {centerBlockTitle}
             </Text>
@@ -100,7 +104,7 @@ const PieChart = ({
               {centerBlockContent}
             </Text>
           </div>
-          <img src={PieChartImage} alt="diagram" className="w-full mt-285px md:mt-336px lg:mt-332px xl:mt-326px" />
+          <img src={PieChartImage} alt="diagram" className="justify-self-center w-full lg:w-457px xl:w-690px mt-285px md:mt-336px lg:mt-269px xl:mt-357px" />
         </div>
       </div>
     </div>

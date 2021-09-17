@@ -199,44 +199,39 @@ const AnalyticsFeatures = ({
   );
 };
 
-AnalyticsFeatures.propTypes = { title: PropTypes.string, subtitle: PropTypes.string, features: PropTypes.array };
+AnalyticsFeatures.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  feature1Title: PropTypes.string,
+  feature1Content: PropTypes.string,
+  feature2Title: PropTypes.string,
+  feature2Content: PropTypes.string,
+  feature3Title: PropTypes.string,
+  feature3Content: PropTypes.string,
+  feature4Title: PropTypes.string,
+  feature4Content: PropTypes.string,
+  feature5Title: PropTypes.string,
+  feature5Content: PropTypes.string,
+  feature6Title: PropTypes.string,
+  feature6Content: PropTypes.string,
+};
 
 AnalyticsFeatures.defaultProps = {
   title:
     "Fusce maximus ligula mauris, ac sodales leo consectetur at. Nunc sagittis nulla viverra, eleifend lacus quis, maximus lacus",
   subtitle: "Some text…",
-  features: [
-    {
-      title: "Lorem ipsum dolor sit amet",
-      content:
-        "Fusce maximus ligula mauris, ac sodales leo consectetur at. Nunc sagittis nulla viverra, eleifend lacus quis, maximus lacus",
-    },
-    {
-      title: "Lorem ipsum dolor sit amet",
-      content:
-        "Fusce maximus ligula mauris, ac sodales leo consectetur at. Nunc sagittis nulla viverra, eleifend lacus quis, maximus lacus",
-    },
-    {
-      title: "Lorem ipsum dolor sit amet",
-      content:
-        "Fusce maximus ligula mauris, ac sodales leo consectetur at. Nunc sagittis nulla viverra, eleifend lacus quis, maximus lacus",
-    },
-    {
-      title: "Lorem ipsum dolor sit amet",
-      content:
-        "Fusce maximus ligula mauris, ac sodales leo consectetur at. Nunc sagittis nulla viverra, eleifend lacus quis, maximus lacus",
-    },
-    {
-      title: "Lorem ipsum dolor sit amet",
-      content:
-        "Fusce maximus ligula mauris, ac sodales leo consectetur at. Nunc sagittis nulla viverra, eleifend lacus quis, maximus lacus",
-    },
-    {
-      title: "Lorem ipsum dolor sit amet",
-      content:
-        "Fusce maximus ligula mauris, ac sodales leo consectetur at. Nunc sagittis nulla viverra, eleifend lacus quis, maximus lacus",
-    },
-  ],
+  feature1Title: "title 1",
+  feature1Content: "content 1",
+  feature2Title: "title 2",
+  feature2Content: "content 2",
+  feature3Title: "title 3",
+  feature3Content: "content 3",
+  feature4Title: "title 4",
+  feature4Content: "content 4",
+  feature5Title: "title 5",
+  feature5Content: "content 5",
+  feature6Title: "title 6",
+  feature6Content: "content 6",
 };
 
 export default AnalyticsFeatures;
