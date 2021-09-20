@@ -1,13 +1,13 @@
 {
-  "name": "icerik-gatsby-website",
+  "name": "amplify-gatsby-website",
   "private": true,
-  "description": "New website for Icerik implemented with Gatsby, Storybook and Storyblok",
-  "version": "0.5.0",
-  "author": "NeatByte Solutions",
+  "description": "New website for Amplify",
+  "version": "1.0.0",
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^15.2.0",
     "@react-google-maps/api": "^2.2.0",
     "@storybook/addon-postcss": "^2.0.0",
+    "contentful-cli": "^1.9.11",
     "dotenv": "^10.0.0",
     "formik": "^2.2.6",
     "gatsby": "^3.2.1",

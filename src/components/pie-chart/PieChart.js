@@ -31,7 +31,7 @@ const PieChart = ({
 }) => {
   return (
     <div className={`grid justify-items-center overflow-hidden ${className}`} {...otherProps}>
-      <div className="grid lg:pie-chart-web-grid xl:pie-chart-webhd-grid lg:items-center relative w-318px md:w-672px lg:w-full">
+      <div className="grid lg:pie-chart-web-grid xl:pie-chart-webhd-grid lg:items-center relative w-318px md:w-672px lg:w-1366px xl:w-1920px">
         <img
           src={PieChartBackgroundMobile}
           alt="background"
@@ -50,12 +50,12 @@ const PieChart = ({
         <img
           src={PieChartBackgroundWeb1}
           alt="background"
-          className="hidden lg:block xl:hidden absolute -z-10 -top-94px left-46px max-w-none"
+          className="hidden lg:block xl:hidden absolute -z-10 -top-94px left-55px max-w-none"
         />
         <img
           src={PieChartBackgroundWeb2}
           alt="background"
-          className="hidden lg:block xl:hidden absolute -z-10 -bottom-81px -left-42px max-w-none"
+          className="hidden lg:block xl:hidden absolute -z-10 -bottom-81px -left-33px max-w-none"
         />
 
         <img
