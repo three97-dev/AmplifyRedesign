@@ -59,7 +59,7 @@ export const pageQuery = graphql`
         raw
       }
     }
-    contentfulBlogPostTemplate(id: { eq: "bf2c0b74-865f-5b71-8069-0164f6b86bee" }) {
+    contentfulBlogPostTemplate(contentful_id: { eq: "2TpT76DyrBcrRHzIYMl63d" }) {
       minutesToRead
       contactUsTitle
       contactUsSubtitle

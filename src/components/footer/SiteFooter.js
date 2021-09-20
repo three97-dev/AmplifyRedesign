@@ -6,7 +6,7 @@ import Footer from "./Footer";
 const SiteFooter = () => {
   const data = useStaticQuery(graphql`
     query FooterQuery {
-      contentfulFooterConfig(id: { eq: "6f7cc191-f49b-583d-ab82-498ea37da156" }) {
+      contentfulFooterConfig(contentful_id: { eq: "6OEs29FewA4bdvFxbUsAKn" }) {
         logo {
           ...Image
         }

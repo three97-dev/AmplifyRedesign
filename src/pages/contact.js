@@ -53,7 +53,7 @@ export default function ContactPage({ data }) {
 
 export const pageQuery = graphql`
   query ContactsPageQuery {
-    contentfulContactsPage(id: { eq: "4b411d63-9f97-530f-a39b-2ce94d63012a" }) {
+    contentfulContactsPage(contentful_id: { eq: "6i0aF0cuaK6zxLsd0x2EFP" }) {
       heroTitle
       heroSubtitle
       firstNameInputPlaceholder

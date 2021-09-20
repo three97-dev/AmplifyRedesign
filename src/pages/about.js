@@ -71,7 +71,7 @@ export default function AboutPage({ data }) {
 
 export const pageQuery = graphql`
   query AboutPageQuery {
-    contentfulAboutPage(id: { eq: "4be89d15-4d75-5019-a9de-729fe32909cb" }) {
+    contentfulAboutPage(contentful_id: { eq: "5JpMa2LmRFEQ2Z77hini5F" }) {
       heroTitle
       heroSubtitle
       aboutUs {

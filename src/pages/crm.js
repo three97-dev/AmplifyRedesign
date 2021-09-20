@@ -83,7 +83,7 @@ export default function CRMPage({ data }) {
 
 export const pageQuery = graphql`
   query CRMPageQuery {
-    contentfulCrmPage(id: { eq: "22e086f3-6bc8-5e6c-a3ad-969bc9f134e9" }) {
+    contentfulCrmPage(contentful_id: { eq: "6QkKvURMQdKH4fha9tWHQZ" }) {
       heroTitle
       heroSubtitle
       whatIsCrm {

@@ -7,7 +7,7 @@ import Header from "./Header";
 const SiteHeader = ({ isInverted }) => {
   const data = useStaticQuery(graphql`
     query HeaderQuery {
-      contentfulHeaderConfig(id: { eq: "446629fe-4ebc-5f68-9a22-d5bac3db3642" }) {
+      contentfulHeaderConfig(contentful_id: { eq: "10XQiIPsmGjraFMTI21aGj" }) {
         links {
           label
           link

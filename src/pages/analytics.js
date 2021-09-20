@@ -49,7 +49,7 @@ export default function AnalyticsPage({ data }) {
 
 export const pageQuery = graphql`
   query AnalyticsPageQuery {
-    contentfulAnalyticsPage(id: { eq: "5e71c382-a438-54de-affc-161f273093ad" }) {
+    contentfulAnalyticsPage(contentful_id: { eq: "4MthmF4VxHODEBnAnlxmnR" }) {
       heroTitle
       heroSubtitle
       gettingMost {

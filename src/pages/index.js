@@ -98,7 +98,7 @@ export default function IndexPage({ data }) {
 
 export const pageQuery = graphql`
   query HomePageQuery {
-    contentfulHomePage(id: { eq: "c59e105b-a170-50a0-9222-10747f86c8d2" }) {
+    contentfulHomePage(contentful_id: { eq: "7F4gLw0YFwqjYZQl3GS8m" }) {
       heroHomeTitle {
         raw
       }

@@ -43,7 +43,7 @@ export const pageQuery = graphql`
         ...BlogPostTile
       }
     }
-    contentfulBlogRootTemplate(id: { eq: "b28fc462-0bf5-57b5-9f9c-c83ab4cf751c" }) {
+    contentfulBlogRootTemplate(contentful_id: { eq: "7vcna8CB6S5KuvZ0fgYUR" }) {
       heroTitle
       heroSubtitle
       readMoreLabel

@@ -9,7 +9,7 @@ const Seo = ({ seo, children }) => {
   const { pathname } = useLocation();
   const { contentfulDefaultSeo } = useStaticQuery(graphql`
     query DefaultSEOQuery {
-      contentfulDefaultSeo(id: { eq: "691d813d-e23e-58b1-b8d0-fca83e3a3d6c" }) {
+      contentfulDefaultSeo(contentful_id: { eq: "3Ki5C4SzAEXDPkyh6nAcMu" }) {
         seoSiteUrl
         seoTitleTemplate
         seoTitle
