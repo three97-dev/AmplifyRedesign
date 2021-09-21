@@ -210,7 +210,7 @@ const HeroContactForm = ({
             className="mb-16px"
           />
         </div>
-        <div className="hero-contact-required-area flex items-center justify-center md:justify-start tracking-wide text-body text-coral-red border-dashed border-2 border-input-color md:pl-5px mb-15px md:mb-0px xl:-mr-135px ">
+        <div className="hero-contact-required-area flex items-center justify-center md:justify-start tracking-wide text-body text-coral-red md:pl-5px mb-15px md:mb-0px xl:-mr-135px ">
           {requiredMessage}
         </div>
         <div className="hero-contact-submit-area xl:text-right">

@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticImage } from "gatsby-plugin-image";
-
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 
@@ -86,7 +85,7 @@ const HeroHome = ({ title, subtitle, arrowText, className, storybookBackgroundsM
           <Text
             typography="h1"
             color="text-white"
-            className="text-center md+:text-left mt-177px sm+:mt-270px md+:mt-262px lg+:mt-446px"
+            className="text-center md+:text-left mt-147px sm+:mt-270px md+:mt-262px lg+:mt-446px"
           >
             {title && title.raw ? renderRichText(title, customRenderOptions) : title}
           </Text>
@@ -98,8 +97,8 @@ const HeroHome = ({ title, subtitle, arrowText, className, storybookBackgroundsM
             {subtitle}
           </Text>
         </div>
-        <div className="justify-self-center self-end grid justify-items-center mb-50px">
-          <Text typography="body" color="text-white" className="text-center">
+        <div className="justify-self-center self-end grid justify-items-center mt-30px mb-50px">
+          <Text typography="learn-more" color="text-white" className="text-center">
             {arrowText}
           </Text>
           <img src={ArrowImage} alt="arrow" className="mt-5px" />

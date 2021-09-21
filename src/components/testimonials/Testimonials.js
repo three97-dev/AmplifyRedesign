@@ -61,13 +61,18 @@ const Testimonials = ({ title, image, testimonialsToShow, className, ...otherPro
         alt="background"
         className="hidden xl:block absolute -z-10 bottom-101px right-202px max-w-none"
       />
-      <Text typography="h2" className="md:testimonials-header-area md:justify-self-start h-auto md:self-end">
+      <Text typography="h2" className="md:testimonials-header-area lg:justify-self-start h-auto md:self-end">
         {title}
       </Text>
       <img
         src={QuoteImage}
         alt="quote"
-        className="md:testimonials-quote-area mt-20px md:mt-26px lg:mt-20px xl:w-60px justify-self-start"
+        className="hidden md:block md:testimonials-left-quote-area mt-20px md:mt-0px lg:mt-20px xl:w-60px self-start"
+      />
+      <img
+        src={QuoteImage}
+        alt="quote"
+        className="hidden md:block md:testimonials-right-quote-area mb-95px lg:mb-0px lg:mt-172px xl:mt-95px xl:w-60px transform rotate-180 self-end lg:self-start"
       />
       <div className="md:testimonials-slide-area">
         <Slider ref={c => setSlider(c)} {...settings}>
@@ -87,12 +92,12 @@ const Testimonials = ({ title, image, testimonialsToShow, className, ...otherPro
           ))}
         </Slider>
       </div>
-      <div className="flex md:grid md:h-320px xl:h-428px w-full justify-between md:justify-center items-center md:content-center  md:testimonials-slider-dots-area relative mt-24px md:mt-155px lg:mt-146px xl:mt-255px ">
-        <button className="-mt-5px -mb-5px -mx-5px md:mb-15px" onClick={previous}>
-          <img src={TestimonialsArrow} alt="previous slide" className="transform md:rotate-90 m-5px" />
+      <div className="flex lg:grid lg:h-320px xl:h-428px w-full justify-between md:justify-center items-center md:content-center  md:testimonials-slider-dots-area relative mt-24px md:mt-20px lg:mt-146px xl:mt-255px ">
+        <button className="-mt-5px -mb-5px -mx-5px lg:mb-15px" onClick={previous}>
+          <img src={TestimonialsArrow} alt="previous slide" className="transform lg:rotate-90 m-5px" />
         </button>
-        <div className="md:grid justify-center justify-items-center md:content-center items-center gap-15px md:gap-15px lg:gap-15px xl:gap-20px  md:w-full md:h-210px lg:h-212px xl:h-312px testimonials-slider-dots flex md:grid">
-          <div className="md:justify-self-center w-154px md:w-1px h-1px md:h-210px lg:h-212px xl:h-312px bg-line-color3 absolute -z-10" />
+        <div className="flex lg:grid justify-center justify-items-center lg:content-center items-center gap-15px md:gap-17px lg:gap-15px xl:gap-20px  md:w-full lg:h-212px xl:h-312px testimonials-slider-dots">
+          <div className="lg:justify-self-center w-154px md:w-329px lg:w-1px h-1px lg:h-212px xl:h-312px bg-line-color3 absolute -z-10" />
           {testimonialsToShow.map((item, slideIndex) => (
             <button
               key={slideIndex}
@@ -106,11 +111,11 @@ const Testimonials = ({ title, image, testimonialsToShow, className, ...otherPro
             />
           ))}
         </div>
-        <button className="-mt-5px -mb-5px -mx-5px md:mt-15px" onClick={next}>
-          <img src={TestimonialsArrow} alt="next slide" className="transform rotate-180 md:-rotate-90 m-5px" />
+        <button className="-mt-5px -mb-5px -mx-5px lg:mt-15px" onClick={next}>
+          <img src={TestimonialsArrow} alt="next slide" className="transform rotate-180 lg:-rotate-90 m-5px" />
         </button>
       </div>
-      <Image image={image} className="mt-15px md:mt-0px w-full max-w-536px md:testimonials-image-area" />
+      <Image image={image} className="mt-15px md:mt-0px w-318px md:w-328px lg:w-full max-w-536px md:testimonials-image-area" />
     </div>
   );
 };

@@ -11,12 +11,13 @@
       grid-template-areas: ". HeroContent";
     }
 
-    .hero-h-type1-mobile {
-      height: calc(100vh + 46px);
+    .hero-h-bg-mobile {
+      height: calc(100vh + 49px);
     }
-    .hero-h-type1-tablet {
+    .hero-h-bg-tablet {
       height: calc(100vh + 73px);
     }
+
     .hero-h-type1-web {
       height: calc(100vh + 84px);
     }
@@ -24,12 +25,6 @@
       height: calc(100vh + 136px);
     }
 
-    .hero-h-type2-mobile {
-      height: calc(100vh + 86px);
-    }
-    .hero-h-type2-tablet {
-      height: calc(100vh + 84px);
-    }
     .hero-h-type2-web {
       height: calc(100vh + 112px);
     }
@@ -37,12 +32,6 @@
       height: calc(100vh + 116px);
     }
 
-    .hero-h-type3-mobile {
-      height: calc(100vh + 80px);
-    }
-    .hero-h-type3-tablet {
-      height: calc(100vh + 77px);
-    }
     .hero-h-type3-web {
       height: calc(100vh + 137px);
     }
@@ -50,12 +39,6 @@
       height: calc(100vh + 182px);
     }
 
-    .hero-h-type4-mobile {
-      height: calc(100vh + 46px);
-    }
-    .hero-h-type4-tablet {
-      height: calc(100vh + 71px);
-    }
     .hero-h-type4-web {
       height: calc(100vh + 75px);
     }

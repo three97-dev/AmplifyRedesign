@@ -159,7 +159,7 @@ FractionalApproach.propTypes = {
   stats: PropTypes.string,
   statsDescription: PropTypes.string,
   subtitle: PropTypes.string,
-  subtitleContent: PropTypes.string,
+  subtitleContent: PropTypes.object,
   tile1Number: PropTypes.string,
   tile1Description: PropTypes.string,
   tile2Number: PropTypes.string,

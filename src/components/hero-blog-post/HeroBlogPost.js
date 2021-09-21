@@ -58,7 +58,7 @@ const HeroBlogPost = ({ title, subtitle, image, className, storybookBackgroundsM
 
   return (
     <div
-      className={`grid justify-items-center content-end hero-blog-post-grid-mobile sm+:hero-blog-post-grid-tablet md+:hero-blog-post-web-grid lg+:hero-blog-post-webhd-grid w-full relative overflow-hidden hero-blog-post-h-mobile sm+:hero-blog-post-h-tablet-plus ${className}`}
+      className={`grid justify-items-center content-center hero-blog-post-grid-mobile sm+:hero-blog-post-grid-tablet md+:hero-blog-post-web-grid lg+:hero-blog-post-webhd-grid w-full relative overflow-hidden hero-blog-post-h-mobile sm+:hero-blog-post-h-tablet-plus ${className}`}
       {...otherProps}
     >
       <div className="absolute bottom-0px -z-10 w-max max-w-none sm+:hidden">
@@ -74,8 +74,8 @@ const HeroBlogPost = ({ title, subtitle, image, className, storybookBackgroundsM
         <WebHdBg alt="hero background" />
       </div>
 
-      <div className="hero-blog-post-image-area relative justify-self-start w-354px sm+:w-463px md+:w-full h-full sm+:ml-117px md+:ml-0px">
-        <div className="relative text-center overflow-hidden rounded-full ml-36px sm+:ml-50px md+:ml-55px lg+:ml-66px w-318px h-318px sm+:w-413px sm+:h-413px md+:w-444px md+:h-444px lg+:w-536px lg+:h-536px">
+      <div className="hero-blog-post-image-area relative justify-self-start w-354px sm+:w-413px md+:w-full h-full">
+        <div className="relative text-center overflow-hidden rounded-full fix-mobile-overflow ml-36px sm+:ml-0px md+:ml-55px lg+:ml-66px w-318px h-318px sm+:w-413px sm+:h-413px md+:w-444px md+:h-444px lg+:w-536px lg+:h-536px">
           <Image image={image} />
         </div>
         <img
@@ -85,12 +85,12 @@ const HeroBlogPost = ({ title, subtitle, image, className, storybookBackgroundsM
         />
       </div>
 
-      <div className="hero-blog-post-content-area w-full lg+:max-w-screen-xl grid justify-items-center">
-        <div className="max-w-318px sm+:max-w-328px md+:max-w-536px lg+:max-w-674px sm+:justify-self-end sm+:mr-81px md+:mr-0px">
-          <Text typography="h1" className="md+:mt-215px lg+:mt-254px">
+      <div className="hero-blog-post-content-area sm+:text-center md+:text-left w-full lg+:max-w-screen-xl grid justify-items-center">
+        <div className="max-w-318px sm+:max-w-414px md+:max-w-536px lg+:max-w-674px md+:justify-self-end">
+          <Text typography="h1" className="sm+:mt-80px md+:mt-215px lg+:mt-254px">
             {title}
           </Text>
-          <Text typography="h3" className="mt-24px sm+:ml-1px lg+:ml-0px mb-77px sm+:mb-200px md+:mb-0px">
+          <Text typography="h3" className="mt-24px sm+:ml-1px lg+:ml-0px mb-27px md+:mb-0px">
             {subtitle}
           </Text>
         </div>

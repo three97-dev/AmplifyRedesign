@@ -89,7 +89,7 @@ export default function IndexPage({ data }) {
         title={testimonials.title}
         image={testimonials.image}
         testimonialsToShow={testimonials.testimonialsToShow}
-        className="mt-51px md:mt-0px pb-49px md:pb-165px lg:pb-0px"
+        className="mt-51px md:mt-0px pb-49px md:pb-0px"
       />
       <SiteFooter />
     </Seo>

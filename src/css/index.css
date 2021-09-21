@@ -7,6 +7,10 @@ html {
   color: #0b121d;
 }
 
+html body {
+  width: 100%;
+}
+
 /* poppins-100 - latin */
 @font-face {
   font-family: "Poppins";
