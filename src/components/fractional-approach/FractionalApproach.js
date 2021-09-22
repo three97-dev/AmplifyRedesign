@@ -94,6 +94,8 @@ const FractionalApproach = ({
           <img
             src={ImageFractionalApproach}
             alt="Fractional Approach"
+            width="318"
+            height="94"
             className="mt-29px lg:mt-12px md:w-328px xl:w-388px"
           />
         </div>

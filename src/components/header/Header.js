@@ -50,7 +50,7 @@ const Header = ({ isInverted, links, logoLink, logoMobile, logoDesktop, sendButt
   return (
     <div className="absolute top-0px z-100 grid w-full header-mobile-grid md:header-tablet-grid md+:header-desktop-grid lg+:header-hd-grid items-center md:items-start md+:items-center mt-22px md:mt-30px md+:mt-0px">
       <UniversalLink link={logoLink} className="header-logo-area focus-visible:header-focus-outline">
-        <Image image={logoMobile} className="md:hidden" />
+        <Image image={logoMobile} className="md:hidden" width="52" height="44" />
         <Image image={logoDesktop} className="hidden md:block" />
       </UniversalLink>
       <div className="header-links-area justify-end gap-x-49px lg+:gap-92px hidden md+:flex">

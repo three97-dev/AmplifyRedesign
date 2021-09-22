@@ -29,7 +29,7 @@ const Footer = ({
       {...otherProps}
     >
       <UniversalLink link="/" className="footer-image-area mx-auto md:mx-0px md:mt-4px mb-28px md:mb-0px">
-        <Image image={logo} className="md:w-168px" />
+        <Image image={logo} className="md:w-168px" width="154" height="40" />
       </UniversalLink>
       <div className="links-block-area justify-self-end md:-mt-3px lg:-mt-2px mx-auto md:mx-0px mb-48px md:mb-0px md:ml-50px md:mr-39px lg:mr-51px xl:mr-143px">
         {links.map((link, i) => (

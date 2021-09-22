@@ -52,6 +52,8 @@ const MicrosoftPartner = ({ title, mainText, secondaryText, image, className, ..
         />
         <Image
           image={image}
+          width="374"
+          height="400"
           className="area-mp-partner-image mt-50px md:mt-75px md+:mt-0px lg+:mt-25px md:mb-20px -ml-55px md:-ml-88px md+:ml-0px md+:mr-101px lg+:mr-148px justify-self-center w-374px md:w-587px md+:w-523px lg+:w-629px"
         />
       </div>

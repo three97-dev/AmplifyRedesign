@@ -104,7 +104,13 @@ const PieChart = ({
               {centerBlockContent}
             </Text>
           </div>
-          <img src={PieChartImage} alt="diagram" className="justify-self-center w-full lg:w-457px xl:w-690px mt-285px md:mt-336px lg:mt-269px xl:mt-357px" />
+          <img
+            src={PieChartImage}
+            alt="diagram"
+            width="318"
+            height="160"
+            className="justify-self-center w-full lg:w-457px xl:w-690px mt-285px md:mt-336px lg:mt-269px xl:mt-357px"
+          />
         </div>
       </div>
     </div>

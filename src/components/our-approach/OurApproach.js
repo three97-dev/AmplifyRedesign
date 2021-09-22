@@ -89,7 +89,7 @@ const OurApproach = ({
           </div>
         </div>
         <div className="area-our-approach-tile-1 mx-22px md:mx-0px md:ml-15px lg:ml-0px md:mr-34px lg:mr-0px mt-30px md:mt-0px lg:absolute lg:top-221px xl:top-295px lg:max-w-316px lg:justify-self-center">
-          <Image image={tileOneImage} className="mx-auto tile-image" />
+          <Image image={tileOneImage} className="mx-auto tile-image" width="115" height="115" />
           <Text typography="h4" className="text-center mt-22px">
             {tileOneMainText}
           </Text>
@@ -104,7 +104,7 @@ const OurApproach = ({
         <Border borderSide="right" className="area-our-approach-tile-1 hidden md:block lg:hidden pt-8px pb-110px" />
 
         <div className="area-our-approach-tile-2 mx-22px md:mx-0px md:ml-34px lg:ml-0px md:mr-15px lg:mr-0px mt-30px md:mt-0px lg:absolute lg:top-565px xl:top-775px lg:right-20px xl:right-32px lg:max-w-316px xl:max-w-496px">
-          <Image image={tileTwoImage} className="mx-auto tile-image" />
+          <Image image={tileTwoImage} className="mx-auto tile-image" width="115" height="115" />
           <Text typography="h4" className="text-center mt-22px">
             {tileTwoMainText}
           </Text>
@@ -120,7 +120,7 @@ const OurApproach = ({
         <Border borderSide="left" className="area-our-approach-tile-2 hidden md:block lg:hidden pt-8px pb-110px" />
 
         <div className="area-our-approach-tile-3 mx-22px md:mx-0px md:ml-15px lg:ml-0px md:mr-34px lg:mr-0px mt-30px md:mt-80px lg:mt-0px lg:absolute lg:bottom-97px xl:bottom-135px lg:justify-self-center lg:max-w-316px xl:max-w-496px">
-          <Image image={tileThreeImage} className="mx-auto tile-image" />
+          <Image image={tileThreeImage} className="mx-auto tile-image" width="115" height="115" />
           <Text typography="h4" className="text-center mt-22px">
             {tileThreeMainText}
           </Text>
@@ -136,7 +136,7 @@ const OurApproach = ({
         <Border borderSide="right" className="area-our-approach-tile-3 hidden md:block lg:hidden pt-78px" />
 
         <div className="area-our-approach-tile-4 mx-22px md:mx-0px md:ml-34px lg:ml-0px md:mr-15px mt-30px md:mt-80px lg:mt-0px lg:absolute lg:top-565px xl:top-775px lg:left-20px xl:left-32px lg:max-w-316px xl:max-w-496px">
-          <Image image={tileFourImage} className="mx-auto tile-image" />
+          <Image image={tileFourImage} className="mx-auto tile-image" width="115" height="115" />
           <Text typography="h4" className="text-center mt-22px">
             {tileFourMainText}
           </Text>

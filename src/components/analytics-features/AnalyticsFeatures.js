@@ -58,6 +58,8 @@ const AnalyticsFeatures = ({
           <img
             src={AnalyticsFeaturesImage}
             alt="analytics features"
+            width="318"
+            height="199"
             className="w-full mt-50px md:mt-75px lg:mt-0px lg:analytics-features-image-area"
           />
         </div>

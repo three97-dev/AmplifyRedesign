@@ -90,7 +90,7 @@ const BusinessLifecycleTiles = ({
               }}
             >
               <div>
-                <Image image={tileOneImage} className="mx-auto w-115px lg+:w-174px" />
+                <Image image={tileOneImage} className="mx-auto w-115px lg+:w-174px" width="115" height="115" />
                 <Text typography="h4" className="mt-22px">
                   {blockTitle1}
                 </Text>
@@ -118,7 +118,7 @@ const BusinessLifecycleTiles = ({
               }}
             >
               <div>
-                <Image image={tileTwoImage} className="mx-auto w-115px lg+:w-165px" />
+                <Image image={tileTwoImage} className="mx-auto w-115px lg+:w-165px" width="115" height="115" />
                 <Text typography="h4" className="mt-21px lg+:mt-31px">
                   {blockTitle2}
                 </Text>
@@ -152,7 +152,7 @@ const BusinessLifecycleTiles = ({
               }}
             >
               <div>
-                <Image image={tileThreeImage} className="mx-auto w-115px lg+:w-165px" />
+                <Image image={tileThreeImage} className="mx-auto w-115px lg+:w-165px" width="115" height="115" />
                 <Text typography="h4" className="mt-21px lg+:mt-31px">
                   {blockTitle3}
                 </Text>
@@ -187,7 +187,7 @@ const BusinessLifecycleTiles = ({
               }}
             >
               <div>
-                <Image image={tileFourImage} className="mx-auto w-115px lg+:w-165px" />
+                <Image image={tileFourImage} className="mx-auto w-115px lg+:w-165px" width="115" height="115" />
                 <Text typography="h4" className="mt-21px lg+:mt-31px md:mx-10px">
                   {blockTitle4}
                 </Text>

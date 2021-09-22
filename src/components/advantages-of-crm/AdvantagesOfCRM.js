@@ -52,7 +52,12 @@ const AdvantagesOfCRM = ({
         </Text>
         <div className="grid relative advantages-of-crm-mobile-tiles-grid md:advantages-of-crm-tablet-tiles-grid lg:advantages-of-crm-desktop-tiles-grid xl:advantages-of-crm-desktop-hd-tiles-grid items-start md:mt-20px lg:mt-25px xl:mt-50px mb-20px md:mb-74px lg:mb-100px xl:mb-150px">
           <div className="advantages-of-crm-tile-1-area grid justify-items-center pl-20px pr-20px">
-            <Image image={advantages1Image} className="w-115px xl:w-165px h-115px xl:h-165px mt-30px lg:mt-50px" />
+            <Image
+              image={advantages1Image}
+              width="115"
+              height="115"
+              className="w-115px xl:w-165px h-115px xl:h-165px mt-30px lg:mt-50px"
+            />
             <Text typography="h4" className="text-center mt-20px">
               {advantages1Title}
             </Text>
@@ -66,7 +71,12 @@ const AdvantagesOfCRM = ({
             borderSide="right"
           />
           <div className="advantages-of-crm-tile-2-area grid justify-items-center pl-20px pr-20px">
-            <Image image={advantages2Image} className="w-115px xl:w-165px h-115px xl:h-165px mt-30px lg:mt-50px" />
+            <Image
+              image={advantages2Image}
+              width="115"
+              height="115"
+              className="w-115px xl:w-165px h-115px xl:h-165px mt-30px lg:mt-50px"
+            />
             <Text typography="h4" className="text-center mt-20px">
               {advantages2Title}
             </Text>
@@ -85,7 +95,12 @@ const AdvantagesOfCRM = ({
           />
           <Border className="advantages-of-crm-tile-2-area pt-50px pb-9px hidden lg:block" borderSide="right" />
           <div className="advantages-of-crm-tile-3-area grid justify-items-center pl-20px pr-20px">
-            <Image image={advantages3Image} className="w-115px xl:w-165px h-115px xl:h-165px mt-30px lg:mt-50px" />
+            <Image
+              image={advantages3Image}
+              width="115"
+              height="115"
+              className="w-115px xl:w-165px h-115px xl:h-165px mt-30px lg:mt-50px"
+            />
             <Text typography="h4" className="text-center mt-20px">
               {advantages3Title}
             </Text>
@@ -107,7 +122,12 @@ const AdvantagesOfCRM = ({
             borderSide="right"
           />
           <div className="advantages-of-crm-tile-4-area grid justify-items-center pl-20px pr-20px">
-            <Image image={advantages4Image} className="w-115px xl:w-165px h-115px xl:h-165px mt-30px lg:mt-50px" />
+            <Image
+              image={advantages4Image}
+              width="115"
+              height="115"
+              className="w-115px xl:w-165px h-115px xl:h-165px mt-30px lg:mt-50px"
+            />
             <Text typography="h4" className="text-center mt-20px">
               {advantages4Title}
             </Text>
@@ -126,7 +146,12 @@ const AdvantagesOfCRM = ({
           <Border className="advantages-of-crm-tile-4-area pt-9px pb-9px hidden md:block lg:hidden" borderSide="left" />
           <Border className="advantages-of-crm-tile-4-area pt-9px pb-50px hidden lg:block" borderSide="right" />
           <div className="advantages-of-crm-tile-5-area grid justify-items-center pl-20px pr-20px">
-            <Image image={advantages5Image} className="w-115px xl:w-165px h-115px xl:h-165px mt-30px lg:mt-50px" />
+            <Image
+              image={advantages5Image}
+              width="115"
+              height="115"
+              className="w-115px xl:w-165px h-115px xl:h-165px mt-30px lg:mt-50px"
+            />
             <Text typography="h4" className="text-center mt-20px">
               {advantages5Title}
             </Text>
@@ -145,7 +170,12 @@ const AdvantagesOfCRM = ({
             borderSide="right"
           />
           <div className="advantages-of-crm-tile-6-area grid justify-items-center pl-20px pr-20px">
-            <Image image={advantages6Image} className="w-115px xl:w-165px h-115px xl:h-165px mt-30px lg:mt-50px" />
+            <Image
+              image={advantages6Image}
+              width="115"
+              height="115"
+              className="w-115px xl:w-165px h-115px xl:h-165px mt-30px lg:mt-50px"
+            />
             <Text typography="h4" className="text-center mt-20px">
               {advantages6Title}
             </Text>
