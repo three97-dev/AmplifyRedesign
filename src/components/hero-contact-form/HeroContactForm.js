@@ -124,16 +124,16 @@ const HeroContactForm = ({
 
       <form
         id="contact-form"
-        className="self-end grid hero-contact-grid-mobile sm+:hero-contact-grid-tablet lg:hero-contact-web-grid xl:hero-contact-webhd-grid mx-36px mb-50px md:mb-180px lg:mb-180px xl:mb-360px mt-70px md:mt-70px lg:mt-150px xl:mt-150px"
+        className="self-end md+:self-center grid hero-contact-grid-mobile sm+:hero-contact-grid-tablet md+:hero-contact-web-grid lg+:hero-contact-webhd-grid mx-36px mb-50px md+:mb-0px mt-70px md+:-mt-90px lg+:-mt-117px"
         onSubmit={formik.handleSubmit}
       >
-        <div className="hero-contact-title-area sm+:self-end lg:self-start">
-          <Text typography="h1" className="mb-20px lg:text-white">
+        <div className="hero-contact-title-area w-280px sm+:w-414px md+:w-auto sm+:justify-self-center md+:justify-self-start sm+:text-center md+:text-left">
+          <Text typography="h1" className="mb-20px lg:mb-16px">
             {heroTitle}
           </Text>
         </div>
-        <div className="hero-contact-subtitle-area">
-          <Text typography="h3" className="mb-50px">
+        <div className="hero-contact-subtitle-area sm+:w-414px md+:w-auto sm+:justify-self-center md+:justify-self-start sm+:text-center md+:text-left">
+          <Text typography="h3" className="sm+:mb-50px">
             {heroSubtitle}
           </Text>
         </div>
@@ -210,7 +210,7 @@ const HeroContactForm = ({
             className="mb-16px"
           />
         </div>
-        <div className="hero-contact-required-area flex items-center justify-center md:justify-start tracking-wide text-body text-coral-red md:pl-5px mb-15px md:mb-0px xl:-mr-135px ">
+        <div className="hero-contact-required-area flex items-center justify-center md+:justify-start tracking-wide text-body text-coral-red md+:pl-5px mb-15px md+:mb-0px xl:-mr-135px ">
           {requiredMessage}
         </div>
         <div className="hero-contact-submit-area xl:text-right">
