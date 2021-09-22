@@ -80,6 +80,10 @@
       grid-area: HeroContactSubmit;
     }
 
+    .hero-contact-height-tablet {
+      height: calc(100vh + 73px);
+    }
+
     .hero-contact-height-web {
       height: calc(100vh + 90px);
     }

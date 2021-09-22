@@ -19,7 +19,7 @@ export default function CRMPage({ data }) {
   return (
     <Seo seo={contentfulCrmPage}>
       <SiteHeader />
-      <Hero type="type2" title={contentfulCrmPage.heroTitle} subtitle={contentfulCrmPage.heroTitle} />
+      <Hero type="type2" title={contentfulCrmPage.heroTitle} subtitle={contentfulCrmPage.heroSubtitle} />
       <WhatIsCRM
         title1={whatIsCrm.title1}
         subtitle1={whatIsCrm.subtitle1}

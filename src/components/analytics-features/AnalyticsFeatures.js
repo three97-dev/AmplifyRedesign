@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { StaticImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 
 import Text from "../basic/text/Text";
 import Border from "../basic/border/Border";
 
-import AnalyticsFeaturesImage from "../../assets/pages/analytics/analytics-features-image.png";
 import AnalyticsFeaturesTablet from "../../assets/pages/analytics/analytics-features-bg-tablet.svg";
 import AnalyticsFeaturesWeb from "../../assets/pages/analytics/analytics-features-bg-web.svg";
 import AnalyticsFeaturesWebHD from "../../assets/pages/analytics/analytics-features-bg-webhd.svg";
@@ -55,12 +55,15 @@ const AnalyticsFeatures = ({
           >
             {title}
           </Text>
-          <img
-            src={AnalyticsFeaturesImage}
+          <StaticImage
+            src="../../assets/pages/analytics/analytics-features-image.png"
             alt="analytics features"
-            width="318"
-            height="199"
+            width="812"
+            height="509"
             className="w-full mt-50px md:mt-75px lg:mt-0px lg:analytics-features-image-area"
+            quality={100}
+            placeholder="blurred"
+            layout="constrained"
           />
         </div>
 

@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { StaticImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 
 import Text from "../basic/text/Text";
-
-import PieChartImage from "../../assets/pages/crm/pie-chart-img.png";
 
 import PieChartBackgroundMobile from "../../assets/pages/crm/pie-chart-bg-mobile.svg";
 import PieChartBackgroundTablet1 from "../../assets/pages/crm/pie-chart-bg-tablet-1.svg";
@@ -104,12 +103,15 @@ const PieChart = ({
               {centerBlockContent}
             </Text>
           </div>
-          <img
-            src={PieChartImage}
+          <StaticImage
+            src="../../assets/pages/crm/pie-chart-img.png"
             alt="diagram"
-            width="318"
-            height="160"
-            className="justify-self-center w-full lg:w-457px xl:w-690px mt-285px md:mt-336px lg:mt-269px xl:mt-357px"
+            width="690"
+            height="362"
+            className="justify-self-center w-full lg:w-457px xl:w-690px mt-285px md:mt-336px lg:mt-269px xl:mt-357px h-166px md:h-353px lg:h-239px xl:h-362px"
+            quality={100}
+            placeholder="blurred"
+            layout="constrained"
           />
         </div>
       </div>

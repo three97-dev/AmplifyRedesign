@@ -80,12 +80,12 @@ const HeroHome = ({ title, subtitle, arrowText, className, storybookBackgroundsM
         <WebHdBg alt="hero background" />
       </div>
 
-      <div className="w-full xl:max-w-screen-xl justify-self-start xl:justify-self-center grid justify-items-center md+:justify-items-start">
-        <div className="md+:ml-139px lg+:ml-140px max-w-318px sm+:max-w-500px md+:max-w-535px lg+:max-w-812px">
+      <div className="grid w-full xl:max-w-screen-xl justify-self-start xl:justify-self-center justify-items-center md+:justify-items-start">
+        <div className="md+:col-span-full md+:row-span-full md+:self-center md+:ml-139px lg+:ml-140px max-w-318px sm+:max-w-500px md+:max-w-535px lg+:max-w-812px">
           <Text
             typography="h1"
             color="text-white"
-            className="text-center md+:text-left mt-147px sm+:mt-270px md+:mt-262px lg+:mt-446px"
+            className="text-center md+:text-left mt-147px sm+:mt-270px md+:mt-0px"
           >
             {title && title.raw ? renderRichText(title, customRenderOptions) : title}
           </Text>
@@ -97,7 +97,7 @@ const HeroHome = ({ title, subtitle, arrowText, className, storybookBackgroundsM
             {subtitle}
           </Text>
         </div>
-        <div className="justify-self-center self-end grid justify-items-center mt-30px mb-50px">
+        <div className="md+:col-span-full md+:row-span-full justify-self-center self-end grid justify-items-center mt-30px mb-50px">
           <Text typography="learn-more" color="text-white" className="text-center">
             {arrowText}
           </Text>

@@ -23,10 +23,10 @@ const BACKGROUNDS = {
   ),
   TabletBg: ({ alt, className }) => (
     <StaticImage
-      src="../../assets/pages/contact/hero-contact-bg-tablet.png"
+      src="../../assets/hero/hero-bg-tablet.png"
+      quality={100}
       placeholder="blurred"
       layout="fixed"
-      quality={100}
       alt={alt}
       className={className}
     />
@@ -98,7 +98,7 @@ const HeroContactForm = ({
 
   return (
     <div
-      className={`grid justify-items-center w-full relative overflow-hidden h-1375px sm+:h-screen md+:hero-contact-height-web lg+:hero-contact-height-webhd ${className}`}
+      className={`grid justify-items-center w-full relative overflow-hidden h-1458px sm+:hero-contact-height-tablet md+:hero-contact-height-web lg+:hero-contact-height-webhd ${className}`}
       {...otherProps}
     >
       <div className="absolute bottom-0px -z-10 w-max max-w-none sm+:hidden">
@@ -124,7 +124,7 @@ const HeroContactForm = ({
 
       <form
         id="contact-form"
-        className="self-end md+:self-center grid hero-contact-grid-mobile sm+:hero-contact-grid-tablet md+:hero-contact-web-grid lg+:hero-contact-webhd-grid mx-36px mb-50px md+:mb-0px mt-70px md+:-mt-90px lg+:-mt-117px"
+        className="self-end md+:self-center grid hero-contact-grid-mobile sm+:hero-contact-grid-tablet md+:hero-contact-web-grid lg+:hero-contact-webhd-grid mx-36px mb-100px sm+:mb-123px md+:mb-0px mt-70px md+:-mt-90px lg+:-mt-117px"
         onSubmit={formik.handleSubmit}
       >
         <div className="hero-contact-title-area w-280px sm+:w-414px md+:w-auto sm+:justify-self-center md+:justify-self-start sm+:text-center md+:text-left">

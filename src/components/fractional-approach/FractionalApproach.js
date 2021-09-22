@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { StaticImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 
 import Text from "../basic/text/Text";
@@ -15,8 +16,6 @@ import ImageFABackground4Tablet from "../../assets/pages/home/fractional-approac
 import ImageFABackground4Web from "../../assets/pages/home/fractional-approach-bg-4-web.svg";
 import ImageFABackground4WebHd from "../../assets/pages/home/fractional-approach-bg-4-webhd.svg";
 import ImageFABackground5 from "../../assets/pages/home/fractional-approach-bg-5.svg";
-
-import ImageFractionalApproach from "../../assets/pages/home/fractional-approach.svg";
 
 import "./FractionalApproach.css";
 
@@ -91,12 +90,15 @@ const FractionalApproach = ({
           <Text text={description} />
         </div>
         <div className="area-fa-image grid justify-items-center md:justify-items-start md:mr-17px md:mt-45px lg:mt-38px xl:mt-55px lg:mb-18px xl:mb-124px">
-          <img
-            src={ImageFractionalApproach}
+          <StaticImage
+            src="../../assets/pages/home/fractional-approach.svg"
             alt="Fractional Approach"
-            width="318"
-            height="94"
+            width="388"
+            height="114"
             className="mt-29px lg:mt-12px md:w-328px xl:w-388px"
+            quality={100}
+            placeholder="blurred"
+            layout="constrained"
           />
         </div>
         <div className="area-fa-stats mt-33px md:mt-80px lg:mt-53px xl:mt-83px lg:mb-18px md:ml-8px lg:ml-0px text-center">
