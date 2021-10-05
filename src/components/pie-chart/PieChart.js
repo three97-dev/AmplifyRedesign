@@ -25,6 +25,7 @@ const PieChart = ({
   rightBlockContent,
   centerBlockTitle,
   centerBlockContent,
+  isBottomBackground,
   className,
   ...otherProps
 }) => {
@@ -42,31 +43,34 @@ const PieChart = ({
           className="hidden md:block lg:hidden absolute -z-10 top-15px left-38px max-w-none"
         />
         <img
-          src={PieChartBackgroundTablet2}
-          alt="background"
-          className="hidden md:block lg:hidden absolute -z-10 -bottom-30px -right-172px max-w-none"
-        />
-        <img
           src={PieChartBackgroundWeb1}
           alt="background"
           className="hidden lg:block xl:hidden absolute -z-10 -top-94px left-55px max-w-none"
         />
         <img
-          src={PieChartBackgroundWeb2}
-          alt="background"
-          className="hidden lg:block xl:hidden absolute -z-10 -bottom-81px -left-33px max-w-none"
-        />
-
-        <img
           src={PieChartBackgroundWebHD1}
           alt="background"
           className="hidden xl:block absolute -z-10 -top-87px left-80px max-w-none"
         />
-        <img
-          src={PieChartBackgroundWebHD2}
-          alt="background"
-          className="hidden xl:block absolute -z-10 -bottom-63px -left-22px max-w-none"
-        />
+        {isBottomBackground ? (
+          <>
+            <img
+              src={PieChartBackgroundTablet2}
+              alt="background"
+              className="hidden md:block lg:hidden absolute -z-10 -bottom-30px -right-172px max-w-none"
+            />
+            <img
+              src={PieChartBackgroundWeb2}
+              alt="background"
+              className="hidden lg:block xl:hidden absolute -z-10 -bottom-81px -left-33px max-w-none"
+            />
+            <img
+              src={PieChartBackgroundWebHD2}
+              alt="background"
+              className="hidden xl:block absolute -z-10 -bottom-63px -left-22px max-w-none"
+            />
+          </>
+        ) : null}
 
         <div className="lg:pie-chart-content-area">
           <Text typography="h2" className="text-center lg:text-left mt-50px md:mt-100px lg:mt-0px">
@@ -129,6 +133,7 @@ PieChart.propTypes = {
   rightBlockContent: PropTypes.string,
   centerBlockTitle: PropTypes.string,
   centerBlockContent: PropTypes.string,
+  isBottomBackground: PropTypes.bool,
 };
 
 PieChart.defaultProps = {
@@ -144,6 +149,7 @@ PieChart.defaultProps = {
   centerBlockTitle: "TRACK RECORD",
   centerBlockContent:
     "In an industry known to have a steep price and poor success rates, our approach has lead to a flawless success rate at a discount.",
+  isBottomBackground: false,
 };
 
 export default PieChart;

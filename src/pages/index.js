@@ -8,6 +8,7 @@ import {
   BusinessLifecycleTiles,
   Heading,
   FractionalApproach,
+  PieChart,
   SiteFooter,
   SiteHeader,
   Testimonials,
@@ -15,7 +16,7 @@ import {
 
 export default function IndexPage({ data }) {
   const { contentfulHomePage } = data;
-  const { microsoftPartner, businessLifecycleTiles, fractionalApproach, testimonials } = contentfulHomePage;
+  const { microsoftPartner, businessLifecycleTiles, fractionalApproach, pieChart, testimonials } = contentfulHomePage;
 
   return (
     <Seo seo={contentfulHomePage}>
@@ -67,6 +68,7 @@ export default function IndexPage({ data }) {
         description={fractionalApproach.description}
         subtitle={fractionalApproach.subtitle}
         subtitleContent={fractionalApproach.subtitleContent}
+        image={fractionalApproach.image}
         stats={fractionalApproach.statsValue}
         statsDescription={fractionalApproach.statsDescription}
         tile1Number={fractionalApproach.tile1Number}
@@ -84,6 +86,18 @@ export default function IndexPage({ data }) {
         text={contentfulHomePage.heading2Label}
         link={contentfulHomePage.heading2Link}
         className="md:mt-32px lg:-mt-11px xl:-mt-31px"
+      />
+      <PieChart
+        title={pieChart.title}
+        subtitle={pieChart.subtitle}
+        content={pieChart.content}
+        leftBlockTitle={pieChart.leftBlockTitle}
+        leftBlockContent={pieChart.leftBlockContent}
+        rightBlockTitle={pieChart.rightBlockTitle}
+        rightBlockContent={pieChart.rightBlockContent}
+        centerBlockTitle={pieChart.centerBlockTitle}
+        centerBlockContent={pieChart.centerBlockContent}
+        className="lg:-mb-6px xl:-mb-2px"
       />
       <Testimonials
         title={testimonials.title}
@@ -117,6 +131,9 @@ export const pageQuery = graphql`
       }
       heading2Label
       heading2Link
+      pieChart {
+        ...PieChart
+      }
       testimonials {
         ...Testimonials
       }

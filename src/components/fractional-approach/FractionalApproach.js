@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { StaticImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 
 import Text from "../basic/text/Text";
 import TileShadow from "../basic/tile-shadow/TileShadow";
 import Button from "../basic/button/Button";
+import Image from "../basic/image/Image";
 
 //bg images
 import ImageFABackground1TabletWeb from "../../assets/pages/home/fractional-approach-bg-1-tablet-web.svg";
@@ -22,6 +22,7 @@ import "./FractionalApproach.css";
 const FractionalApproach = ({
   title,
   description,
+  image,
   stats,
   statsDescription,
   subtitle,
@@ -90,16 +91,7 @@ const FractionalApproach = ({
           <Text text={description} />
         </div>
         <div className="area-fa-image grid justify-items-center md:justify-items-start md:mr-17px md:mt-45px lg:mt-38px xl:mt-55px lg:mb-18px xl:mb-124px">
-          <StaticImage
-            src="../../assets/pages/home/fractional-approach.svg"
-            alt="Fractional Approach"
-            width="388"
-            height="114"
-            className="mt-29px lg:mt-12px md:w-328px xl:w-388px"
-            quality={100}
-            placeholder="blurred"
-            layout="constrained"
-          />
+          <Image image={image} width="388" height="114" className="mt-29px lg:mt-12px md:w-328px xl:w-388px" />
         </div>
         <div className="area-fa-stats mt-33px md:mt-80px lg:mt-53px xl:mt-83px lg:mb-18px md:ml-8px lg:ml-0px text-center">
           <Text typography="h1">{stats}</Text>
@@ -160,6 +152,7 @@ const FractionalApproach = ({
 FractionalApproach.propTypes = {
   title: PropTypes.string,
   description: PropTypes.object,
+  image: PropTypes.object,
   stats: PropTypes.string,
   statsDescription: PropTypes.string,
   subtitle: PropTypes.string,
@@ -207,6 +200,9 @@ export const query = graphql`
     }
     statsValue
     statsDescription
+    image {
+      ...Image
+    }
     tile1Number
     tile1Description
     tile2Number

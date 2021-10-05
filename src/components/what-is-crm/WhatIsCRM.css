@@ -27,14 +27,14 @@
     .what-is-crm-grid-web {
       max-width: none;
       grid-template-columns: 55.2rem 53.6rem;
-      grid-template-rows: 31.9rem 31.9rem;
+      grid-template-rows: 31.9rem 0.2rem;
       grid-template-areas:
         "WhatIsCRMTitle1 WhatIsCRMText1"
         "WhatIsCRMTitle2 WhatIsCRMText2";
     }
     .what-is-crm-grid-webhd {
       grid-template-columns: 82.8rem 81.2rem;
-      grid-template-rows: 29rem 29rem;
+      grid-template-rows: 29rem 0.2rem;
       grid-template-areas:
         "WhatIsCRMTitle1 WhatIsCRMText1"
         "WhatIsCRMTitle2 WhatIsCRMText2";

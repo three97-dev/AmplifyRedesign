@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { StaticImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 
 import Text from "../basic/text/Text";
 import Border from "../basic/border/Border";
+import Image from "../basic/image/Image";
 
 import AnalyticsFeaturesTablet from "../../assets/pages/analytics/analytics-features-bg-tablet.svg";
 import AnalyticsFeaturesWeb from "../../assets/pages/analytics/analytics-features-bg-web.svg";
@@ -13,6 +13,7 @@ import AnalyticsFeaturesWebHD from "../../assets/pages/analytics/analytics-featu
 import "./AnalyticsFeatures.css";
 
 const AnalyticsFeatures = ({
+  image,
   title,
   subtitle,
   feature1Title,
@@ -55,15 +56,11 @@ const AnalyticsFeatures = ({
           >
             {title}
           </Text>
-          <StaticImage
-            src="../../assets/pages/analytics/analytics-features-image.png"
-            alt="analytics features"
+          <Image
+            image={image}
             width="812"
             height="509"
-            className="w-full mt-50px md:mt-75px lg:mt-0px lg:analytics-features-image-area"
-            quality={100}
-            placeholder="blurred"
-            layout="constrained"
+            className="justify-self-center w-full md:max-w-812px lg:max-w-none mt-50px md:mt-75px lg:mt-0px lg:analytics-features-image-area"
           />
         </div>
 
@@ -205,6 +202,7 @@ const AnalyticsFeatures = ({
 };
 
 AnalyticsFeatures.propTypes = {
+  image: PropTypes.object,
   title: PropTypes.string,
   subtitle: PropTypes.string,
   feature1Title: PropTypes.string,
@@ -243,6 +241,9 @@ export default AnalyticsFeatures;
 
 export const query = graphql`
   fragment AnalyticsFeatures on ContentfulAnalyticsFeatures {
+    image {
+      ...Image
+    }
     title
     subtitle
     feature1Title

@@ -1,10 +1,9 @@
-
 import React from "react";
 
 import HeroContactForm from "./HeroContactForm";
 
 import ImageHeroContactMobile from "../../assets/pages/contact/hero-contact-bg-mobile.png";
-import ImageHeroContactTablet from "../../assets/pages/contact/hero-contact-bg-tablet.png";
+import ImageHeroContactTablet from "../../assets/hero/hero-bg-tablet.png";
 import ImageHeroContactWeb from "../../assets/pages/contact/hero-contact-bg-web.png";
 import ImageHeroContactHd from "../../assets/pages/contact/hero-contact-bg-webhd.png";
 
@@ -23,6 +22,4 @@ const storybookBackgroundsMocks = {
 const Template = args => <HeroContactForm storybookBackgroundsMocks={storybookBackgroundsMocks} {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {
-
-};
+Default.args = {};

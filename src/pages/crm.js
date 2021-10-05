@@ -24,10 +24,7 @@ export default function CRMPage({ data }) {
         title1={whatIsCrm.title1}
         subtitle1={whatIsCrm.subtitle1}
         contentText1={whatIsCrm.contentText1}
-        title2={whatIsCrm.title2}
-        subtitle2={whatIsCrm.subtitle2}
-        contentText2={whatIsCrm.contentText2}
-        className="-mt-16px md:mt-40px lg:-mt-112px xl:-mt-140px -mb-148px md:-mb-87px lg:-mb-70px xl:-mb-146px"
+        className="-mt-16px md:mt-40px lg:-mt-112px xl:-mt-140px"
       />
       <AdvantagesOfCRM
         title={advantagesOfCrm.title}
@@ -75,6 +72,7 @@ export default function CRMPage({ data }) {
         centerBlockTitle={pieChart.centerBlockTitle}
         centerBlockContent={pieChart.centerBlockContent}
         className="lg:-mb-6px xl:-mb-2px"
+        isBottomBackground={true}
       />
       <SiteFooter />
     </Seo>
