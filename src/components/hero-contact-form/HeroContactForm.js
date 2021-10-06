@@ -6,6 +6,7 @@ import * as Yup from "yup";
 
 import Text from "../basic/text/Text";
 import Input from "../basic/input/Input";
+import InputPhone from "../basic/input-phone/InputPhone";
 import Button from "../basic/button/Button";
 
 import "./HeroContactForm.css";
@@ -84,10 +85,13 @@ const HeroContactForm = ({
         .required("First Name is required"),
       lastname: Yup.string().max(50, "Last Name should be shorter then 50 letters").required("Last Name is required"),
       business: Yup.string().max(50, "Business should be shorter then 50 letters"),
-      phone: Yup.string().matches(phoneRegExp, "Phone Number should match XXX-XXX-XXXX"),
+      phone: Yup.string()
+        .matches(phoneRegExp, "Phone Number should match XXX-XXX-XXXX")
+        .min(12, "Too short to be valid phone number"),
       email: Yup.string().email("Valid email is required").required("Email Address is required"),
     }),
     onSubmit: async (values, { setSubmitting }) => {
+      let t = values;
       console.log("Form submitted");
       setSubmitting(false);
       setIsSubmitted(true);
@@ -181,15 +185,16 @@ const HeroContactForm = ({
           />
         </div>
         <div className="hero-contact-phone-number-area">
-          <Input
+          <InputPhone
             id="phone"
             name="phone"
-            onChange={formik.handleChange}
+            onChange={(value, country, e, formattedValue) => {
+              formik.setFieldValue("phone", formattedValue)
+            }}
             onBlur={formik.handleBlur}
             isError={formik.errors.phone && formik.touched.phone}
             title={formik.errors.phone}
             value={formik.values.phone}
-            disabled={isSubmitted}
             placeholder={phoneNumberInputPlaceholder}
             className="mb-16px"
           />

@@ -110,8 +110,8 @@ const PieChart = ({
           <StaticImage
             src="../../assets/pages/crm/pie-chart-img.png"
             alt="diagram"
-            width="690"
-            height="362"
+            width={690}
+            height={362}
             className="justify-self-center w-full lg:w-457px xl:w-690px mt-285px md:mt-336px lg:mt-269px xl:mt-357px h-166px md:h-353px lg:h-239px xl:h-362px"
             quality={100}
             placeholder="blurred"

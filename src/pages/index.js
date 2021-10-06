@@ -99,6 +99,9 @@ export default function IndexPage({ data }) {
         centerBlockContent={pieChart.centerBlockContent}
         className="lg:-mb-6px xl:-mb-2px"
       />
+      <div className="w-full px-36px md:px-81px lg:px-139px xl:px-140px md:mb-30px lg:mb-0px">
+        <div className="h-2px bg-line-color2 w-full" />
+      </div>
       <Testimonials
         title={testimonials.title}
         image={testimonials.image}

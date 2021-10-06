@@ -45,7 +45,7 @@ export default function ContactPage({ data }) {
         emailContent={contactsMap.emailValue}
         location={contactsMap.location}
         googleMapsCredentials={contactsMap.googleMapsCredentials}
-        className="md+:-mt-90px lg+:-mt-117px"
+        className="-mt-30px sm+:-mt-74px md+:-mt-90px lg+:-mt-117px"
       />
       <SiteFooter />
     </Seo>

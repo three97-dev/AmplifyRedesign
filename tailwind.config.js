@@ -54,6 +54,9 @@ module.exports = {
       "fontcolor-footer": "#F7F7F7",
       "fontcolor-paginator": "#1D1C4B",
       "footer-bg": "#262626",
+      "button-color-1": "#1A1A40",
+      "button-color-2": "#C3BDEB",
+      "button-color-3": "#824B9F",
       "ourApproach-color": "#FFFFFF",
 
       white: "#FFFFFF",

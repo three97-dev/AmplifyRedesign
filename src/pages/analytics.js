@@ -24,6 +24,7 @@ export default function AnalyticsPage({ data }) {
         className="mt-100px md:mt-25px lg:-mt-14px xl:-mt-180px"
       />
       <AnalyticsFeatures
+        image={analyticsFeatures.image}
         title={analyticsFeatures.title}
         subtitle={analyticsFeatures.subtitle}
         feature1Title={analyticsFeatures.feature1Title}

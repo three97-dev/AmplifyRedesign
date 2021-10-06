@@ -7,10 +7,10 @@
         "LocationMap";
     }
     .location-grid-tablet {
-      grid-template-columns: 67.2rem;
+      grid-template-columns: 3.6rem minmax(52.8rem, 67.2rem) 3.6rem;
       grid-template-areas:
-        "LocationContacts"
-        "LocationMap";
+        ". LocationContacts ."
+        ". LocationMap .";
     }
     .location-grid-desc {
       grid-template-columns: 44.4rem 10.8rem 53.6rem;
@@ -19,7 +19,7 @@
         "LocationContacts . LocationMap";
     }
     .location-grid-hd {
-      grid-template-columns: 14rem 53.6rem auto 79.6rem 15.6rem;
+      grid-template-columns: minmax(6rem, 14rem) 53.6rem auto 79.6rem minmax(7.6rem, 15.6rem);
       grid-template-areas:
         " . LocationContacts . LocationMap . "
         " . LocationContacts . LocationMap . ";

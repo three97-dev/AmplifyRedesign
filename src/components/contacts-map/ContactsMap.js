@@ -26,42 +26,42 @@ const ContactsMap = ({
 }) => {
   return (
     <div
-      className={`grid justify-items-center xl:justify-items-stretch w-full overflow-y-hidden ${className}`}
+      className={`grid justify-items-center lg+:justify-items-stretch w-full overflow-y-hidden ${className}`}
       {...otherProps}
     >
-      <div className="grid relative location-grid-mobile md:location-grid-tablet lg:location-grid-desc xl:location-grid-hd py-50px md:py-100px lg:py-120px">
+      <div className="grid relative location-grid-mobile sm+:location-grid-tablet md+:location-grid-desc lg+:location-grid-hd py-50px sm+:py-100px md+:py-120px">
         <img
           src={ImageBackgroundTablet}
           alt="background"
-          className="hidden md:block lg:hidden absolute -z-10 md:bottom-310px md:right-254px max-w-none"
+          className="hidden sm+:block md+:hidden absolute -z-10 sm+:bottom-310px sm+:right-254px max-w-none"
         />
         <img
           src={ImageBackgroundWeb}
           alt="background"
-          className="hidden lg:block xl:hidden absolute -z-10 lg:-bottom-107px lg:right-475px max-w-none"
+          className="hidden md+:block lg+:hidden absolute -z-10 md+:-bottom-107px md+:right-475px max-w-none"
         />
         <img
           src={ImageBackgroundWebhd}
           alt="background"
-          className="hidden xl:block absolute -z-10 xl:-bottom-80px xl:right-924px max-w-none"
+          className="hidden lg+:block absolute -z-10 lg+:-bottom-80px lg+:right-924px max-w-none"
         />
-        <div className="location-contacts-area md:flex lg:block self-center">
-          <div className="mb-20px md:mt-1px lg:mt-0px lg:mb-20px">
+        <div className="location-contacts-area sm+:flex md+:block self-center">
+          <div className="mb-20px sm+:mt-1px md+:mt-0px md+:mb-20px">
             <Text typography="h2">{title}</Text>
           </div>
-          <div className="md:ml-115px lg:ml-0px">
-            <div className="flex mb-19px lg:mb-20px">
+          <div className="sm+:ml-115px md+:ml-0px">
+            <div className="flex mb-19px md+:mb-20px">
               <Text typography="body">{address}</Text>
-              <Text typography="body" className="mr-20px ml-14px md:ml-18px lg:ml-25px xl:ml-70px lg:w-205px">
+              <Text typography="body" className="mr-20px ml-14px sm+:ml-18px md+:ml-25px lg+:ml-70px md+:w-205px">
                 {addressContent}
               </Text>
             </div>
-            <div className="flex mb-19px lg:mb-18px">
+            <div className="flex mb-19px md+:mb-18px">
               <Text typography="body">{phone}</Text>
               <Text
                 typography="body"
                 color="text-tile-bg-3"
-                className="mr-20px ml-28px md:ml-33px xl:ml-84px lg:ml-38px"
+                className="mr-20px ml-28px sm+:ml-33px lg+:ml-84px md+:ml-38px"
               >
                 {phoneContent}
               </Text>
@@ -71,14 +71,14 @@ const ContactsMap = ({
               <Text
                 typography="body"
                 color="text-tile-bg-3"
-                className="mr-20px ml-33px md:ml-37px xl:ml-90px lg:ml-43px"
+                className="mr-20px ml-33px sm+:ml-37px lg+:ml-90px md+:ml-43px"
               >
                 {emailContent}
               </Text>
             </div>
           </div>
         </div>
-        <div className="location-map-area h-241px md:h-509px lg:h-406px xl:h-602px w-full mt-50px md:mt-75px lg:mt-0px">
+        <div className="location-map-area h-241px sm+:h-509px md+:h-406px lg+:h-602px w-full mt-50px sm+:mt-75px md+:mt-0px">
           <MapsComponent location={location} googleMapsCredentials={googleMapsCredentials} />
         </div>
       </div>

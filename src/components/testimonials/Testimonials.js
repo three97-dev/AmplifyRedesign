@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
-
 import Slider from "react-slick";
+import { graphql } from "gatsby";
 
 import Image from "../basic/image/Image";
 import Text from "../basic/text/Text";
 
 import QuoteImage from "../../assets/pages/home/testimonials-quote.svg";
-import TestimonialsArrow from "../../assets/pages/blog/testemonials-arrow-left-mobile.svg";
-import TestimonialsTablet from "../../assets/pages/home/testimonials-bg-tablet.svg";
+import TestimonialsArrow from "../../assets/pages/home/testimonials-arrow.svg";
 import TestimonialsWeb from "../../assets/pages/home/testimonials-bg-web.svg";
 import TestimonialsWebHD from "../../assets/pages/home/testimonials-bg-webhd.svg";
 
@@ -43,14 +41,9 @@ const Testimonials = ({ title, image, testimonialsToShow, className, ...otherPro
 
   return (
     <div
-      className={`grid relative overflow-hidden justify-items-center md:testimonials-tablet-grid lg:testimonials-desktop-grid xl:testimonials-hd-grid px-36px md:px-0px ${className}`}
+      className={`grid relative overflow-hidden justify-items-center md:testimonials-tablet-grid md+:testimonials-tablet-bigger-grid lg:testimonials-desktop-grid xl:testimonials-hd-grid px-36px md:px-0px ${className}`}
       {...otherProps}
     >
-      <img
-        src={TestimonialsTablet}
-        alt="background"
-        className="hidden md:block lg:hidden absolute -z-10 -bottom-93px right-26px max-w-none"
-      />
       <img
         src={TestimonialsWeb}
         alt="background"
@@ -93,10 +86,13 @@ const Testimonials = ({ title, image, testimonialsToShow, className, ...otherPro
         </Slider>
       </div>
       <div className="flex lg:grid lg:h-320px xl:h-428px w-full justify-between md:justify-center items-center md:content-center  md:testimonials-slider-dots-area relative mt-24px md:mt-20px lg:mt-146px xl:mt-255px ">
-        <button className="-mt-5px -mb-5px -mx-5px lg:mb-15px" onClick={previous}>
-          <img src={TestimonialsArrow} alt="previous slide" className="transform lg:rotate-90 m-5px" />
+        <button
+          className="grid place-items-center w-35px h-35px rounded-full bg-button-color-1 hover:bg-button-color-2 focus-visible:bg-button-color-2  active:bg-button-color-3 lg:mb-15px"
+          onClick={previous}
+        >
+          <img src={TestimonialsArrow} alt="previous slide" className="transform lg:rotate-90" />
         </button>
-        <div className="flex lg:grid justify-center justify-items-center lg:content-center items-center gap-15px md:gap-17px lg:gap-15px xl:gap-20px  md:w-full lg:h-212px xl:h-312px testimonials-slider-dots">
+        <div className="flex lg:grid justify-center justify-items-center lg:content-center items-center gap-15px md:gap-17px lg:gap-15px xl:gap-20px md:w-500px lg:w-full lg:h-212px xl:h-312px testimonials-slider-dots">
           <div className="lg:justify-self-center w-154px md:w-329px lg:w-1px h-1px lg:h-212px xl:h-312px bg-line-color3 absolute -z-10" />
           {testimonialsToShow.map((item, slideIndex) => (
             <button
@@ -111,11 +107,17 @@ const Testimonials = ({ title, image, testimonialsToShow, className, ...otherPro
             />
           ))}
         </div>
-        <button className="-mt-5px -mb-5px -mx-5px lg:mt-15px" onClick={next}>
-          <img src={TestimonialsArrow} alt="next slide" className="transform rotate-180 lg:-rotate-90 m-5px" />
+        <button
+          className="grid place-items-center w-35px h-35px rounded-full bg-button-color-1 hover:bg-button-color-2 focus-visible:bg-button-color-2  active:bg-button-color-3 lg:mt-15px"
+          onClick={next}
+        >
+          <img src={TestimonialsArrow} alt="next slide" className="transform rotate-180 lg:-rotate-90" />
         </button>
       </div>
-      <Image image={image} className="mt-15px md:mt-0px w-318px md:w-328px lg:w-full max-w-536px md:testimonials-image-area" />
+      <Image
+        image={image}
+        className="hidden lg:block mt-15px md:mt-0px w-318px md:w-328px lg:w-full max-w-536px lg:testimonials-image-area"
+      />
     </div>
   );
 };
