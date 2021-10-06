@@ -114,10 +114,9 @@ const Testimonials = ({ title, image, testimonialsToShow, className, ...otherPro
           <img src={TestimonialsArrow} alt="next slide" className="transform rotate-180 lg:-rotate-90" />
         </button>
       </div>
-      <Image
-        image={image}
-        className="hidden lg:block mt-15px md:mt-0px w-318px md:w-328px lg:w-full max-w-536px lg:testimonials-image-area"
-      />
+      <div className="testimonials-image-area hidden lg:block mt-15px md:mt-0px w-318px md:w-328px lg:w-full max-w-536px">
+        <Image image={image} />
+      </div>
     </div>
   );
 };
