@@ -15,10 +15,13 @@ export default function AnalyticsPage({ data }) {
       <GettingMost
         title={gettingMost.title}
         subtitle={gettingMost.subtitle}
+        blockImage1={gettingMost.block1Image}
         blockTitle1={gettingMost.block1Title}
         blockContent1={gettingMost.block1Content}
+        blockImage2={gettingMost.block2Image}
         blockTitle2={gettingMost.block2Title}
         blockContent2={gettingMost.block2Content}
+        blockImage3={gettingMost.block3Image}
         blockTitle3={gettingMost.block3Title}
         blockContent3={gettingMost.block3Content}
         className="mt-100px md:mt-25px lg:-mt-14px xl:-mt-180px"

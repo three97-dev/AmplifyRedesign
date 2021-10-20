@@ -8,7 +8,6 @@ import {
   BusinessLifecycleTiles,
   Heading,
   FractionalApproach,
-  PieChart,
   SiteFooter,
   SiteHeader,
   Testimonials,
@@ -16,7 +15,7 @@ import {
 
 export default function IndexPage({ data }) {
   const { contentfulHomePage } = data;
-  const { microsoftPartner, businessLifecycleTiles, fractionalApproach, pieChart, testimonials } = contentfulHomePage;
+  const { microsoftPartner, businessLifecycleTiles, fractionalApproach, testimonials } = contentfulHomePage;
 
   return (
     <Seo seo={contentfulHomePage}>
@@ -75,33 +74,23 @@ export default function IndexPage({ data }) {
         tile1Description={fractionalApproach.tile1Description}
         tile2Number={fractionalApproach.tile2Number}
         tile2Description={fractionalApproach.tile2Description}
-        learnMoreText={fractionalApproach.buttonCommentText}
-        learnMoreButtonLabel={fractionalApproach.buttonLabel}
-        learnMoreButtonLink={fractionalApproach.buttonLink}
+        titlePieChart={fractionalApproach.titlePieChart}
+        subtitlePieChart={fractionalApproach.subtitlePieChart}
+        content={fractionalApproach.content}
+        leftBlockTitle={fractionalApproach.leftBlockTitle}
+        leftBlockContent={fractionalApproach.leftBlockContent}
+        rightBlockTitle={fractionalApproach.rightBlockTitle}
+        rightBlockContent={fractionalApproach.rightBlockContent}
+        centerBlockTitle={fractionalApproach.centerBlockTitle}
+        centerBlockContent={fractionalApproach.centerBlockContent}
         className="mt-50px md:mt-64px lg:mt-57px xl:mt-42px"
       />
       <Heading
-        type="type1"
         isHuge={true}
         text={contentfulHomePage.heading2Label}
         link={contentfulHomePage.heading2Link}
         className="md:mt-32px lg:-mt-11px xl:-mt-31px"
       />
-      <PieChart
-        title={pieChart.title}
-        subtitle={pieChart.subtitle}
-        content={pieChart.content}
-        leftBlockTitle={pieChart.leftBlockTitle}
-        leftBlockContent={pieChart.leftBlockContent}
-        rightBlockTitle={pieChart.rightBlockTitle}
-        rightBlockContent={pieChart.rightBlockContent}
-        centerBlockTitle={pieChart.centerBlockTitle}
-        centerBlockContent={pieChart.centerBlockContent}
-        className="lg:-mb-6px xl:-mb-2px"
-      />
-      <div className="w-full px-36px md:px-81px lg:px-139px xl:px-140px md:mb-30px lg:mb-0px">
-        <div className="h-2px bg-line-color2 w-full" />
-      </div>
       <Testimonials
         title={testimonials.title}
         image={testimonials.image}
@@ -134,9 +123,6 @@ export const pageQuery = graphql`
       }
       heading2Label
       heading2Link
-      pieChart {
-        ...PieChart
-      }
       testimonials {
         ...Testimonials
       }

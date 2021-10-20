@@ -2,8 +2,6 @@ import React from "react";
 
 import FractionalApproach from "./FractionalApproach";
 
-import Text from "../basic/text/Text";
-
 export default {
   title: "Home/Fractional Approach",
   component: FractionalApproach,
@@ -37,7 +35,17 @@ Default.args = {
   tile1Description: "MET/EXCEEDED EXPECTATIONS",
   tile2Number: "94%",
   tile2Description: "CLIENT SATISFACTION RATING",
-  learnMoreText: "New to the fractional CRM approach? Click below to learn more.",
-  learnMoreButtonLabel: "Learn more",
-  learnMoreButtonLink: "/test",
+  titlePieChart: "The “Amplify” Difference",
+  subtitlePieChart:
+    "We look to partner and grow with each of our clients, we like to be thought of as a “Fractional CRM Department”.",
+  content:
+    "The impacts of a high functioning CRM are substantial. But getting there is not easy as evident in the industry report that 49% of CRM projects fail. We have found an approach that has lead to overwhelming satisfaction at a discounted cost.",
+  leftBlockTitle: "ALIGNMENT",
+  leftBlockContent: "We structure our partnership so we can dive in with our clients and proactively work together.",
+  rightBlockTitle: "VALUE",
+  rightBlockContent:
+    "We only work on a flat consulting fee so there is less time on quotes, proposals, and approvals… And more time on development.",
+  centerBlockTitle: "TRACK RECORD",
+  centerBlockContent:
+    "In an industry known to have a steep price and poor success rates, our approach has lead to a flawless success rate at a discount.",
 };

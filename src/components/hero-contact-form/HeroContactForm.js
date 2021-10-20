@@ -91,8 +91,7 @@ const HeroContactForm = ({
       email: Yup.string().email("Valid email is required").required("Email Address is required"),
     }),
     onSubmit: async (values, { setSubmitting }) => {
-      let t = values;
-      console.log("Form submitted");
+      console.log("Form submitted: " + JSON.stringify(values));
       setSubmitting(false);
       setIsSubmitted(true);
     },

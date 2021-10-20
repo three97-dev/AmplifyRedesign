@@ -1,57 +1,55 @@
 @layer base {
   @variants responsive {
     .fa-grid-mobile {
+      grid-template-columns: 31.8rem;
       grid-template-areas:
         "Heading"
-        "Description"
-        "Tile1"
-        "Tile2"
-        "Border"
         "Subtitle"
         "Image"
         "Stats"
-        "Button";
+        "Border"
+        "DiagramPie"
+        "ContentPie"
+        "Tile1"
+        "Tile2";
     }
 
     .fa-grid-tablet {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: 33.6rem 33.6rem;
       grid-template-areas:
         "Heading Heading"
-        "Description Description"
-        "Tile1 Tile2"
-        "Border Border"
         "Subtitle Subtitle"
         "Image Stats"
-        "Button Button";
+        "Border Border"
+        "DiagramPie DiagramPie"
+        "ContentPie ContentPie"
+        "Tile1 Tile2";
     }
 
     .fa-grid-web-small {
-      grid-template-columns: 53.6rem 10.8rem 27.6rem 16.8rem;
+      grid-template-columns: 27.6rem 26.8rem 36rem 18.4rem;
       grid-template-areas:
         "Heading Heading Heading Heading"
-        "Description .  Tile1 Tile2"
+        "Subtitle Subtitle Image Stats"
         "Border Border Border Border"
-        "Subtitle . Image Stats"
-        "Button Button Button Button";
+        "ContentPie ContentPie DiagramPie DiagramPie"
+        "Tile1 Tile2 DiagramPie DiagramPie";
     }
 
     .fa-grid-web {
-      grid-template-columns: 81.2rem 15.4rem 41.4rem 26rem;
+      grid-template-columns: 40.6rem 40.6rem 55.2rem 27.6rem;
       grid-template-areas:
         "Heading Heading Heading Heading"
-        "Description .  Tile1 Tile2"
+        "Subtitle Subtitle Image Stats"
         "Border Border Border Border"
-        "Subtitle . Image Stats"
-        "Button Button Button Button";
+        "ContentPie ContentPie DiagramPie DiagramPie"
+        "Tile1 Tile2 DiagramPie DiagramPie";
     }
   }
 }
 
 .area-fa-heading {
   grid-area: Heading;
-}
-.area-fa-description {
-  grid-area: Description;
 }
 .area-fa-image {
   grid-area: Image;
@@ -65,12 +63,15 @@
 .area-fa-tile1 {
   grid-area: Tile1;
 }
-.area-fa-button {
-  grid-area: Button;
-}
 .area-fa-subtitle {
   grid-area: Subtitle;
 }
 .area-fa-border {
   grid-area: Border;
+}
+.area-fa-content-pie {
+  grid-area: ContentPie;
+}
+.area-fa-diagram-pie {
+  grid-area: DiagramPie;
 }

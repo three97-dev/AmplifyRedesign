@@ -47,7 +47,7 @@ const AnalyticsFeatures = ({
         <img
           src={AnalyticsFeaturesWebHD}
           alt="background"
-          className="hidden xl:block absolute -z-10 -top-233px -left-187px max-w-none"
+          className="hidden xl:block absolute -z-10 -top-75px -left-187px max-w-none"
         />
         <div className="grid lg:analytics-features-image-text-desktop-grid xl:analytics-features-image-text-hd-grid">
           <Text

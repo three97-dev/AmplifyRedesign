@@ -1,7 +1,7 @@
 @layer base {
   @variants responsive {
     .getting-grid-mobile {
-      grid-template-columns: auto;
+      grid-template-columns: 39rem;
       grid-template-areas:
         "TitleBlock"
         "AnswerBlock1"
