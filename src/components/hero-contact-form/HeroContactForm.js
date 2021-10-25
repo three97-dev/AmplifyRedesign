@@ -117,14 +117,13 @@ const HeroContactForm = ({
         <WebHdBg alt="hero background" />
       </div>
 
-      <script src="https://mktdplp102cdn.azureedge.net/public/latest/js/form-loader.js?v=1.75.2012.0"></script>
+      <script src="https://mktdplp102cdn.azureedge.net/public/latest/js/form-loader.js?v=1.77.2005.0"></script>
       <div
         className="d365-mkt-config"
         style={{ display: "none" }}
-        data-website-id="rRvIWTB_IB990UqH1dvyLDcy5EnjG29dLkvxzuyUkdw"
+        data-website-id="UbEjgkJNBZIzPYVmNZ2CxqDXah8Ajyw9cvS4flzHZYc"
         data-hostname="7ac0a376c0174a89b912752aded4dd64.svc.dynamics.com"
       ></div>
-
       <form
         id="contact-form"
         className="self-end md+:self-center grid hero-contact-grid-mobile sm+:hero-contact-grid-tablet md+:hero-contact-web-grid lg+:hero-contact-webhd-grid mx-36px mb-100px sm+:mb-123px md+:mb-0px mt-70px md+:-mt-90px lg+:-mt-117px"
@@ -188,7 +187,7 @@ const HeroContactForm = ({
             id="phone"
             name="phone"
             onChange={(value, country, e, formattedValue) => {
-              formik.setFieldValue("phone", formattedValue)
+              formik.setFieldValue("phone", formattedValue);
             }}
             onBlur={formik.handleBlur}
             isError={formik.errors.phone && formik.touched.phone}
