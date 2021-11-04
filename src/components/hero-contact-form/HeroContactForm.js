@@ -9,6 +9,8 @@ import Input from "../basic/input/Input";
 import InputPhone from "../basic/input-phone/InputPhone";
 import Button from "../basic/button/Button";
 
+import useFormScript from "../../utils/useFormScript";
+
 import "./HeroContactForm.css";
 
 const BACKGROUNDS = {
@@ -71,6 +73,8 @@ const HeroContactForm = ({
   const [isSubmitted, setIsSubmitted] = useState(false);
   const phoneRegExp = /^[0-9]{3}-[0-9]{3}-[0-9]{4}$/;
 
+  useFormScript("https://mktdplp102cdn.azureedge.net/public/latest/js/form-loader.js?v=1.77.2005.0");
+
   const formik = useFormik({
     initialValues: {
       firstname: "",
@@ -117,7 +121,6 @@ const HeroContactForm = ({
         <WebHdBg alt="hero background" />
       </div>
 
-      <script src="https://mktdplp102cdn.azureedge.net/public/latest/js/form-loader.js?v=1.77.2005.0"></script>
       <div
         className="d365-mkt-config"
         style={{ display: "none" }}
