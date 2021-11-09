@@ -71,6 +71,14 @@ const Seo = ({ seo, children }) => {
         <meta name="twitter:title" content={mergedSEO.twitter_title} />
         <meta name="twitter:description" content={mergedSEO.twitter_description} />
         <meta name="twitter:image" content={mergedSEO.twitter_image} />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-178PL276KH"></script>
+        <script>
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+        
+            gtag('config', 'G-178PL276KH');`}
+        </script>
       </Helmet>
       {children}
     </>
