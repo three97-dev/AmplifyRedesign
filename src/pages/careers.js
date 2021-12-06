@@ -135,7 +135,7 @@ export const pageQuery = graphql`
         careersBottomDescription
       }
     }
-    allContentfulOpenPosition {
+    allContentfulOpenPosition(filter: { contentful_id: { ne: "31WhFfYVd8DWqNVg1OGpeK" } }) {
       nodes {
         roleName
         department
