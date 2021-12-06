@@ -23,7 +23,7 @@ export default function CareersPage({ data }) {
         mainText={contentfulCareersPage.theAmplifyAdvantageTitle}
         secondaryText={contentfulCareersPage.theAmplifyAdvantageDescription}
         image={contentfulCareersPage.theAmplifyAdvantageImage}
-        className=""
+        className="-mt-40px sm+:-mt-60px md+:-mt-90px"
       />
       <WhyWorkAmplify
         title={contentfulCareersPage.whyWorkForAmplify.title}

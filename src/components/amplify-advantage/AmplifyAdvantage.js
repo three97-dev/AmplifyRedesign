@@ -15,13 +15,13 @@ const AmplifyAdvantage = ({ mainText, secondaryText, image, className }) => {
   };
   return (
     <div className={`justify-items-center w-full overflow-x-hidden ${className}`}>
-      <div className="px-35px pt-26px sm+:pt-75px md+:pt-90px lg+:pt-85px pb-20px">
+      <div className="px-35px pt-100px md+:pt-180px lg+:pt-200px pb-20px">
         <div className="md+:flex justify-center sm+:mx-auto sm+:max-w-674px md+:max-w-none">
-          <div className="relative md+:max-w-444px lg+:max-w-672px md+:mr-110px lg+:mr-150px">
+          <div className="relative md+:max-w-444px lg+:max-w-672px md+:mr-110px lg+:mr-150px lg+:h-450px">
             <img
               src={AdvantagesBgImage}
               alt="background"
-              className="absolute -z-10 max-w-none sm+:w-671px md+:w-493px lg+:w-743px sm+:h-593px md+:h-435px lg+:h-657px -top-40px sm+:-top-95px md+:-top-104px lg+:-top-112px left-0px sm+:left-82px md+:left-140px lg+:left-140px"
+              className="absolute -z-10 max-w-none sm+:w-671px md+:w-493px lg+:w-743px sm+:h-593px md+:h-435px lg+:h-657px -top-108px md+:-top-197px lg+:-top-225px -left-35px sm+:left-0px"
             />
             <Text typography="h2" className="mb-27px sm+:mb-23px">
               {mainText}
@@ -34,7 +34,7 @@ const AmplifyAdvantage = ({ mainText, secondaryText, image, className }) => {
             image={image}
             width="115"
             height="115"
-            className="hidden sm+:block rounded-15px overflow-hidden md+:w-536px lg+:w-812px sm+:-mt-7px md+:mt-0px"
+            className="hidden sm+:block rounded-15px overflow-hidden md+:w-536px lg+:w-812px lg+:h-457px sm+:-mt-7px md+:mt-0px"
           />
         </div>
       </div>

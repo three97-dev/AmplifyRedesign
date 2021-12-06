@@ -26,14 +26,14 @@ const WhyWorkAmplify = ({
   return (
     <>
       <div className={`grid justify-items-center w-full overflow-x-hidden ${className}`}>
-        <div className="grid relative text-center justify-items-center why-work-amplify-mobile md:why-work-amplify-grid-tablet lg:why-work-amplify-grid-web lg+:why-work-amplify-grid-webHD sm+:mt-30px mb-60px sm+:mb-60px md+:mb-31px lg+:mb-113px">
+        <div className="grid relative text-center justify-items-center why-work-amplify-mobile md:why-work-amplify-grid-tablet md+:why-work-amplify-grid-web lg+:why-work-amplify-grid-webHD sm+:mt-30px mb-60px sm+:mb-60px md+:mb-50px lg+:mb-113px">
           <img
             src={WhyWorkWebPlus}
             alt="background"
             className="hidden md+:block justify-self-center absolute -z-10 -bottom-50px lg+:-bottom-113px lg+:-left-210px w-1366px lg+:w-2061px h-593px lg+:h-565px max-w-none"
           />
 
-          <div className="why-work-amplify-title w-full lg:mb-70px">
+          <div className="why-work-amplify-title w-full md+:mb-70px">
             <Text typography="h2">{title}</Text>
           </div>
 
@@ -43,7 +43,7 @@ const WhyWorkAmplify = ({
               <Text typography="h4" className="mt-25px lg+:20px">
                 {blockTitle1}
               </Text>
-              <Text typography="body" color="text-fontcolor-body" className="mt-20px lg+:mr-2px lg+:pb-5px">
+              <Text typography="body" color="text-fontcolor-body" className="mt-20px lg+:pb-5px">
                 {blockContent1}
               </Text>
             </div>
@@ -55,7 +55,7 @@ const WhyWorkAmplify = ({
               <Text typography="h4" className="mt-25px lg+:mt-20px">
                 {blockTitle2}
               </Text>
-              <Text typography="body" color="text-fontcolor-body" className="mt-20px lg:mt-22px lg+:pb-5px">
+              <Text typography="body" color="text-fontcolor-body" className="mt-20px lg+:pb-5px">
                 {blockContent2}
               </Text>
             </div>
@@ -67,7 +67,7 @@ const WhyWorkAmplify = ({
               <Text typography="h4" className="mt-25px lg+:mt-20px">
                 {blockTitle3}
               </Text>
-              <Text typography="body" color="text-fontcolor-body" className="mt-20px lg+:mt-22px lg+:pb-5px">
+              <Text typography="body" color="text-fontcolor-body" className="mt-20px lg+:pb-5px">
                 {blockContent3}
               </Text>
             </div>
@@ -79,7 +79,7 @@ const WhyWorkAmplify = ({
               <Text typography="h4" className="mt-25px lg+:mt-20px">
                 {blockTitle4}
               </Text>
-              <Text typography="body" color="text-fontcolor-body" className="mt-20px md:mt-21px lg:mt-21px lg+:pb-5px">
+              <Text typography="body" color="text-fontcolor-body" className="mt-20px lg+:pb-5px">
                 {blockContent4}
               </Text>
             </div>
