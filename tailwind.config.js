@@ -438,9 +438,9 @@ module.exports = {
       max: "max-content",
       "1/4": "25%",
     },
-    // minWidth: {
-    //   "170px": "17rem",
-    // },
+    minHeight: {
+      "450px": "45rem",
+    },
     maxWidth: {
       "screen-xs": "39rem",
       "screen-sm": "48rem",

@@ -17,7 +17,7 @@ const AmplifyAdvantage = ({ mainText, secondaryText, image, className }) => {
     <div className={`justify-items-center w-full overflow-x-hidden ${className}`}>
       <div className="px-35px pt-100px md+:pt-180px lg+:pt-200px pb-20px">
         <div className="md+:flex justify-center sm+:mx-auto sm+:max-w-674px md+:max-w-none">
-          <div className="relative md+:max-w-444px lg+:max-w-672px md+:mr-110px lg+:mr-150px lg+:h-450px">
+          <div className="relative md+:max-w-444px lg+:max-w-672px md+:mr-110px lg+:mr-150px lg+:min-h-450px">
             <img
               src={AdvantagesBgImage}
               alt="background"
