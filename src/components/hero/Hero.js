@@ -134,6 +134,33 @@ const BACKGROUNDS = {
     titlePositionsDefaults: "-mt-46px sm+:-mt-73px md+:-mt-75px lg+:-mt-119px",
     subtitlePositionsDefaults: "mt-24px sm+:ml-1px lg+:ml-0px",
   },
+  type5: {
+    imageMobile,
+    imageTablet,
+    imageWeb: (
+      <StaticImage
+        src="../../assets/hero/hero-type5-web.png"
+        alt="hero background"
+        quality={100}
+        placeholder="blurred"
+        layout="fixed"
+        className="-mt-25px"
+      />
+    ),
+    imageWebHd: (
+      <StaticImage
+        src="../../assets/hero/hero-type5-webhd.png"
+        alt="hero background"
+        quality={100}
+        placeholder="blurred"
+        layout="fixed"
+        className="-mt-25px"
+      />
+    ),
+    heightCss: "hero-h-bg-mobile sm+:hero-h-bg-tablet md+:hero-h-type5-web lg+:hero-h-type5-webhd",
+    titlePositionsDefaults: "-mt-46px sm+:-mt-210px md+:-mt-75px lg+:-mt-119px",
+    subtitlePositionsDefaults: "mt-24px sm+:ml-1px lg+:ml-0px",
+  },
 };
 
 const resolveBackgrounds = (type, backgrounds = BACKGROUNDS) => {
@@ -165,7 +192,9 @@ const Hero = ({
   } = resolveBackgrounds(type, storybookBackgroundsMocks);
   return (
     <div
-      className={`grid hero-grid-mobile md+:hero-grid justify-items-center w-full relative overflow-hidden ${heightCss} ${className}`}
+      className={`grid hero-grid-mobile ${
+        type === "type5" ? "md:hero-grid" : "md+:hero-grid"
+      } justify-items-center w-full relative overflow-hidden ${heightCss} ${className}`}
       {...otherProps}
     >
       <div className="absolute bottom-0px -z-10 w-max max-w-none sm+:hidden">{imageMobile}</div>
@@ -174,7 +203,11 @@ const Hero = ({
       <div className="absolute bottom-0px -z-10 w-max max-w-none hidden lg+:grid">{imageWebHd}</div>
 
       <div className="area-hero-content self-center w-full xl:max-w-screen-xl grid justify-items-center md+:justify-items-start sm+:text-center md+:text-left">
-        <div className="sm+:ml-8px max-w-318px sm+:max-w-414px md+:max-w-535px lg+:max-w-672px">
+        <div
+          className={`sm+:ml-8px max-w-318px sm+:max-w-414px md+:max-w-535px lg+:max-w-672px ${
+            type === "type5" ? "md:text-left md:pr-85px md+:pr-0px" : ""
+          }`}
+        >
           <Text typography="h1" className={titlePositions.length > 0 ? titlePositions : titlePositionsDefaults}>
             {title}
           </Text>
@@ -193,7 +226,7 @@ const Hero = ({
 Hero.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
-  type: PropTypes.oneOf(["type1", "type2", "type3", "type4"]),
+  type: PropTypes.oneOf(["type1", "type2", "type3", "type4", "type5"]),
   titlePositions: PropTypes.string,
   subtitlePositions: PropTypes.string,
   className: PropTypes.string,

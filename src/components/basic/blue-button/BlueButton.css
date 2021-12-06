@@ -1,0 +1,7 @@
+.button-dark-blue {
+  @apply text-white rounded-15px transition duration-300 ease-out hover:opacity-80;
+}
+
+.box-shadow {
+  box-shadow: 10px 10px 18px rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,32 @@
+@layer base {
+  @variants responsive {
+    .open-opportunities-row-wrap {
+      border-radius: 18px;
+      box-shadow: 7px 7px 15px #00000029;
+    }
+
+    .table-title-grid-mobile {
+      display: grid;
+      grid-template-columns: minmax(auto, 70rem);
+      align-items: center;
+    }
+
+    .table-title-grid-tablet {
+      display: grid;
+      grid-template-columns: minmax(auto, 80rem) 15.6rem 15.6rem;
+      column-gap: 16px;
+    }
+
+    .table-title-grid-web {
+      display: grid;
+      grid-template-columns: minmax(auto, 120rem) 24.5rem 16.8rem 16.5rem;
+      column-gap: 16px;
+    }
+
+    .table-title-grid-webhd {
+      display: grid;
+      grid-template-columns: minmax(auto, 130rem) 39.8rem 26rem 26rem;
+      column-gap: 16px;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@layer utilities {
+  @variants responsive {
+    .why-work-amplify-mobile {
+      grid-template-columns: 31.8rem;
+      grid-template-areas:
+        "WhyWorkAmplifyTitle"
+        "WhyWorkAmplifyTiles1"
+        "WhyWorkAmplifyTiles2"
+        "WhyWorkAmplifyTiles3"
+        "WhyWorkAmplifyTiles4";
+    }
+    .why-work-amplify-grid-tablet {
+      grid-template-columns: 32.8rem 32.8rem;
+      grid-template-rows: auto;
+      column-gap: 16px;
+      grid-template-areas:
+        "WhyWorkAmplifyTitle WhyWorkAmplifyTitle"
+        "WhyWorkAmplifyTiles1 WhyWorkAmplifyTiles2"
+        "WhyWorkAmplifyTiles3 WhyWorkAmplifyTiles4";
+    }
+    .why-work-amplify-grid-web {
+      max-width: 1070px;
+      width: 100%;
+      grid-template-columns: 26rem 26rem 26rem 26rem;
+      grid-template-areas:
+        "WhyWorkAmplifyTitle WhyWorkAmplifyTitle WhyWorkAmplifyTitle WhyWorkAmplifyTitle"
+        "WhyWorkAmplifyTiles1 WhyWorkAmplifyTiles2 WhyWorkAmplifyTiles3 WhyWorkAmplifyTiles4";
+    }
+    .why-work-amplify-grid-webHD {
+      max-width: 1640px;
+      width: 100%;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "WhyWorkAmplifyTitle WhyWorkAmplifyTitle WhyWorkAmplifyTitle WhyWorkAmplifyTitle"
+        "WhyWorkAmplifyTiles1 WhyWorkAmplifyTiles2 WhyWorkAmplifyTiles3 WhyWorkAmplifyTiles4";
+    }
+    .why-work-amplify-title {
+      grid-area: WhyWorkAmplifyTitle;
+    }
+    .why-work-amplify-tiles1 {
+      grid-area: WhyWorkAmplifyTiles1;
+    }
+    .why-work-amplify-tiles2 {
+      grid-area: WhyWorkAmplifyTiles2;
+    }
+    .why-work-amplify-tiles3 {
+      grid-area: WhyWorkAmplifyTiles3;
+    }
+    .why-work-amplify-tiles4 {
+      grid-area: WhyWorkAmplifyTiles4;
+    }
+
+    .modal-background {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}

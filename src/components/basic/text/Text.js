@@ -97,7 +97,7 @@ const Text = ({ children, tag, className, typography, color, text, ...otherProps
       </HtmlElement>
     );
   } else {
-    throw new Error("Failed to render Text component: no valid text data");
+    return <>Missing text data</>;
   }
 };
 
