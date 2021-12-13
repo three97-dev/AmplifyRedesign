@@ -25,7 +25,7 @@
 
     .table-title-grid-webhd {
       display: grid;
-      grid-template-columns: minmax(auto, 130rem) 39.8rem 26rem 26rem;
+      grid-template-columns: minmax(auto, 120rem) 25rem 26rem 26rem;
       column-gap: 16px;
     }
   }

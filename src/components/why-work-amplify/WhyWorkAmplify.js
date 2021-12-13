@@ -39,7 +39,7 @@ const WhyWorkAmplify = ({
 
           <div className="why-work-amplify-tiles1 text-center px-20px pt-20px md+:pt-0px">
             <div>
-              <Image image={tileOneImage} className="mx-auto md+:mt-30px" width="165" height="165" />
+              <Image image={tileOneImage} className="mx-auto md+:mt-30px w-165px" width="165" height="165" />
               <Text typography="h4" className="mt-25px lg+:20px">
                 {blockTitle1}
               </Text>
@@ -51,7 +51,7 @@ const WhyWorkAmplify = ({
 
           <div className="why-work-amplify-tiles2 text-center px-20px pt-20px md+:pt-0px">
             <div>
-              <Image image={tileTwoImage} className="mx-auto md+:mt-30px" width="165" height="165" />
+              <Image image={tileTwoImage} className="mx-auto md+:mt-30px w-165px" width="165" height="165" />
               <Text typography="h4" className="mt-25px lg+:mt-20px">
                 {blockTitle2}
               </Text>
@@ -63,7 +63,7 @@ const WhyWorkAmplify = ({
 
           <div className="why-work-amplify-tiles3 text-center px-20px pt-20px md+:pt-0px">
             <div>
-              <Image image={tileThreeImage} className="mx-auto md+:mt-30px" width="165" height="165" />
+              <Image image={tileThreeImage} className="mx-auto md+:mt-30px w-165px" width="165" height="165" />
               <Text typography="h4" className="mt-25px lg+:mt-20px">
                 {blockTitle3}
               </Text>
@@ -75,7 +75,7 @@ const WhyWorkAmplify = ({
 
           <div className="why-work-amplify-tiles4 text-center px-20px pt-20px md+:pt-0px ">
             <div>
-              <Image image={tileFourImage} className="mx-auto md+:mt-30px" width="165" height="165" />
+              <Image image={tileFourImage} className="mx-auto md+:mt-30px w-165px" width="165" height="165" />
               <Text typography="h4" className="mt-25px lg+:mt-20px">
                 {blockTitle4}
               </Text>
