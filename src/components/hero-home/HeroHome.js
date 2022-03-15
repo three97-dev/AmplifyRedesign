@@ -17,6 +17,7 @@ const BACKGROUNDS = {
       layout="fixed"
       alt={alt}
       className={className}
+      style={{ height: "100vh" }}
     />
   ),
   TabletBg: ({ alt, className }) => (
@@ -27,6 +28,7 @@ const BACKGROUNDS = {
       layout="fixed"
       alt={alt}
       className={className}
+      style={{ height: "100vh" }}
     />
   ),
   WebBg: ({ alt, className }) => (
@@ -37,6 +39,7 @@ const BACKGROUNDS = {
       layout="fixed"
       alt={alt}
       className={className}
+      style={{ height: "100vh" }}
     />
   ),
   WebHdBg: ({ alt, className }) => (
@@ -47,6 +50,7 @@ const BACKGROUNDS = {
       layout="fixed"
       alt={alt}
       className={className}
+      style={{ height: "100vh" }}
     />
   ),
 };

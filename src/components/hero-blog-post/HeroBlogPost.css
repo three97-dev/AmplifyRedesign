@@ -38,10 +38,20 @@
 
     .hero-blog-post-h-mobile {
       height: calc(100vh + 27px);
+      max-height: 900px;
     }
 
     .hero-blog-post-h-tablet-plus {
       height: 100vh;
+      max-height: 1100px;
+    }
+    .hero-blog-post-h-web {
+      height: 100vh;
+      max-height: 750px;
+    }
+    .hero-blog-post-h-webhd {
+      height: 100vh;
+      max-height: 1050px;
     }
 
     .fix-mobile-overflow {

@@ -18,6 +18,7 @@ const contentfulConfig = {
 //
 // To change back to the normal CDA, remove the CONTENTFUL_HOST variable from your environment.
 if (process.env.CONTENTFUL_HOST) {
+  console.log("Using PREVIEW CMS data")
   contentfulConfig.host = process.env.CONTENTFUL_HOST;
   contentfulConfig.accessToken = process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN;
 }

@@ -82,14 +82,17 @@
 
     .hero-contact-height-tablet {
       height: calc(100vh + 73px);
+      max-height: 1180px;
     }
 
     .hero-contact-height-web {
       height: calc(100vh + 90px);
+      max-height: 850px;
     }
 
     .hero-contact-height-webhd {
       height: calc(100vh + 117px);
+      max-height: 1190px;
     }
   }
 }

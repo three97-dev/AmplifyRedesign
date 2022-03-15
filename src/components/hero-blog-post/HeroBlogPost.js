@@ -58,7 +58,7 @@ const HeroBlogPost = ({ title, subtitle, image, className, storybookBackgroundsM
 
   return (
     <div
-      className={`grid justify-items-center content-center hero-blog-post-grid-mobile sm+:hero-blog-post-grid-tablet md+:hero-blog-post-web-grid lg+:hero-blog-post-webhd-grid w-full relative overflow-hidden hero-blog-post-h-mobile sm+:hero-blog-post-h-tablet-plus ${className}`}
+      className={`grid justify-items-center content-center hero-blog-post-grid-mobile sm+:hero-blog-post-grid-tablet md+:hero-blog-post-web-grid lg+:hero-blog-post-webhd-grid w-full relative overflow-hidden hero-blog-post-h-mobile sm+:hero-blog-post-h-tablet-plus md+:hero-blog-post-h-web lg+:hero-blog-post-h-webhd ${className}`}
       {...otherProps}
     >
       <div className="absolute bottom-0px -z-10 w-max max-w-none sm+:hidden">
