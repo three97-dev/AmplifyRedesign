@@ -10,7 +10,7 @@ import ImageBackgroundTablet from "../../assets/pages/blog/blog-post-bg-tablet.s
 const BlogPostContent = ({ text, minutesToRead, minutesToReadText, date, className, ...otherProps }) => {
   let dt = DateTime.now();
   let dateToday = dt.setLocale("en").toLocaleString(DateTime.DATE_HUGE);
- 
+
   return (
     <div className={`grid justify-items-center w-full overflow-x-hidden ${className}`} {...otherProps}>
       <div className="grid relative px-36px md:px-0px pt-50px mb-35px md:mb-100px lg:mb-130px md:pt-100px lg:pt-90px lg+:pt-104px md:max-w-672px lg:max-w-720px lg+:max-w-1088px">

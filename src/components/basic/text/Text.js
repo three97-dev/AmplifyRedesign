@@ -64,21 +64,6 @@ const Text = ({ children, tag, className, typography, color, text, ...otherProps
     };
   }
 
-  // if (text) {
-  //   const resolveTypographyCss = typography ? resolveTypography(typography) : "markdown-or-rich-text";
-
-  //   return (
-  //     <HtmlElement
-  //       {...otherProps}
-  //       className={`${resolveTypographyCss} ${color || resolveColor(typography)} ${className}`}
-  //     >
-  //       {renderRichText(text)}
-  //       {/* <img className="mx-auto w-full max-w-536px"
-  //         src={text.references[0].fluid.src}
-  //         alt="test"
-  //       /> */}
-  //     </HtmlElement>
-  //   );
   if (text && text.raw) {
     const resolveTypographyCss = typography ? resolveTypography(typography) : "markdown-or-rich-text";
 
@@ -91,11 +76,8 @@ const Text = ({ children, tag, className, typography, color, text, ...otherProps
 
     const renderOptions = {
       renderNode: {
-        [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
-          // render the EMBEDDED_ASSET as you need
+        [BLOCKS.EMBEDDED_ASSET]: (node) => {
           const imageData = richTextImages.find(imageData => imageData.contentful_id === node.data.target.sys.id);
-
-          let t = 0;
 
           const image = getImage(imageData.image);
 
