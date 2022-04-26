@@ -57,13 +57,6 @@ export const pageQuery = graphql`
       }
       content {
         raw
-        references {
-          ... on ContentfulAsset {
-            contentful_id
-            description
-            gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, width: 720)
-          }
-        }
       }
     }
     contentfulBlogPostTemplate(contentful_id: { eq: "2TpT76DyrBcrRHzIYMl63d" }) {
