@@ -9,9 +9,9 @@ import UniversalLink from "../../utils/UniversalLink";
 const BlogPostTile = ({ title, subtitle, postDate, slug, linkLabel, postImage, className }) => {
   const link = `/blog/${slug}`;
   return (
-    <div className={`tile-shadow bg-tile-content w-318px md:w-328px lg:w-536px ${className}`}>
+    <div className={`flex flex-col justify-between tile-shadow bg-tile-content w-318px md:w-328px lg:w-536px ${className}`}>
       <div className="pl-20px lg:pl-36px pt-33px lg:pt-50px pb-28px md:pb-30px lg:pb-38px">
-        <div className="md:h-197px lg:h-full">
+        <div className="md:h-197px lg:h-auto">
           <UniversalLink link={link}>
             <Text typography="h2" className="mb-12px lg:mr-55px hover:underline">
               {title}

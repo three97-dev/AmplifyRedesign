@@ -1,6 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { renderRichText } from "gatsby-source-contentful/rich-text";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { BLOCKS } from "@contentful/rich-text-types";
+
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import "./Text.css";
 
@@ -61,15 +64,61 @@ const Text = ({ children, tag, className, typography, color, text, ...otherProps
     };
   }
 
+  // if (text) {
+  //   const resolveTypographyCss = typography ? resolveTypography(typography) : "markdown-or-rich-text";
+
+  //   return (
+  //     <HtmlElement
+  //       {...otherProps}
+  //       className={`${resolveTypographyCss} ${color || resolveColor(typography)} ${className}`}
+  //     >
+  //       {renderRichText(text)}
+  //       {/* <img className="mx-auto w-full max-w-536px"
+  //         src={text.references[0].fluid.src}
+  //         alt="test"
+  //       /> */}
+  //     </HtmlElement>
+  //   );
   if (text && text.raw) {
     const resolveTypographyCss = typography ? resolveTypography(typography) : "markdown-or-rich-text";
+
+    const richTextImages =
+      text?.references?.map(reference => ({
+        contentful_id: reference.contentful_id,
+        image: reference.gatsbyImageData,
+        alt: reference.description,
+      })) || [];
+
+    const renderOptions = {
+      renderNode: {
+        [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
+          // render the EMBEDDED_ASSET as you need
+          const imageData = richTextImages.find(imageData => imageData.contentful_id === node.data.target.sys.id);
+
+          let t = 0;
+
+          const image = getImage(imageData.image);
+
+          return (
+            <div className="grid w-full justify-center my-15px">
+              <div className="max-w-720px">
+                <GatsbyImage image={image} alt={imageData.alt} />
+                <div className="text-center typography-body text-fontcolor-body mt-5px">
+                  <span className="italic">{imageData.alt}</span>
+                </div>
+              </div>
+            </div>
+          );
+        },
+      },
+    };
 
     return (
       <HtmlElement
         {...otherProps}
         className={`${resolveTypographyCss} ${color || resolveColor(typography)} ${className}`}
       >
-        {renderRichText(text)}
+        {documentToReactComponents(JSON.parse(text.raw), renderOptions)}
       </HtmlElement>
     );
   } else if (text && text.childMarkdownRemark) {
